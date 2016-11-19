@@ -22,16 +22,16 @@
         
         if(name.length > 10)
         {   
-          $("#result").html('checking...');
+          $(".errorTxt0").html('checking...');
           
           $.ajax({
             
             type : 'POST',
-            url  : 'enrollcheck.php',
+            url  : 'core/enrollcheck.php',
             data : $(this).serialize(),
             success : function(data)
                   {
-                       $("#result").html(data);
+                       $(".errorTxt0").html(data);
                     }
             });
             return false;
@@ -39,7 +39,7 @@
         }
         else
         {
-          $("#result").html('');
+          $(".errorTxt0").html('');
         }
       });
       
@@ -48,7 +48,7 @@
 </head>
 
 <style type="text/css">
-  .input-field div.error{
+  .input-field div.error,.errorTxt0{
     position: relative;
     top: -1rem;
     left: 0rem;
@@ -132,8 +132,7 @@
             <div class="input-field">
                 <input type="text" name="enroll" id="new-enroll" data-error=".errorTxt0" length="11" maxlength="11" value="<?php echo $enroll ?>" />
                 <label for="new-enroll">Enrollment Number</label>
-                <div class="errorTxt0" id="results"></div>
-                <span class="text-danger"><?php echo $enrollError; ?></span>
+                <div class="errorTxt0"></div>
             </div>
 
 
@@ -243,7 +242,7 @@ $("#formValidate").validate({
     messages: {
         uname:{
             required: "Enter a username",
-            minlength: "Enter at least 5 characters"
+            minlength: "Minimum of 5 characters"
         },
         curl: "Enter your website",
     },
