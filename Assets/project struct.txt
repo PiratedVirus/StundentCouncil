@@ -1,0 +1,228 @@
+New improved file structure
+
+	No need of
+		fetch.php      Removed all four
+		userhome.php
+		chk.php
+		profile.php
+	and all these replaced with testing.php
+
+
+assets
+
+--css
+  --base.css
+  --sass
+	--components
+		--_custom.sass = styles.sass + team.sass
+		--team.sass
+	--materlize.scss
+	--base.sass -> components/
+			_custom.sass + materlize.scss
+
+
+	file		function        													where used
+
+core
+	chk.php =  fetching all checkboxes       											home.php,adminhome.php
+	display.php = display * of  all results											    adminhome.php
+	edit.php = for updating profiles													for editing
+	fetch.php = updating																adminhome, userhome, edit
+	new.php  = registration of new user													registration.php
+	profile-form.php = html for update forms used in edit.php 							edit.php fetch.php
+	profile.php = Fetching all checkboxes												NOT USED
+	sorting.php = sorter 																adminhome.php
+	user.php = getting all inputs from sql $get query, creating session vars 			index.php
+	userhome.php = select * from and saved into $res 									home.php
+
+new core
+	checkbox.php 		putting 1													keep seprate `
+	dbconnect.php
+	display.php 		admin display													
+	edit.php 			update -> profile-form.php 									
+	msg.php 			message to show 
+	new.php 			-| register.php
+	notified.php 		SAT exit page
+	profile-form.php 	HTML for edit.php ->testing.php
+	sat.php 			SAT form
+	sort.php 			admin sort (X) no need
+	sorters.php 		logic for all sortes
+	testing.php 		exit page after update profile 
+	user.php 			-| index.php login window for user account
+
+
+--------------------------------------------
+
+user inputs
+	At the time of reg
+		- Name + Enroll + Branch + Email + pass + M/F
+	In the update Tab
+		- Gen
+			+ Year (class) `
+			+ DOB			`
+			+ Address -> Localite or Hostelite and State (J&K OR MH)	`
+			+ Last year CGPA (x)
+			+ DSE / 12th (x)
+
+		- Technical (Task -- Need in GECA)
+			+ Web 			-- Developing pending website
+			+ App 			-- New Era of Apps in College
+			+ Networking	-- Providing Internet at arious events in clg
+			+ Photoshop		-- Posters for events
+			+ Animation		-- For Socail Team
+			+ MEch Team checked="
+
+			"
+			+ Robocorn
+		- Social
+			+ Acting		-- Easy to contact at the time of Events / Representing CLG in intercollege competations
+			+ Dance			--              ''
+			+ Ankering		-- Hosting in various events
+			+ Singing		-- Fairwell and Intro in events
+			+ Drama			-- Representing CLG
+			+ Mimicry		--     ''
+			+ Writing		-- Theme writing
+			+ Poetry		-- Decorting theme with poems
+			+ Drawing / Doodling   ""
+			+ Decoraction / Design ""
+			+ Painting			   ""
+		- Sports
+			+ Cricket
+			+ Badminton
+			+ Football
+			+ Chess
+			+ .....
+			+ Specify UR Histroy -- Ease in Team Selection
+		- Management
+			+ Leader
+			+ Member
+
+		- Future 	-- Easy To coordinate while arranging Seminars
+		 	+ PG
+		 	+ Job
+		 	+ Other
+
+
+
+includes in admonhome.php
+	dbconnect.php
+	..core/fetch.php
+	index.php
+	../core/display.php
+			edit.php
+			sorting.php
+			chk.php
+
+includes in home.php
+	dbconnect.php
+	core/userHome.php  -- fetch.php
+		/edit.php
+		/chk.php
+
+  Additions
+  Front end (user section) `
+  	MCA in branch dropdown `
+  	Catia `
+  	part of any orgz in GECA `
+  		SAT , TNP ,BAJA , Robocon , E-CELL
+  	Futrure plans add other specify `
+  	Mobile Number
+  	What's Up (x)
+
+  	Admin
+  	name and surname (x)
+  	adding AND in checkbox
+  	concept of nikhil badave`
+  	print compatible
+  	footer 
+  	
+  	entc / electrical
+  		 KEIL`
+  		 PROTEUS`
+  		 ANSYS Maxwell`
+  		 FEMM`
+  		 RM Expert
+  		 VLSI															Added
+  		 Arduino`					`										+ php 
+  		 Rassberry Pie`														
+
+   civil
+   mech cnc programming`
+        proe / creo`
+        ansys hypermesh	`
+
+        library
+
+
+        
+
+
+
+dropdown list for academic year branch 
+
+after GECA -> checkboxes
+Additional phone number
+Address
+
+bascketball`
+
+achivements `
+	
+video editing`
+Photography`
+database
+
+
+Added 
+	php`
+	video editing
+	photography
+	supra
+	cnc
+	hyper
+	prcoe
+	achivements in tech, sport,cul
+
+---------------------------------------Scripting---------------------------------------------------------------
+
+as the world is advancing into the digital word,  including us in the race with the stepping stone coined as "digital india". and so are we, this site would prove as the digital key to unite the students with digitalization and technology.
+
+the site would provide a single platform to all the students. as we use "google" as the one base to get in touch of every corner, the site would prove to be the same connecting link through out the campus. more the students connect to the website, more easy it would be to access everyone.
+
+And of course stating the obvious, the site would also save a ample amount of time as you would be connected to the site, getting faster updates to all the know hows, the events, seminars, etc in the college. A lifeline to people without whatsapp, hike or any other social media applications. 
+
+The website would turn out to be the break-through for the dawn of "Cybernated Automized GECA". It would be "THE" portal for all the students of the college, and not just students, but even the faculty and staff members. The site would minimize the mannual error drastically. It would be easy to get information about all the activities going on. Also, your personal information won't be leaked. In short, you'll be connected to the whole college at any time through any of your life gadgets.
+
+
+
+
+Adding event wise notificarion ****** `
+reteriving data into edit.php ******	`
+Front page ****
+Getting all enrollment numbers **** `
+checkboxes for after geca (Adding tooltip ) ***
+photos for front page **
+invitation card ** 
+Team page *
+Alphabettically ****
+
+restructring database
+updating testing.php `
+submitting form entries `
+captilize everywhere `
+chekbox ticked `
+changing view profile `
+
+
+
+
+Site Design **
+	green color for achivements
+	green color for active admin / user
+	centering footer `
+	adding nikhil center 
+
+
+	black overlay and blue button lyk mahesh final for front page
+
+
