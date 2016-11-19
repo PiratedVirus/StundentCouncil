@@ -38,7 +38,7 @@
   $pass = strip_tags($pass);
   $pass = htmlspecialchars($pass);
 
-  $skill = trim($_POST['skill']);
+  $skill = trim($_POST['branch']);
   $skill = strip_tags($skill);
   $skill = htmlspecialchars($skill);
 

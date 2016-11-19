@@ -114,7 +114,7 @@
             </div>
 
             <div class="input-field">
-            	<input type="password" id="label-pass-admin" name="pass" class="form-control"  maxlength="15" />
+            	<input type="password" id="label-pass-admin" name="password" class="form-control"  maxlength="15" />
             	<label for="label-pass-admin" data-error = "<?php echo $idError; ?>">Password</label>
                 <span class="text-danger"><?php echo $passError; ?></span>
             </div>

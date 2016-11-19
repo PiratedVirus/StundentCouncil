@@ -12,7 +12,7 @@
    <link rel="stylesheet" href="Assets/css/base.css">
    <script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>
 
-
+<!-- Script for Live enrollment number checking ! -->
    <script type="text/javascript">
      $(document).ready(function()
      {    
@@ -53,7 +53,7 @@
     top: -1rem;
     left: 0rem;
     font-size: 0.8rem;
-    color:#FF4081;
+    color:red;
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
@@ -162,24 +162,26 @@
               <div class="errorTxt4"></div>
             </div>
 
-
             <div class="input-field">
-                <input type="text" name="skill" id="new-branch" class="branch" value="<?php echo $skill ?>" />
-                <label for="new-branch" data-error = "<?php echo $idError; ?>">Branch</label>
-                <span class="text-danger"><?php echo $skillError; ?></span>
+              <label for="branch">Branch</label>
+              <input id="branch" type="text" name="branch" class="branch" data-error=".errorTxt5">
+              <div class="errorTxt5"></div>
             </div>
+
 
             <div class="input-field gender">
                 <span id="male-radio">
-                    <input type="radio" name="gender" value="Male" class="with-gap" id="male" />
+                    <input type="radio" name="gender" value="Male" class="with-gap" id="male" data-error=".errorTxt6"/>
                     <label for="male">Male</label>
-                </span>
                 <span>
-                    <input type="radio" name="gender" value="Female" class="with-gap" id="female" />
+                    <input type="radio" name="gender" value="Female" class="with-gap" data-error=".errorTxt6" id="female" />
                     <label for="female">Female</label>
                 </span>
 
+
             </div>
+            <div sclass="errorTxt6" style="color: #F44336;font-size: 15px;"></div>
+
 
 
 
@@ -203,49 +205,66 @@
 
 <script src="Assets/js/materialize.js"></script>
 <script src="Assets/js/init.js"></script>
-<script type="text/javascript" src="jquery.validate.min.js"></script>
+<script src="Assets/js/jquery.validate.min.js"></script>
 
 
 <script type="text/javascript">
 $("#formValidate").validate({
     rules: {
+        enroll:{
+            required: true,
+            minlength:10
+        },
         uname: {
             required: true,
-            minlength: 5
+            minlength: 6
         },
         cemail: {
             required: true,
             email:true
         },
         password: {
-   required: true,
-   minlength: 5
- },
- cpassword: {
-   required: true,
-   minlength: 5,
-   equalTo: "#password"
- },
- curl: {
-            required: true,
-            url:true
+           required: true,
+           minlength: 5
         },
-        crole:"required",
-        ccomment: {
-   required: true,
-   minlength: 15
+       cpassword: {
+          required: true,
+          minlength: 5,
+          equalTo: "#password"
         },
-        cgender:"required",
- cagree:"required",
-    },
+       branch: {
+          required: true,
+          minlength: 5,
+        },
+       skill: {
+          required: true,
+          minlength: 2
+       },
+ 
+      gender:"required",
+  },
     //For custom messages
-    messages: {
-        uname:{
-            required: "Enter a username",
-            minlength: "Minimum of 5 characters"
-        },
-        curl: "Enter your website",
-    },
+  messages: {
+      uname:{
+          required: "Don't leave me alone! Give me a Name.",
+          minlength: "That must be your pet name ! Enter your full name."
+      },
+
+      password:{
+          required: "Don't leave me alone! Please fill me.",
+          minlength: "Uh Oh! too Weak ! Feed me at least 6 characters."
+      },
+      cpassword:{
+          required: "Don't leave me alone! Please fill me.",
+          minlength: "Where did you learn to type ? Type excat same password."
+      },
+      branch:{
+          required: "How could be you confuse on your Branch ?",
+          minlength: "No shortforms! Respect your Branch."
+      }
+      
+  },
+
     errorElement : 'div',
     errorPlacement: function(error, element) {
       var placement = $(element).data('error');
