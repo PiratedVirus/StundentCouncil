@@ -1,5 +1,5 @@
 <?php
-  
+  include 'dbconnect.php';
   $host="localhost";
   $user="root";
   $pass="";
@@ -10,7 +10,7 @@
   if($_POST) 
   {
       $enroll = strip_tags($_POST['enroll']);
-      
+
 	  $stmt=$dbcon->prepare("SELECT enrollment FROM enrollment WHERE enrollment=:enroll");
 	  $stmt->execute(array(':enroll'=>$enroll));
 	  $count=$stmt->rowCount();
@@ -18,8 +18,12 @@
 	  $tester=$dbcon->prepare("SELECT userId FROM users WHERE userId=:enroll");
 	  $tester->execute(array(':enroll'=>$enroll));
 	  $testcount=$tester->rowCount();
-	  	
-	  if($testcount!=0){
+
+
+	  $get = mysqli_query($conn,"SELECT name FROM enrollment WHERE enrollment = '$enroll'");
+	  $arr = mysqli_fetch_array($get);
+
+	  if($testcount!=0) {
 	  	echo "<span style='color:red;'>Somebody hacked you before you!</span>";
 
 	  }  else{
@@ -35,3 +39,10 @@
 	  
   }
 ?>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	
+	var name = '<?php echo $arr['name'] ?>';
+	$('#new-name').val(name);
+	Materialize.updateTextFields();
+</script>

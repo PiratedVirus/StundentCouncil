@@ -137,8 +137,8 @@
 
 
             <div class="input-field">
-                <input type="text" name="uname" id="new-name" style="text-transform: capitalize;" data-error=".errorTxt1" maxlength="50" value="<?php echo $name ?>" />
-                <label for="uname">Name</label>
+                <input type="text" name="uname" class="inser" id="new-name" style="text-transform: capitalize;" data-error=".errorTxt1" maxlength="50" value="" />
+                <label  for="uname">Name</label>
                 <div class="errorTxt1"></div>
             </div>
 
