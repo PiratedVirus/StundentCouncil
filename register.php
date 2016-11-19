@@ -10,45 +10,14 @@
 
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
    <link rel="stylesheet" href="Assets/css/base.css">
+   
    <script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>
+   <script src="Assets/js/ajaxvailator.js"></script>
 
-<!-- Script for Live enrollment number checking ! -->
-   <script type="text/javascript">
-     $(document).ready(function()
-     {    
-      $("#new-enroll").keyup(function()
-      {   
-        var name = $(this).val(); 
-        
-        if(name.length > 10)
-        {   
-          $(".errorTxt0").html('checking...');
-          
-          $.ajax({
-            
-            type : 'POST',
-            url  : 'core/enrollcheck.php',
-            data : $(this).serialize(),
-            success : function(data)
-                  {
-                       $(".errorTxt0").html(data);
-                    }
-            });
-            return false;
-          
-        }
-        else
-        {
-          $(".errorTxt0").html('');
-        }
-      });
-      
-     });
-   </script>
 </head>
 
 <style type="text/css">
-  .input-field div.error,.errorTxt0{
+  .input-field div.error,.errorTxt0,.errorTxt7{
     position: relative;
     top: -1rem;
     left: 0rem;
@@ -144,9 +113,9 @@
 
 
             <div class="input-field">
-                <input type="email" name="cemail" id="new-email"  value="<?php echo $email ?>" />
-                <label for="new-email" data-error = "<?php echo $idError; ?>">Email</label>
-                <span class="text-danger"><?php echo $emailError; ?></span>
+                <input type="email" name="cemail" id="new-email" data-error=".errorTxt7"/>
+                <label for="new-email">Email</label>
+                <div class="errorTxt7"></div>
             </div>
 
 
@@ -180,7 +149,7 @@
 
 
             </div>
-            <div sclass="errorTxt6" style="color: #F44336;font-size: 15px;"></div>
+            <div class="errorTxt6" style="color: #F44336;font-size: 15px;"></div>
 
 
 
@@ -206,76 +175,6 @@
 <script src="Assets/js/materialize.js"></script>
 <script src="Assets/js/init.js"></script>
 <script src="Assets/js/jquery.validate.min.js"></script>
-
-
-<script type="text/javascript">
-$("#formValidate").validate({
-    rules: {
-        enroll:{
-            required: true,
-            minlength:10
-        },
-        uname: {
-            required: true,
-            minlength: 6
-        },
-        cemail: {
-            required: true,
-            email:true
-        },
-        password: {
-           required: true,
-           minlength: 5
-        },
-       cpassword: {
-          required: true,
-          minlength: 5,
-          equalTo: "#password"
-        },
-       branch: {
-          required: true,
-          minlength: 5,
-        },
-       skill: {
-          required: true,
-          minlength: 2
-       },
- 
-      gender:"required",
-  },
-    //For custom messages
-  messages: {
-      uname:{
-          required: "Don't leave me alone! Give me a Name.",
-          minlength: "That must be your pet name ! Enter your full name."
-      },
-
-      password:{
-          required: "Don't leave me alone! Please fill me.",
-          minlength: "Uh Oh! too Weak ! Feed me at least 6 characters."
-      },
-      cpassword:{
-          required: "Don't leave me alone! Please fill me.",
-          minlength: "Where did you learn to type ? Type excat same password."
-      },
-      branch:{
-          required: "How could be you confuse on your Branch ?",
-          minlength: "No shortforms! Respect your Branch."
-      }
-      
-  },
-
-    errorElement : 'div',
-    errorPlacement: function(error, element) {
-      var placement = $(element).data('error');
-      if (placement) {
-        $(placement).append(error)
-      } else {
-        error.insertAfter(element);
-      }
-    }
- });
-</script>
 
 </body>
 </html>

@@ -7,7 +7,6 @@
   header("Location: home.php");
  }
 
-
  include_once 'dbconnect.php';
  global $conn;
 
@@ -42,73 +41,24 @@
   $skill = strip_tags($skill);
   $skill = htmlspecialchars($skill);
 
-
-
-  if (empty($enroll)) {
-
-   $error = true;
-   $enrollError = "Please enter your enrollment number.";
-
-  } else {
-
-   // check email exist or not
-   $query = "SELECT userId FROM users WHERE userId='$enroll'";
-
-   $result = mysqli_query($conn,$query);
-   $count = mysqli_num_rows($result);
-
-   if($count!=0){
-
-    $error = true;
-    $enrollError = "Provided Enrollment number is already in use.";
-
-   }else{
-    $tester = "SELECT enrollment FROM enrollment WHERE enrollment='$enroll'";
-    $result_tester = mysqli_query($conn,$tester);
-    $count_tester = mysqli_num_rows($result_tester);
-
-    if($count_tester==0){
-        $error = true;
-        $enrollError = "Provided Enrollment number not matched.";
-
-      }
-   }
- }
-
-     
-
-  // //basic email validation
-
-  // if(!filter_var($email,FILTER_VALIDATE_EMAIL) {
-
-  //  // check email exist or not
-  //  $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
-
-  //  $result = mysqli_query($conn,$query);
-  //  $count = mysqli_num_rows($result);
-  //  if($count!=0){
-
-  //   $error = true;
-  //   $emailError = "Provided Email is already in use.";
-
-  //  }
-  // }
-
-
-
-  // skill validation
-
-  if(empty($skill)){
-    $error = true;
-    $skillError = "Plese enter branch";
-  } else if(strlen($skill) < 2) {
-
-    $error = true;
-    $skillError = "Don't fool Us";
-  }
-
   // password encrypt using SHA256();
   $password = hash('sha256', $pass);
+
+  function encryptIt( $q ) {
+      $cryptKey  = 'qJB0rGtIn5UB1xG03efyCp';
+      $qEncoded      = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $cryptKey ), $q, MCRYPT_MODE_CBC, md5( md5( $cryptKey ) ) ) );
+      return( $qEncoded );
+  }
+
+  function decryptIt( $q ) {
+      $cryptKey  = 'qJB0rGtIn5UB1xG03efyCp';
+      $qDecoded      = rtrim( mcrypt_decrypt( MCRYPT_RIJNDAEL_256, md5( $cryptKey ), base64_decode( $q ), MCRYPT_MODE_CBC, md5( md5( $cryptKey ) ) ), "\0");
+      return( $qDecoded );
+  }
+
+  $encrypted = encryptIt( $pass );
+  $decrypted = decryptIt( $encrypted );
+
 
   // Gender
   $gender=$_POST['gender'];
@@ -116,7 +66,7 @@
   // if there's no error, continue to signup
   if( !$error ) {
 
-   $query = "INSERT INTO users(userId,userName,userEmail,userPass,skills,gender) VALUES('$enroll','$name','$email','$password','$skill','$gender')";
+   $query = "INSERT INTO users(userId,userName,userEmail,userPass,skills,gender) VALUES('$enroll','$name','$email','$encrypted','$skill','$gender')";
    $res = mysqli_query($conn,$query);
 
    if ($res) {

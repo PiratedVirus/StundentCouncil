@@ -17,13 +17,21 @@
 
 	  $tester=$dbcon->prepare("SELECT userId FROM users WHERE userId=:enroll");
 	  $tester->execute(array(':enroll'=>$enroll));
-	  $testcount=$tester->rowCount();
+	  $enrollcount=$tester->rowCount();
+
+	  // $emailtester=$dbcon->prepare("SELECT userEmail FROM users");
+	  // $emailtester->execute(array(':enroll'=>$enroll));
+	  // $emailcount=$emailtester->rowCount();
 
 
 	  $get = mysqli_query($conn,"SELECT name FROM enrollment WHERE enrollment = '$enroll'");
 	  $arr = mysqli_fetch_array($get);
 
-	  if($testcount!=0) {
+	  // if($emailcount!=0){
+	  // 	echo "<span style='color:red;'>Copy cat! Use your Email address.</span>";
+	  // }
+
+	  if($enrollcount!=0) {
 	  	echo "<span style='color:red;'>Somebody hacked you before you!</span>";
 
 	  }  else{
