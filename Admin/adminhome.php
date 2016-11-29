@@ -74,13 +74,12 @@
 
     
      <?php 
-      include '../Core/sorters.php';
+      include 'sorters.php';
       ?>
-    <a href="../Core/sorters.php" target="_blank">Print</a>
 
   </div>
 
-  <form action="../core/sort.php" id="combolink" class = "combo" method="POST">
+  <form action="" id="combolink" class = "combo" method="POST">
     <hr class="header-holder top-line">
     <div class="container" >
       <h4 class="form-header">Combo Sort</h4>

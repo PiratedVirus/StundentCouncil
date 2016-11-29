@@ -16,7 +16,7 @@
 	if ($conn->connect_error) {
 	     die("Connection failed: " . $conn->connect_error);
 	}
-
+// dec varibles for Combo sort
 	if (isset($_POST['FE'])) {
 		$fe = 'First Year';
 	  } else {
@@ -82,7 +82,9 @@
 	} else {
 		$mca ='';
 	}
+//combo sort ends here
 
+// Branch and year seprate sorting
 	if (isset($_POST['single-cse'])) {
 			$query_cse = "SELECT * FROM users WHERE Skills = 'Computer Science And Engineering'";
 
@@ -92,7 +94,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $cse_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -109,7 +111,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $mech_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -126,7 +128,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -143,7 +145,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -160,7 +162,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -177,7 +179,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -194,7 +196,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -211,7 +213,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -228,7 +230,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -245,7 +247,7 @@
 			         echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
-			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
+			         	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			         }
 			         echo "</table>";
 			    } else {
 			         echo "0 results";
@@ -253,34 +255,37 @@
 
 		}
 
-		$sql = "SELECT * FROM users WHERE (academic_year = '$fe' or academic_year = '$se' or academic_year = '$te' or academic_year = '$be') and ( Skills = '$cse' or Skills = '$mech' or Skills = '$civil' or Skills = '$entc' or Skills = '$it' or Skills = '$elect' ) ";
+// Query for combo sort
+		$sql = "SELECT * FROM users WHERE (academic_year = '$fe' or academic_year = '$se' or academic_year = '$te' or academic_year = '$be') AND ( Skills = '$cse' or Skills = '$mech' or Skills = '$civil' or Skills = '$entc' or Skills = '$it' or Skills = '$elect' ) ";
 		$result = $conn->query($sql);
+
 
 		if ($result->num_rows > 0) {
 			 echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			 // output data of each row
 			 while($row = $result->fetch_assoc()) {
-			 	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			 }
+			 	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$row[mobile]\">".$row["mobile"]."</a></span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";			 }
 			 echo "</table>";
-		} else {
-			 // echo "string in sql";
-			 // echo "0 results";
-		}
+		} 
+
+	// Branch and year seprate sorting ends here
+
 
 	$checkboxes = "SELECT * FROM skills WHERE app = '$app' OR web = '$web' OR photoshop ='$graphics' OR animation = '$animations' OR networking = '$networking' OR autocad = '$autocad' OR katia = '$katia' OR robocon ='$robocon'  OR acting = '$act' OR dance = '$dance' OR ankering = '$anker' OR singing = '$sing' OR drama ='$drama' OR writing = '$writing' OR poetry = '$poetry' OR drawing = '$drawing' OR decoration ='$decoration' OR painting ='$paint' OR cricket ='$cricket' OR badminton='$badminton' OR football ='$football' OR chess ='$chess' or kabbadi ='$kabbadi' OR vollyball ='$vollyball' or PHP ='$PHP' or Video ='$Video' or Photo ='$Photo' or CNC ='$CNC'OR Hypermesh ='$Hypermesh'";
+
 	$result = $conn->query($checkboxes);
 
 	if ($result->num_rows > 0) {
 		echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 		 // output data of each row
 		 while($row = $result->fetch_assoc()) {
-		 	echo "<tr> <td class =\"uppercase\"> ".$row["userId"]." </td> <td class =\"uppercase bold-text\"> ".$row["userName"]." </td>  <td>".$row["Skills"]."</td>  <td>".$row["academic_year"]."</td> <td><span class =\"bold-text\"> ".$row["mobile"]."</span> <br> ".$row["userEmail"]." </td>  <td>".$row["Gender"]."</td>   </tr>";
+		 	$checkboxes_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+		 	$result_user = $conn->query($checkboxes_user);
+		 	$newrow = $result_user->fetch_assoc();
+		 	echo "<tr> <td class =\"uppercase\"> ".$newrow["userId"]." </td> <td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  <td>".$newrow["Skills"]."</td>  <td>".$newrow["academic_year"]."</td> <td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   </tr>";
 		 }
 		 echo "</table>";
-	} else {
-		 // echo "string in sql";
-		 // echo "0 results";
-	}
+	} 
 
 	
 
