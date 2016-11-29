@@ -36,7 +36,23 @@
 		// if there's no error, continue to login
 		if (!$error) {
 			
-			$password = hash('sha256', $pass); // password hashing using SHA256
+			$password = hash('sha256', $pass);
+
+			function encryptIt( $q ) {
+			    $cryptKey  = 'qJB0rGtIn5UB1xG03efyCp';
+			    $qEncoded      = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $cryptKey ), $q, MCRYPT_MODE_CBC, md5( md5( $cryptKey ) ) ) );
+			    return( $qEncoded );
+			}
+
+			function decryptIt( $q ) {
+			    $cryptKey  = 'qJB0rGtIn5UB1xG03efyCp';
+			    $qDecoded      = rtrim( mcrypt_decrypt( MCRYPT_RIJNDAEL_256, md5( $cryptKey ), base64_decode( $q ), MCRYPT_MODE_CBC, md5( md5( $cryptKey ) ) ), "\0");
+			    return( $qDecoded );
+			}
+
+			$encrypted = encryptIt( $pass );
+			$decrypted = decryptIt( $encrypted );
+
 		
 			//passing array for retring whole info
 			$res=mysqli_query($conn,"SELECT userId, userName, userPass FROM users WHERE userId='$id'");
@@ -91,7 +107,7 @@
 
 
 
-			if( $count == 1 && $row['userPass']==$password ) {
+			if( $count == 1 && $row['userPass']==$encrypted ) {
 				$_SESSION['user'] = $row['userId'];
 				header("Location: home.php");
 

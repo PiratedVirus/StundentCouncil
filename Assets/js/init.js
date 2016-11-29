@@ -8,17 +8,6 @@
       selectYears: 50 // Creates a dropdown of 15 years to control year
     });
 
-    $('input.branch').autocomplete({
-      data: {
-        "Computer Science And Engineering (CSE)": 'Assets/img/cse.png',
-        "Information Technology (IT)": 'Assets/img/it.png',
-        "Mechanical Engineering": 'Assets/img/mech.png',
-        "Civil Engineering": 'Assets/img/civil.png',
-        "Electrical Engineering": 'Assets/img/electrical.png',
-        "Electronics And Telecommunications (ENTC)": 'Assets/img/entc.png',
-        "MCA": 'Assets/img/mca.png'
-      }
-    });
 
 
     $('input.future').autocomplete({
@@ -33,15 +22,6 @@
           }
     });
 
-
-    $('input.year').autocomplete({
-      data: {
-            "First Year": null,
-            "Second Year": null,
-            "Third Year": null,
-            "Final Year": null
-          }
-    });
 
     $('input.state').autocomplete({
       data: {
@@ -83,6 +63,7 @@
     });
 
     $(document).ready(function(){
+
       $('.tooltipped').tooltip({delay: 50});
       $('.carousel').carousel();
       
@@ -118,15 +99,10 @@
            cpassword: {
               required: true,
               minlength: 5,
-              equalTo: "#password"
+              equalTo: "#mpassword"
             },
-           branch: {
-              required: true,
-              minlength: 3
-            },
-
-     
-          gender:"required",
+          branch:"required",
+          gender:"required"
       },
         //For custom messages
       messages: {
@@ -144,8 +120,8 @@
               minlength: "Where did you learn to type ? Type excat same password."
           },
           branch:{
-              required: "How could be you confuse on your Branch ?",
-              minlength: "No shortforms! Respect your Branch."
+              required: "How could be you confuse on your Branch ?"
+              // minlength: "No shortforms! Respect your Branch."
           }
           
       },

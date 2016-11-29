@@ -13,11 +13,15 @@
    
    <script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>
    <script src="Assets/js/ajaxvailator.js"></script>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script> -->
+
+
+
 
 </head>
 
 <style type="text/css">
-  .input-field div.error,.errorTxt0,.errorTxt7{
+  .input-field div.error,.errorTxt0,.errorTxt7,.errorTxt8{
     position: relative;
     top: -1rem;
     left: 0rem;
@@ -120,9 +124,13 @@
 
 
             <div class="input-field">
-              <label for="password">Password</label>
-              <input  id="password" type="password" name="password" data-error=".errorTxt3">
-              <div class="errorTxt3"></div>
+            <label for="mpassword">Enter password</label>
+            <input type="password" name="password" id="mpassword">
+            <div class="progress">
+                <div class="determinate" id="mpassword-strength-meter" style="width: 70%"></div>
+            </div>
+
+            <p id="mpassword-strength-text"></p>
             </div>
 
             <div class="input-field">
@@ -131,11 +139,24 @@
               <div class="errorTxt4"></div>
             </div>
 
+
             <div class="input-field">
-              <label for="branch">Branch</label>
-              <input id="branch" type="text" name="branch" class="branch" data-error=".errorTxt5">
+              <select required id="branch" name="branch" class="branch required"  data-error=".errorTxt5">
+                <option value="" disabled selected="selected" >Select Branch</option>
+                <option value="Civil Engineering" data-icon="Assets/img/civil.png" class="circle">Civil Engineering</option>
+                <option value="Computer Science And Engineering" data-icon="Assets/img/cse.png" class="circle">Computer Science And Engineering</option>
+                <option value="Electrical Engineering" data-icon="Assets/img/electrical.png" class="circle">Electrical Engineering</option>
+                <option value="Electronics And Telecommunications" data-icon="Assets/img/entc.png" class="circle">Electronics And Telecommunications</option>
+                <option value="Information Technology" data-icon="Assets/img/it.png" class="circle">Information Technology</option>
+                <option value="Master of Computer Application" data-icon="Assets/img/mca.png" class="circle">Master of Computer Application</option>
+                <option value="Mechanical Engineering" data-icon="Assets/img/mech.png" class="circle">Mechanical Engineering</option>
+              </select>
+              <label for="">Branch</label>
+
               <div class="errorTxt5"></div>
             </div>
+
+
 
 
             <div class="input-field gender">
@@ -172,9 +193,12 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.1/zxcvbn.js"></script>
+<script src="Assets/js/password.js"></script>
 <script src="Assets/js/materialize.js"></script>
 <script src="Assets/js/init.js"></script>
 <script src="Assets/js/jquery.validate.min.js"></script>
+
 
 </body>
 </html>

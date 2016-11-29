@@ -1,9 +1,12 @@
 $(document).ready(function(){    
+  $('select').material_select();
+
    $("#new-enroll").keyup(function(){   
      var name = $(this).val(); 
      
      if(name.length > 10){   
-       $(".errorTxt0").html('checking...');
+       $(".errorTxt0").html("Checking....Won't Take 2 Billions hours !");
+
        
        $.ajax({
          
@@ -27,7 +30,7 @@ $(document).ready(function(){
      var name = $(this).val(); 
      
      if(name.length > 2){   
-       $(".errorTxt7").html('checking...');
+       $(".errorTxt7").html("Checking....Won't Take 2 Billions hours !");
        
        $.ajax({
          

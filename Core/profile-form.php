@@ -52,8 +52,11 @@
  		      ob_start();
  		      session_start();
 
-          $get = mysqli_query($conn,"SELECT * FROM users WHERE userId = '".$_SESSION['stud_id']."'");
+          $get = mysqli_query($conn,"SELECT * FROM skills WHERE userId = '".$_SESSION['stud_id']."'");
           $arr = mysqli_fetch_array($get);
+
+          $getuser = mysqli_query($conn,"SELECT * FROM users WHERE userId = '".$_SESSION['stud_id']."'");
+          $arruser = mysqli_fetch_array($getuser);
 
  		    ?>
 
@@ -84,7 +87,7 @@
  		        </div>
 
  		        <div class="input-field col s12">
- 		          <input id="icon_prefix" type="email" name="email" value="<?php echo $_SESSION['stud_email'] ?>" class="validate">
+ 		          <input id="icon_prefix" type="email" name="cemail" value="<?php echo $_SESSION['stud_email'] ?>" class="validate">
  		          <label for="icon_prefix">Email</label>
  		        </div>
 
@@ -99,10 +102,18 @@
  		          <input id="birthdate" type="date" name="dob" value="<?php echo $_SESSION['stud_dob'] ?>" class="datepicker">
  		        </div>
 
- 		        <div class="input-field col s12 m6">
- 		          <input id="icon_prefix" type="text" name="year" value="<?php echo $_SESSION['stud_academic_year'] ?>" class="year">
- 		          <label for="icon_prefix">Year of Study</label>
- 		        </div>
+
+            <div class="input-field col s12 m6">
+              <select required id="icon_prefix" type="text" name="year" class="year">
+                <option value="" disabled selected="selected" >Select Year</option>
+                <option value="First Year" >First Year</option>
+                <option value="Second Year" >Second Year</option>
+                <option value="Third Year" >Third Year</option>
+                <option value="Final Year" >Final Year</option>
+              </select>
+              <label for="">Year of Study</label>
+
+            </div>
 
 
  		        <div class="input-field col m6 s12">
@@ -215,7 +226,7 @@
  		        	          	    </p>
 
  		        					<div class="input-field col s12">
- 		        					  <input id="high-tech" name="high_tech" type="text" length="300" maxlength="300" class="high-tech">
+ 		        					  <input id="high-tech" name="high_tech" type="text" length="300" value="<?php echo $arr['hightech'] ?>" maxlength="300" class="high-tech">
  		        					  <label for="high-tech">Achivements in Technical</label>
  		        					</div>
 
@@ -228,12 +239,12 @@
 
  		        	          <div id="Social" class="col s12">
  		        					<p class="col m4 s6">
- 		        				      <input type="checkbox" name="act" id="act" />
+ 		        				      <input type="checkbox" name="act" id="act" <?php if ($arr['acting'] == '1') echo "checked='checked'"; ?> />
  		        				      <label for="act">Acting</label>
  		        				    </p>
 
  		        				    <p class="col m4 s6">
- 		        				      <input type="checkbox" name="Photography" id="Photography" <?php if ($arr['Photography'] == '1') echo "checked='checked'"; ?> />
+ 		        				      <input type="checkbox" name="Photography" id="Photography" <?php if ($arr['Photo'] == '1') echo "checked='checked'"; ?> />
  		        				      <label for="Photography">Photography</label>
  		        				    </p>
 
@@ -272,8 +283,8 @@
  		        				      <label for="Drawing">Drawing</label>
  		        				    </p>
  		        				    <p class="col m4 s6">
- 		        				      <input type="checkbox" name="Decoraction / Design" id="Decoraction / Design" <?php if ($arr['decoraction'] == '1') echo "checked='checked'"; ?> />
- 		        				      <label for="Decoraction / Design">Decoration / Design</label>
+ 		        				      <input type="checkbox" name="decoration / Design" id="decoration / Design" <?php if ($arr['decoration'] == '1') echo "checked='checked'"; ?> />
+ 		        				      <label for="decoration / Design">Decoration / Design</label>
  		        				    </p>
  		        				    <p class="col m4 s6">
  		        				      <input type="checkbox" name="Painting" id="Painting" <?php if ($arr['painting'] == '1') echo "checked='checked'"; ?> />
@@ -281,7 +292,7 @@
  		        				    </p>
 
  		        				    <div class="input-field col s12">
- 		        				      <input id="high-cult" name="high_cult" type="text" length="300" maxlength="300" class="high-cult">
+ 		        				      <input id="high-cult" name="high_cult" type="text" length="300" value="<?php echo $arr['highcult'] ?>" maxlength="300" class="high-cult">
  		        				      <label for="high-cult">Achivements in Cultural</label>
  		        				    </div>
 
@@ -319,7 +330,7 @@
  		        		          	</p>
 
  		        		          	<div class="input-field col s12">
- 		        		          	  <input id="high-sport" name="high_sport" type="text" length="300" maxlength="300" class="high-sport">
+ 		        		          	  <input id="high-sport" name="high_sports" type="text" length="300" value="<?php echo $arr['highsports'] ?>" maxlength="300" class="high-sport">
  		        		          	  <label for="high-sport">Achivements in Sports</label>
  		        		          	</div>
 
@@ -327,11 +338,11 @@
 
  		        	          <div id="Managment" class="col s12">
  		        		          	<p class="col m4 s6">
- 		        		          	  <input type="checkbox" name="Leader" id="Leader"  />
+ 		        		          	  <input type="checkbox" name="Leader" id="Leader" <?php if ($arr['Leader'] == '1') echo "checked='checked'"; ?> />
  		        		          	  <label for="Leader">Leader</label>
  		        		          	</p>
  		        		          	<p class="col m4 s6">
- 		        		          	  <input type="checkbox" name="Member" id="Member"  />
+ 		        		          	  <input type="checkbox" name="Member" id="Member" <?php if ($arr['Member'] == '1') echo "checked='checked'"; ?> />
  		        		          	  <label for="Member">Member</label>
  		        		          	</p>
  		        	          </div>
@@ -340,32 +351,32 @@
  		        <div class="input-field col s12" style="margin-bottom: 50px;">
  		          <h6 class="edit-head">Member Of</h6>
  		          <p class="col m4 s6">
- 		            <input type="checkbox" name="SAT" id="SAT"  />
+ 		            <input type="checkbox" name="SAT" id="SAT" <?php if ($arr['sat'] == '1') echo "checked='checked'"; ?> />
  		            <label for="SAT">SAT</label>
  		          </p>
 
  		          <p class="col m4 s6">
- 		            <input type="checkbox" name="TNP" id="TNP"  />
+ 		            <input type="checkbox" name="TNP" id="TNP" <?php if ($arr['tnp'] == '1') echo "checked='checked'"; ?> />
  		            <label for="TNP">TNP</label>
  		          </p>
 
  		          <p class="col m4 s6">
- 		            <input type="checkbox" name="BAJA" id="BAJA"  />
+ 		            <input type="checkbox" name="BAJA" id="BAJA" <?php if ($arr['baja'] == '1') echo "checked='checked'"; ?> />
  		            <label for="BAJA">BAJA</label>
  		          </p>
 
               <p class="col m4 s6">
-                <input type="checkbox" name="ROBOCON" id="ROBOCON"  />
+                <input type="checkbox" name="ROBOCON" id="ROBOCON" <?php if ($arr['robocon'] == '1') echo "checked='checked'"; ?> />
                 <label for="ROBOCON">ROBOCON</label>
               </p>
 
  		          <p class="col m4 s6">
- 		            <input type="checkbox" name="Supra" id="Supra"  />
+ 		            <input type="checkbox" name="Supra" id="Supra" <?php if ($arr['supra'] == '1') echo "checked='checked'"; ?> />
  		            <label for="Supra">SUPRA</label>
  		          </p>
 
               <p class="col m4 s6">
-                <input type="checkbox" name="E-CELL" id="E-CELL"  />
+                <input type="checkbox" name="E-CELL" id="E-CELL" <?php if ($arr['ecell'] == '1') echo "checked='checked'"; ?> />
                 <label for="E-CELL">E-CELL</label>
               </p>
 
@@ -377,12 +388,12 @@
  		        </div>
 
  		        <div class="input-field col s12" style="margin-bottom: 50px;">
- 		          <input id="future" name="future" type="text" class="future">
+ 		          <input id="future" name="future" type="text" value="<?php echo $arruser['future'] ?>" class="future">
  		          <label for="future">After GECA (PG / Job..) </label>
  		        </div>
 
             <div class="input-field col s12" style="margin-bottom: 30px;">
-              <input id="sugg" name="sugg" type="text" class="sugg">
+              <input id="sugg" name="sugg" type="text" value="<?php echo $arruser['sugg'] ?>" class="sugg">
               <label for="sugg">Suggestions</label>
             </div>
 
@@ -392,7 +403,7 @@
 
               <div class="col m2 s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Priority ">                    
 
-                <input type="number" name='rank_wings' class="center" id="rank"  min="1" max="3" placeholder="Rank" maxlength="1" >
+                <input type="number" name='rank_wings' class="center" value="<?php echo $arr['rankwings'] ?>" id="rank"  min="1" max="3" placeholder="Rank" maxlength="1" >
               </div>
 
               <div class="col m2 s6 event center teal-text">
@@ -400,26 +411,27 @@
               </div>
 
               <div class="col m8 s12">
-                <input type="text" name="why_wings" class="details-rank"  placeholder="Why you prefer Wings ?">
+                <input type="text" name="why_wings" class="details-rank" value="<?php echo $arr['whywing'] ?>" placeholder="Why you prefer Wings ?">
               </div>
 
-
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
 
               <div class="col m2 s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip=" Priority ">
-                <input type="number" name='rank_gahter' class="center" id="rank"  min="1" max="3" placeholder="Rank" maxlength="1" >
+                <input type="number" name='rank_gahter' class="center" id="rank" value="<?php echo $arr['rankgather'] ?>" min="1" max="3" placeholder="Rank" maxlength="1" >
               </div>
 
-              <div class="col m2 s6 event center teal-text" name="rank-gahter">
+              <div class="col m2 s6 event center teal-text">
                 <h6 style="position: relative;top: 15px;">GATHERING</h6>
               </div>
 
               <div class="col m8 s12">
-                <input type="text" name="why_gather" class="details-rank" id="ranker" placeholder="Why you prefer GATHERING ?">
+                <input type="text" name="why_gather" class="details-rank" id="ranker" value="<?php echo $arr['whygather'] ?>" placeholder="Why you prefer GATHERING ?">
               </div>
 
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
 
               <div class="col m2 s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Priority ">
-                <input type="number" name='rank_sport' class="center" id="rank" min="1" max="3" placeholder="Rank" maxlength="1" >
+                <input type="number" name='rank_sport' class="center" id="rank" min="1" value="<?php echo $arr['ranksport'] ?>" max="3" placeholder="Rank" maxlength="1" >
               </div>
 
               <div class="col m2 s6 event center teal-text">
@@ -427,8 +439,10 @@
               </div>
 
               <div class="col m8 s12">
-                <input type="text" name="why_sport" class="details-rank" id="ranker" placeholder="Why you prefer SPORTS WEEK ?">
+                <input type="text" name="why_sport" class="details-rank" id="ranker" value="<?php echo $arr['whysport'] ?>" placeholder="Why you prefer SPORTS WEEK ?">
               </div>
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
 
         </div>
 
@@ -486,15 +500,15 @@
  </footer>
 
  <script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>
+ <script>
+   $(document).ready(function(){
+    $('select').material_select();
+    $('#modal1').openModal();
+
+   });
+ </script>
  <script src="../Assets/js/materialize.js"></script>
  <script src="../Assets/js/init.js"></script>
- <script>
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('#modal1').openModal();
-    // $('.modal-trigger').leanModal();
-  });
 
- </script>
  </body>
  </html>

@@ -65,20 +65,20 @@
 
 
   <?php 
-  
-        $sql = "SELECT * FROM users  WHERE userId ='".$_SESSION['stud_id']."'";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
+   
+         $sql = "SELECT * FROM users  WHERE userId ='".$_SESSION['stud_id']."'";
+         $result = mysqli_query($conn, $sql);
+         $row = mysqli_fetch_assoc($result);
 
-        if( $row['sat_notify'] == '1'){
-          include 'Admin/notify.php';
-        }else{
-          include 'Core/msg.php';
-        }
+         if( $row['sat_notify'] == '1'){
+           include 'Admin/notify.php';
+         }else{
+           include 'Core/msg.php';
+         }
 
-        $conn->close();
+         $conn->close();
 
-   ?>
+    ?>
 
 
   <footer class="page-footer white">

@@ -47,10 +47,12 @@
 	  
   }
 ?>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 <script>
 	
 	var name = '<?php echo $arr['name'] ?>';
 	$('#new-name').val(name);
 	Materialize.updateTextFields();
+	$('select').material_select();
+
 </script>

@@ -36,12 +36,16 @@
 		    $future = $_POST['future'];
 		}
 
+		if ( ! empty($_POST['sugg'])){
+		    $sugg = $_POST['sugg'];
+		}
+
 		if ( ! empty($_POST['high_tech'])){
 		    $high_tech = $_POST['high_tech'];
 		}
 
-		if ( ! empty($_POST['high_cul'])){
-		    $high_cul = $_POST['high_cul'];
+		if ( ! empty($_POST['high_cult'])){
+		    $high_cult = $_POST['high_cult'];
 		}
 
 		if ( ! empty($_POST['high_sports'])){
@@ -77,22 +81,11 @@
 		    $why_sport = $_POST['why_sport'];
 		}
 
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET userEmail = '$email' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET high_tech = '$high_tech' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET high_cul = '$high_cul' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET high_sports = '$high_sports' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET dob = '$dob' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET mobile = '$mobile' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET academic_year = '$year' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET state = '$state' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET local_hostel = '$res' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET future = '$future' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET why_wing = '$why_wings' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET why_sport = '$sugg' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET why_gather = '$why_gather' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET rank_wings = '$rank_wings' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET rank_gather = '$rank_gather' WHERE userId = '".$_SESSION['stud_id']."'");
-		    $sql_namenew = mysqli_query($conn,"UPDATE users SET rank_sport = '$rank_sport' WHERE userId = '".$_SESSION['stud_id']."'");
+		    $sql_userstable = mysqli_query($conn,"UPDATE users SET userEmail = '$email',academic_year = '$year',mobile = '$mobile',dob = '$dob',future = '$future',state = '$state',sugg = '$sugg' WHERE userId = '".$_SESSION['stud_id']."'");
+
+		    $sql_skillstable = mysqli_query($conn,"UPDATE skills SET highsports = '$high_sports',highcult = '$high_cult',hightech = '$high_tech',rankgather = '$rank_gather',rankwings = '$rank_wings',ranksport = '$rank_sport',whygather = '$why_gather',whysport = '$why_sport',whywing = '$why_wings' WHERE userId = '".$_SESSION['stud_id']."'");
+		   
+
 
 
 
@@ -124,9 +117,9 @@
 		          <a href="#"><span  class="black-text name slide-username"> <b><?php echo $_SESSION['stud_name']; ?></b></span></a>
 		          <a href="#"><span class="black-text email"><?php echo $_SESSION['stud_email']; ?></span></a>
 		        </div></li>
-		        <li><a href="#"><img class="slideicon" src="../Assets/img/eye.png"  alt="">View Profile</a></li>
+<!-- 		        <li><a href="#"><img class="slideicon" src="../Assets/img/eye.png"  alt="">View Profile</a></li>
 		        <li><a href="edit.php"><img class="slideicon" src="../Assets/img/editpro.png"  alt="">Edit Profile</a></li>
-		        <li><a href="../logout.php?logout"><img class="slideicon" src="../Assets/img/logout.png"  alt="">Log Out</a></li>
+ -->		        <li><a href="../logout.php?logout"><img class="slideicon" src="../Assets/img/logout.png"  alt="">Log Out</a></li>
 		        <li><div class="divider"></div></li>
 		        <li><a href="../default.html"><b> STUDENT COUNCIL</b></a></li>
 		        <li><a href="../default.html#team-link">Team</a></li>

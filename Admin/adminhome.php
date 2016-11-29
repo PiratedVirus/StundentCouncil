@@ -394,8 +394,8 @@
                             <label for="Drawing">Drawing</label>
                           </p>
                           <p class="col m4 s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
-                            <input type="checkbox" name="Decoraction / Design" id="Decoraction / Design"  />
-                            <label for="Decoraction / Design">Decoraction / Design</label>
+                            <input type="checkbox" name="decoration / Design" id="decoration / Design"  />
+                            <label for="decoration / Design">decoration / Design</label>
                           </p>
                           <p class="col m4 s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
                             <input type="checkbox" name="Painting" id="Painting"  />

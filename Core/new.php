@@ -55,9 +55,9 @@
       $qDecoded      = rtrim( mcrypt_decrypt( MCRYPT_RIJNDAEL_256, md5( $cryptKey ), base64_decode( $q ), MCRYPT_MODE_CBC, md5( md5( $cryptKey ) ) ), "\0");
       return( $qDecoded );
   }
-
   $encrypted = encryptIt( $pass );
   $decrypted = decryptIt( $encrypted );
+  // echo($decrypted); 
 
 
   // Gender
@@ -66,12 +66,15 @@
   // if there's no error, continue to signup
   if( !$error ) {
 
+   $addskill = mysqli_query($conn,"INSERT INTO skills(userId,userName) VALUES('$enroll','$name')");
    $query = "INSERT INTO users(userId,userName,userEmail,userPass,skills,gender) VALUES('$enroll','$name','$email','$encrypted','$skill','$gender')";
+
    $res = mysqli_query($conn,$query);
 
    if ($res) {
     $errTyp = "success";
-    $errMSG = "Successfully registered, you may login now";
+    $link = "<a href='index.php'>Login Now</a>";
+    $errMSG = "Successfully registered, you may $link !";
     unset($name);
     unset($enroll);
     unset($email);
