@@ -566,7 +566,6 @@ meter[value="4"]::-moz-meter-bar {
 }
 
 .feedback {
-  color: #9ab;
   font-size: 90%;
   padding: 0 .25em;
   margin-top: 1em;

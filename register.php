@@ -21,7 +21,7 @@
 </head>
 
 <style type="text/css">
-  .input-field div.error,.errorTxt0,.errorTxt7,.errorTxt8{
+  .input-field div.error,.errorTxt0,.errorTxt7,.errorTxt8,#mpassword-strength-text{
     position: relative;
     top: -1rem;
     left: 0rem;
@@ -127,10 +127,9 @@
             <label for="mpassword">Enter password</label>
             <input type="password" name="password" id="mpassword">
             <div class="progress">
-                <div class="determinate" id="mpassword-strength-meter" style="width: 70%"></div>
+                <div class="determinate passmeter" id="mpassword-strength-meter" style="width: 0%"></div>
             </div>
-
-            <p id="mpassword-strength-text"></p>
+            <div style="padding-top: 15px;" id="mpassword-strength-text" class='errorTxt3'></div>
             </div>
 
             <div class="input-field">
@@ -141,14 +140,14 @@
 
 
             <div class="input-field">
-              <select required id="branch" name="branch" class="branch required"  data-error=".errorTxt5">
+              <select required id="branch" name="branch" class="branch"  data-error=".errorTxt5">
                 <option value="" disabled selected="selected" >Select Branch</option>
                 <option value="Civil Engineering" data-icon="Assets/img/civil.png" class="circle">Civil Engineering</option>
                 <option value="Computer Science And Engineering" data-icon="Assets/img/cse.png" class="circle">Computer Science And Engineering</option>
                 <option value="Electrical Engineering" data-icon="Assets/img/electrical.png" class="circle">Electrical Engineering</option>
                 <option value="Electronics And Telecommunications" data-icon="Assets/img/entc.png" class="circle">Electronics And Telecommunications</option>
                 <option value="Information Technology" data-icon="Assets/img/it.png" class="circle">Information Technology</option>
-                <option value="Master of Computer Application" data-icon="Assets/img/mca.png" class="circle">Master of Computer Application</option>
+                <option value="MCA" data-icon="Assets/img/mca.png" class="circle">Master of Computer Application</option>
                 <option value="Mechanical Engineering" data-icon="Assets/img/mech.png" class="circle">Mechanical Engineering</option>
               </select>
               <label for="">Branch</label>
@@ -194,7 +193,7 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.1/zxcvbn.js"></script>
-<script src="Assets/js/password.js"></script>
+<!-- <script src="Assets/js/password.js"></script> -->
 <script src="Assets/js/materialize.js"></script>
 <script src="Assets/js/init.js"></script>
 <script src="Assets/js/jquery.validate.min.js"></script>

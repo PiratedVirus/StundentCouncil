@@ -336,10 +336,6 @@
                                   <label for="Rassberry Pie">Rassberry Pie</label>
                                 </p>
 
-                        <div class="input-field col s12">
-                          <input id="high-tech" name="high-tech" type="text" length="300" maxlength="300" class="high-tech">
-                          <label for="high-tech">Achivements in Technical</label>
-                        </div>
 
 
 
@@ -402,10 +398,6 @@
                             <label for="Painting">Painting</label>
                           </p>
 
-                          <div class="input-field col s12">
-                            <input id="high-cult" name="high-cult" type="text" length="300" maxlength="300" class="high-cult">
-                            <label for="high-cult">Achivements in Cultural</label>
-                          </div>
 
                            </div>
 
@@ -439,10 +431,6 @@
                                 <label for="Vollyball">Vollyball</label>
                               </p>
 
-                              <div class="input-field col s12">
-                                <input id="high-sport" name="high-sport" type="text" length="300" maxlength="300" class="high-sport">
-                                <label for="high-sport">Achivements in Sports</label>
-                              </div>
 
                          </div>
 

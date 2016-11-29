@@ -32,8 +32,15 @@
 		    $res = $_POST['res'];
 		}
 
+
+
 		if ( ! empty($_POST['future'])){
-		    $future = $_POST['future'];
+
+			$string = $_POST['future'];
+			$future = '';
+			foreach($string as $val){
+				$future .= $val.',';
+			}
 		}
 
 		if ( ! empty($_POST['sugg'])){
@@ -83,7 +90,7 @@
 
 		    $sql_userstable = mysqli_query($conn,"UPDATE users SET userEmail = '$email',academic_year = '$year',mobile = '$mobile',dob = '$dob',future = '$future',state = '$state',sugg = '$sugg' WHERE userId = '".$_SESSION['stud_id']."'");
 
-		    $sql_skillstable = mysqli_query($conn,"UPDATE skills SET highsports = '$high_sports',highcult = '$high_cult',hightech = '$high_tech',rankgather = '$rank_gather',rankwings = '$rank_wings',ranksport = '$rank_sport',whygather = '$why_gather',whysport = '$why_sport',whywing = '$why_wings' WHERE userId = '".$_SESSION['stud_id']."'");
+		    $sql_skillstable = mysqli_query($conn,"UPDATE skills SET future = '$future',highsports = '$high_sports',highcult = '$high_cult',hightech = '$high_tech',rankgather = '$rank_gather',rankwings = '$rank_wings',ranksport = '$rank_sport',whygather = '$why_gather',whysport = '$why_sport',whywing = '$why_wings' WHERE userId = '".$_SESSION['stud_id']."'");
 		   
 
 

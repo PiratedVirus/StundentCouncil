@@ -44,7 +44,7 @@
 
  <div class="container" style="padding-top: 50px;">
  	<div class="row">
- 	    <form name='form' method="POST" action="testing.php" class="col s12">
+ 	    <form name='form' id="updateform" method="POST" action="testing.php" class="col s12">
 
  		    <?php
 
@@ -87,24 +87,30 @@
  		        </div>
 
  		        <div class="input-field col s12">
- 		          <input id="icon_prefix" type="email" name="cemail" value="<?php echo $_SESSION['stud_email'] ?>" class="validate">
+ 		          <input  required="requried" id="icon_prefix" type="email" name="cemail" value="<?php echo $_SESSION['stud_email'] ?>" class="validate">
  		          <label for="icon_prefix">Email</label>
+              <div class="errorTxt11"></div>
+
  		        </div>
 
 
 
  		        <div class="input-field col s12 m6">
- 		          <input id="icon_telephone" maxlength="10" type="tel" name="mobile" value="<?php echo $_SESSION['stud_mobile'] ?>" class="validate">
+ 		          <input  required="requried"  id="icon_telephone" maxlength="10" type="tel" name="mobile" value="<?php echo $_SESSION['stud_mobile'] ?>" class="validate">
  		          <label for="icon_telephone">Mobile Number</label>
+              <div class="errorTxt12"></div>
+
  		        </div>
- 		        <div class="input-field col m6 s12">
- 		          <label for="birthdate">Birth Date</label>
- 		          <input id="birthdate" type="date" name="dob" value="<?php echo $_SESSION['stud_dob'] ?>" class="datepicker">
- 		        </div>
+
+            <div class="input-field col m6 s12">
+              <label for="birthdate">Birth Date</label>
+              <input requried required="requried" id="birthdate" type="date" name="dob" value="<?php echo $_SESSION['stud_dob'] ?>" class="datepicker">
+            </div>
+
 
 
             <div class="input-field col s12 m6">
-              <select required id="icon_prefix" type="text" name="year" class="year">
+              <select required  required="requried" id="icon_prefix" type="text" name="year" class="year">
                 <option value="" disabled selected="selected" >Select Year</option>
                 <option value="First Year" >First Year</option>
                 <option value="Second Year" >Second Year</option>
@@ -117,7 +123,7 @@
 
 
  		        <div class="input-field col m6 s12">
- 		          <input id="icon_prefix" type="text" name="state" value="<?php echo $_SESSION['stud_state'] ?>" class="state">
+ 		          <input  required="requried" id="icon_prefix" type="text" name="state" value="<?php echo $_SESSION['stud_state'] ?>" class="state">
  		          <label for="icon_prefix">State</label>
  		        </div>
 
@@ -301,7 +307,7 @@
 
  		        	          <div id="Sports" class="col s12">
  		        		          	<p class="col m4 s6">
- 		        		          	  <input type="checkbox" checked="checked" name="Cricket" id="Cricket"<?php if ($arr['cricket'] == '1') echo "checked='checked'"; ?> />
+ 		        		          	  <input type="checkbox" checked="checked" name="Cricket" id="Cricket" <?php if ($arr['cricket'] == '1') echo "checked='checked'"; ?> />
  		        		          	  <label for="Cricket">Cricket</label>
  		        		          	</p>
  		        		          	<p class="col m4 s6">
@@ -387,10 +393,25 @@
 
  		        </div>
 
- 		        <div class="input-field col s12" style="margin-bottom: 50px;">
- 		          <input id="future" name="future" type="text" value="<?php echo $arruser['future'] ?>" class="future">
+<!--  		        <div class="input-field col s12" style="margin-bottom: 50px;">
+ 		          <input  required="requried" id="future" name="future" type="text" value="<?php echo $arruser['future'] ?>" class="future">
  		          <label for="future">After GECA (PG / Job..) </label>
- 		        </div>
+ 		        </div> -->
+
+            <div class="input-field col s12">
+                <select multiple required="requried" id="future" name="future[]" class="future">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="GATE">GATE </option>
+                  <option value="CAT">CAT </option>
+                  <option value="UPSC / MPSC">UPSC / MPSC </option>
+                  <option value="Masters">Masters </option>
+                  <option value="Job">Job </option>
+                  <option value="Bussiness">Bussiness </option>
+                  <option value="Other">Other </option>
+                  <option value="Option">Option </option>
+                </select>
+                <label for="future">After GECA (PG / Job..) </label>
+            </div>
 
             <div class="input-field col s12" style="margin-bottom: 30px;">
               <input id="sugg" name="sugg" type="text" value="<?php echo $arruser['sugg'] ?>" class="sugg">

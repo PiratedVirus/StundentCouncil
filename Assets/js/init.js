@@ -9,20 +9,6 @@
     });
 
 
-
-    $('input.future').autocomplete({
-      data: {
-            "GATE": null,
-            "CAT": null,
-            "UPSC / MPSC": null,
-            "Masters": null,
-            "Job": null,
-            "PHD": null,
-            "Bussiness": null
-          }
-    });
-
-
     $('input.state').autocomplete({
       data: {
            "Andhra Pradesh": null,
@@ -78,7 +64,7 @@
 
     });
 
-    $("#formValidate").validate({
+    $("#formValidate,#updateform").validate({
         rules: {
             enroll:{
                 required: true,
@@ -92,6 +78,10 @@
                 required: true,
                 email:true
             },
+            email: {
+                required: true,
+                email:true
+            },
             password: {
                required: true,
                minlength: 5
@@ -102,6 +92,8 @@
               equalTo: "#mpassword"
             },
           branch:"required",
+          dob:"required",
+          mobile:"required",
           gender:"required"
       },
         //For custom messages
@@ -138,4 +130,66 @@
      });
 
   }); // end of document ready
+
+
+  var strength = {
+     0: "Worst ☹",
+     1: "Bad ☹",
+     2: "Weak ☹",
+     3: "Good ☺",
+     4: "Strong ☻"
+  }
+
+  var password = document.getElementById('mpassword');
+  var meter = document.getElementById('mpassword-strength-meter');
+  var text = document.getElementById('mpassword-strength-text');
+  // var text = $('.errorTxt3');
+
+
+  password.addEventListener('input', function()
+  {
+      var val = password.value;
+      var result = zxcvbn(val);
+
+   
+      // Update the password strength meter
+      meter.value = result.score*25 + '%';
+      meter.style.width = 'meter.value';
+
+
+     // $('.passmeter').css('visibility','visible');
+     $('.passmeter').width(meter.value);
+
+     switch (meter.value) { 
+      case '25%': 
+        $('.passmeter').css('background-color','red');
+        $('#mpassword-strength-text').css('color','red');
+        break;
+      case '50%': 
+        $('.passmeter').css('background-color','#F44336');
+        $('#mpassword-strength-text').css('color','#F44336');
+        break;
+      case '75%': 
+        $('.passmeter').css('background-color','#AED581');
+        $('#mpassword-strength-text').css('color','#AED581');
+        break;    
+      case '100%': 
+        $('.passmeter').css('background-color','#4CAF50');
+        $('#mpassword-strength-text').css('color','4CAF50');
+
+        break;
+      default:
+        $('.passmeter').css('background-color','transparent');
+
+     }
+
+      // Update the text indicator
+      if(val !== "") {
+          text.innerHTML = "" + "<strong>" + strength[result.score] + "</strong>" +  " &nbsp;" + "<span>" + result.feedback.warning + " </span"; 
+      }
+      else {
+          text.innerHTML = "";
+      }
+  });
+
 })(jQuery); // end of jQuery name space

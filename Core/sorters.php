@@ -42,7 +42,7 @@
 	}
 
 	if (isset($_POST['CSE'])) {
-		$cse = 'Computer Science And Engineering (CSE)';
+		$cse = 'Computer Science And Engineering';
 	} else {
 		$cse ='';
 	}
@@ -60,7 +60,7 @@
 	}
 
 	if (isset($_POST['Entc'])) {
-		$entc = 'Elctronics And Telecommunications (ENTC)';
+		$entc = 'Elctronics And Telecommunications';
 	} else {
 		$entc ='';
 	}
@@ -72,7 +72,7 @@
 	}
 
 	if (isset($_POST['It'])) {
-		$it = 'Information Technology (IT)';
+		$it = 'Information Technology';
 	} else {
 		$it ='';
 	}
@@ -84,7 +84,7 @@
 	}
 
 	if (isset($_POST['single-cse'])) {
-			$query_cse = "SELECT * FROM users WHERE Skills = 'Computer Science And Engineering (CSE)'";
+			$query_cse = "SELECT * FROM users WHERE Skills = 'Computer Science And Engineering'";
 
 			    $cse_result = $conn->query($query_cse);
 
@@ -135,7 +135,7 @@
 		}
 
 	if (isset($_POST['single-entc'])) {
-			$query_civil = "SELECT * FROM users WHERE Skills = 'Elctronics And Telecommunications (ENTC)'";
+			$query_civil = "SELECT * FROM users WHERE Skills = 'Elctronics And Telecommunications'";
 
 			    $civil_result = $conn->query($query_civil);
 
@@ -152,7 +152,7 @@
 		}
 
 	if (isset($_POST['single-it'])) {
-			$query_civil = "SELECT * FROM users WHERE Skills = 'Information Technology (IT)'";
+			$query_civil = "SELECT * FROM users WHERE Skills = 'Information Technology'";
 
 			    $civil_result = $conn->query($query_civil);
 
@@ -267,7 +267,7 @@
 			 // echo "0 results";
 		}
 
-	$checkboxes = "SELECT * FROM users WHERE app = '$app' OR web = '$web' OR photoshop ='$graphics' OR animation = '$animations' OR networking = '$networking' OR autocad = '$autocad' OR katia = '$katia' OR robocon ='$robocon' OR other = '$other' OR acting = '$act' OR dance = '$dance' OR ankering = '$anker' OR singing = '$sing' OR drama ='$drama' OR writing = '$writing' OR poetry = '$poetry' OR drawing = '$drawing' OR decoration ='$decoration' OR painting ='$paint' OR cricket ='$cricket' OR badminton='$badminton' OR football ='$football' OR chess ='$chess' or kabbadi ='$kabbadi' OR vollyball ='$vollyball' or PHP ='$PHP' or Video ='$Video' or Photo ='$Photo' or CNC ='$CNC'OR Hypermesh ='$Hypermesh'";
+	$checkboxes = "SELECT * FROM skills WHERE app = '$app' OR web = '$web' OR photoshop ='$graphics' OR animation = '$animations' OR networking = '$networking' OR autocad = '$autocad' OR katia = '$katia' OR robocon ='$robocon'  OR acting = '$act' OR dance = '$dance' OR ankering = '$anker' OR singing = '$sing' OR drama ='$drama' OR writing = '$writing' OR poetry = '$poetry' OR drawing = '$drawing' OR decoration ='$decoration' OR painting ='$paint' OR cricket ='$cricket' OR badminton='$badminton' OR football ='$football' OR chess ='$chess' or kabbadi ='$kabbadi' OR vollyball ='$vollyball' or PHP ='$PHP' or Video ='$Video' or Photo ='$Photo' or CNC ='$CNC'OR Hypermesh ='$Hypermesh'";
 	$result = $conn->query($checkboxes);
 
 	if ($result->num_rows > 0) {

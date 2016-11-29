@@ -20,7 +20,7 @@
 
 
 	  if($emailcount!=0) {
-	  	echo "<span style='color:red;'>Copy Cat ! Use your own Email addres!</span>";
+	  	echo "<span style='color:red;'>Copy Cat ! Use your own Email address!</span>";
 	  }
 	  
   }
