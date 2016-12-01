@@ -45,6 +45,7 @@
 <script>
 	
 	var name = '<?php echo $arr['name'] ?>';
+	console.log(name);
 	$('#new-name').val(name);
 	Materialize.updateTextFields();
 	$('select').material_select();
