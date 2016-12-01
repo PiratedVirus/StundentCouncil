@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link rel="stylesheet" href="../Assets/css/base.css">
 
+  <script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>
+  <script src="../Assets/js/ajaxsearch.js"></script>
+
 </head>
 <body>
 <div class="navbar-fixed">
@@ -60,17 +63,34 @@
 
   <div class="container admin-land">
     <div class="row">
-      <div class="center">
-        <h2 class="admin-head">Welcome Admin !</h2>
-        <p class="info-admin">
+      <div class="">
+        <h2 class="admin-head center">Welcome Admin !</h2>
+
+                <div class="input-field">
+
+                  <input type="search"  name="search_text" id="search_text" class="form-control" />  
+                  <label class="left" for="search_text"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                  
+                </div>
+
+
+
+
+        <p class="info-admin center">
           Use following filters for specific results.There is a COMBO SORT which sorts Year and Branch together.Branches and Year filters are sperate for sorting indivisiuls.'Skills' filter is very useful, Lorem ipsum dolor sit.To
            view all details without any filters <a href="../core/display.php" target="_blank"> click here</a>
         </p>
       </div>
     </div>
+
   </div>
 
-  <div id="resultlink">
+    <div class="row">
+      <div class="col s12">
+        <div  id ="result" ></div>
+      </div>
+    </div>
 
     
      <?php 
@@ -145,6 +165,7 @@
     </div>
         <hr class="header-holder">
 
+        <!-- <div style="height: 100%;border: 2px solid black" id ="result" ></div> -->
 
 
 
@@ -465,7 +486,6 @@
       
     </form>
     
-     <script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>
        <script src="../Assets/js/materialize.js"></script>
        <script src="../Assets/js/init.js"></script>
     

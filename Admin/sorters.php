@@ -7,7 +7,7 @@
 	$password = "";
 	$dbname = "students";
 
-	include 'checkbox.php';
+	include '../Core/checkbox.php';
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -268,8 +268,8 @@
 			 echo "</table>";
 		} 
 
-	// Branch and year seprate sorting ends here
 
+	// Branch and year seprate sorting ends here
 
 	$checkboxes = "SELECT * FROM skills WHERE app = '$app' OR web = '$web' OR photoshop ='$graphics' OR animation = '$animations' OR networking = '$networking' OR autocad = '$autocad' OR katia = '$katia' OR robocon ='$robocon'  OR acting = '$act' OR dance = '$dance' OR ankering = '$anker' OR singing = '$sing' OR drama ='$drama' OR writing = '$writing' OR poetry = '$poetry' OR drawing = '$drawing' OR decoration ='$decoration' OR painting ='$paint' OR cricket ='$cricket' OR badminton='$badminton' OR football ='$football' OR chess ='$chess' or kabbadi ='$kabbadi' OR vollyball ='$vollyball' or PHP ='$PHP' or Video ='$Video' or Photo ='$Photo' or CNC ='$CNC'OR Hypermesh ='$Hypermesh'";
 
@@ -279,6 +279,7 @@
 		echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 		 // output data of each row
 		 while($row = $result->fetch_assoc()) {
+		 	
 		 	$checkboxes_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
 		 	$result_user = $conn->query($checkboxes_user);
 		 	$newrow = $result_user->fetch_assoc();
