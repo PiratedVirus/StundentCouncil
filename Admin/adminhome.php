@@ -71,7 +71,7 @@
                   <input type="search"  name="search_text" id="search_text" class="form-control" />  
                   <label class="left" for="search_text"><i class="material-icons">search</i></label>
                   <i class="material-icons">close</i>
-                  
+
                 </div>
 
 
@@ -91,6 +91,7 @@
         <div  id ="result" ></div>
       </div>
     </div>
+    <div id="resultlink">
 
     
      <?php 
@@ -178,7 +179,7 @@
         <form action="" method="POST" name="singular">
 
 
-          <input type="submit" class="imgbtn col m2 s4" value="Cse" name="single-cse">
+          <input type="submit" class="imgbtn col m2 s4"  value="Cse" name="single-cse">
 
         </form>
 

@@ -90,8 +90,9 @@
 
 			    $cse_result = $conn->query($query_cse);
 
-			    $cnt = 1;
-
+			    ?>
+			    <form method="POST" action=""> 
+			    <?php
 			    if ($cse_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -126,7 +127,9 @@
 			    $mech_result = $conn->query($query_mech);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($mech_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -162,7 +165,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -197,7 +202,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -232,7 +239,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -267,7 +276,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -302,7 +313,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -337,7 +350,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -372,7 +387,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -406,7 +423,9 @@
 			    $civil_result = $conn->query($query_civil);
 
 			    $cnt = 1;
-
+			    ?>
+			    			    <form method="POST" action=""> 
+			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
 			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
@@ -461,8 +480,6 @@
 
 			 	 }	 
 
-			 	
-			 }
 			 echo "</table>";
 		
 	?>
@@ -471,40 +488,14 @@
 		<input type="submit" class="btn btn-waves" value="set1">
 		</form>
 	<?php
+			 	
+			 }
 
 
 
 
 
-		if(isset($_POST['chk']) == true)
-		{
-			$subject = trim($_POST['subject']);
-			$message = trim($_POST['message']);
-			$from = 'saurabhk201@gmail.com';
-			$reply = 'reply@akmedia.com';
-			
-			foreach($_POST['chk'] as $key => $value)
-			{
-			echo $value;
-				// Set content-type for sending HTML email
-				$headers = "MIME-Version: 1.0" . "\r\n";
-				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-				$headers .= "From: <".$from.">\r\n";
-				$headers .= "Reply-To: ".$reply."";
-		 		if(mail($value,$subject,$message,$headers))
-				{	
-					echo '<div class="container-fluid" style="width:50%;">
-						  <div class="alert alert-success fade in">
-						  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
-		 		    echo '<strong>Success! </strong>'; 
-					echo ' Mail has been Successfully sent to '.$value.'</br>';
-					echo '</div></div>';
-				} 
-				else{
-					echo "no email send up!";
-				}
-			}
-		}
+
 	
 		 	
 		 
@@ -514,7 +505,9 @@
 
 	$result = $conn->query($checkboxes);
 
-		 	$cnt = 1;
+		 	?>
+		 	<form method="POST" action=""> 
+		 	<?php
 	if ($result->num_rows > 0) {
 		echo "<table class=\"striped centered responsive-table \"> <thead> <tr>  <th> CHECK </th> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 		 // output data of each row
@@ -523,29 +516,54 @@
 		 	$checkboxes_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
 		 	$result_user = $conn->query($checkboxes_user);
 		 	$newrow = $result_user->fetch_assoc();
-		 	echo "<tr> 
-
-		 			<td class =\"uppercase\"> <input type= \"checkbox\" name= \"chk$cnt\" id= \"chk$cnt\"> <label for=\"chk$cnt\"></label>  </td> 
-		 			<td class =\"uppercase\"> ".$newrow["userId"]." </td> 
-		 			<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
-		 			<td>".$newrow["Skills"]."</td>  
-		 			<td>".$newrow["academic_year"]."</td>
-		 	 		<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td> 
-		 	  		<td>".$newrow["Gender"]."</td>   
-		 	  	 </tr>";
-		 	echo $cnt;
-		 	$cnt ++;
+		 	echo "
+		 				 	<tr> 
+		 					 	<td class =\"uppercase\"> <input value='".$row['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+		 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+		 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+		 					 	<td>".$newrow["Skills"]."</td>  
+		 					 	<td>".$newrow["academic_year"]."</td> 
+		 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+		 				 	</tr>";   
 		 }
 		 echo "</table>";
-	} 
-
-	
-
 	?>
 
-			<!-- <input type="submit" class="btn btn-waves" value="set"> -->
+			<input type="submit" class="btn btn-waves" value="set">
 			</form>
 		<?php
+	} 
+
+	if(isset($_POST['chk']) == true)
+	{
+		$subject = trim($_POST['subject']);
+		$message = trim($_POST['message']);
+		$from = 'saurabhk201@gmail.com';
+		$reply = 'reply@akmedia.com';
+		
+		foreach($_POST['chk'] as $key => $value)
+		{
+		echo $value;
+			// Set content-type for sending HTML email
+			$headers = "MIME-Version: 1.0" . "\r\n";
+			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+			$headers .= "From: <".$from.">\r\n";
+			$headers .= "Reply-To: ".$reply."";
+	 		if(mail($value,$subject,$message,$headers))
+			{	
+				echo '<div class="container-fluid" style="width:50%;">
+					  <div class="alert alert-success fade in">
+					  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
+	 		    echo '<strong>Success! </strong>'; 
+				echo ' Mail has been Successfully sent to '.$value.'</br>';
+				echo '</div></div>';
+			} 
+			else{
+				echo "no email send up!";
+			}
+		}
+	}
+
 
 
 	if( isset($_POST['notify'])){
