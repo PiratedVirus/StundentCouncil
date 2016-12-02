@@ -69,9 +69,14 @@
          $sql = "SELECT * FROM users  WHERE userId ='".$_SESSION['stud_id']."'";
          $result = mysqli_query($conn, $sql);
          $row = mysqli_fetch_assoc($result);
+         echo $row['notification'];
+         if( $row['notification'] > '0'){
+           include 'Admin/notuser.php';
+           ?>
+           <a class="waves-effect waves-light btn-large update-btn" href="Admin/notuserarchive.php">LOAD ARCHIVES</a>
 
-         if( $row['sat_notify'] == '1'){
-           include 'Admin/notify.php';
+           <?php
+
          }else{
            include 'Core/msg.php';
          }

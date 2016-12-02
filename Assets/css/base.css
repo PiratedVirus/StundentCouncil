@@ -6714,7 +6714,7 @@ textarea.materialize-textarea {
 /* Checkboxes
    ========================================================================== */
 /* CUSTOM CSS CHECKBOXES */
-/*form p {
+form p {
   margin-bottom: 10px;
   text-align: left;
 }
@@ -6724,7 +6724,7 @@ form p:last-child {
 }
 
 /* Remove default checkbox */
-/*[type="checkbox"]:not(:checked),
+[type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
   left: -9999px;
@@ -6733,8 +6733,9 @@ form p:last-child {
 
 [type="checkbox"] {
   /* checkbox aspect */
-/*}*/
-/*[type="checkbox"] + label {
+}
+
+[type="checkbox"] + label {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
@@ -6744,14 +6745,15 @@ form p:last-child {
   font-size: 1rem;
   -webkit-user-select: none;
   /* webkit (safari, chrome) browsers */
-/*-moz-user-select: none;*/
-/* mozilla browsers */
-/*-khtml-user-select: none;*/
-/* webkit (konqueror) browsers */
-/*-ms-user-select: none;*/
-/* IE10+ */
-/*}*/
-/*[type="checkbox"] + label:before,
+  -moz-user-select: none;
+  /* mozilla browsers */
+  -khtml-user-select: none;
+  /* webkit (konqueror) browsers */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+
+[type="checkbox"] + label:before,
 [type="checkbox"]:not(.filled-in) + label:after {
   content: '';
   position: absolute;
@@ -6769,7 +6771,7 @@ form p:last-child {
 [type="checkbox"]:not(.filled-in) + label:after {
   border: 0;
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
 [type="checkbox"]:not(:checked):disabled + label:before {
@@ -6779,7 +6781,7 @@ form p:last-child {
 
 [type="checkbox"].tabbed:focus + label:after {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   border: 0;
   border-radius: 50%;
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
@@ -6796,11 +6798,11 @@ form p:last-child {
   border-right: 2px solid #26a69a;
   border-bottom: 2px solid #26a69a;
   -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  transform: rotate(40deg);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
 
 [type="checkbox"]:checked:disabled + label:before {
@@ -6809,7 +6811,7 @@ form p:last-child {
 }
 
 /* Indeterminate checkbox */
-/*[type="checkbox"]:indeterminate + label:before {
+[type="checkbox"]:indeterminate + label:before {
   top: -11px;
   left: -12px;
   width: 10px;
@@ -6819,11 +6821,11 @@ form p:last-child {
   border-right: 2px solid #26a69a;
   border-bottom: none;
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
 
 [type="checkbox"]:indeterminate:disabled + label:before {
@@ -6841,10 +6843,11 @@ form p:last-child {
   left: 0;
   position: absolute;
   /* .1s delay is for check animation */
-/*  transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+  transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
   z-index: 1;
-}*/
-/*[type="checkbox"].filled-in:not(:checked) + label:before {
+}
+
+[type="checkbox"].filled-in:not(:checked) + label:before {
   width: 0;
   height: 0;
   border: 3px solid transparent;
@@ -6918,7 +6921,8 @@ form p:last-child {
 [type="checkbox"].filled-in:disabled:checked + label:after {
   background-color: #BDBDBD;
   border-color: #BDBDBD;
-}*/
+}
+
 /* Switch
    ========================================================================== */
 .switch,

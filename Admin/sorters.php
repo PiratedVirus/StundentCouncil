@@ -94,7 +94,7 @@
 			    <form method="POST" action=""> 
 			    <?php
 			    if ($cse_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $cse_result->fetch_assoc()) {
 			         	 	echo "
@@ -115,8 +115,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -131,7 +148,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($mech_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $mech_result->fetch_assoc()) {
 			         	 	echo "
@@ -153,8 +170,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -169,7 +203,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -190,8 +224,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -206,7 +257,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -227,8 +278,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -243,7 +311,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -264,8 +332,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -280,7 +365,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -301,8 +386,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -317,7 +419,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -338,8 +440,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -354,7 +473,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -375,8 +494,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -391,7 +527,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -411,8 +547,25 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -427,7 +580,7 @@
 			    			    <form method="POST" action=""> 
 			    			    <?php	
 			    if ($civil_result->num_rows > 0) {
-			         echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			         echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 			         // output data of each row
 			         while($row = $civil_result->fetch_assoc()) {
 			         	 	echo "
@@ -447,8 +600,26 @@
 
 			    ?>
 
-			    		<input type="submit" class="btn btn-waves" value="set">
+
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<label for="subject">Email Subject</label>
+			<input type="text" name="subject">
+		</div>
+		<div class="col s12">
+			<label for="message">Email Content</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div style="margin-top: 15px;" class="col s12 center">
+			
+	    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+		</div>
+	</div>
 			    		</form>
+</div>					
+
+
 			    	<?php
 
 		}
@@ -463,7 +634,7 @@
 		<form method="POST" action=""> 
 		<?php
 		if ($result->num_rows > 0) {
-			echo "<table class=\"striped centered responsive-table \"> <thead>  <th> CHECK </th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+			echo "<table class=\"striped centered responsive-table \"> <thead> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th>  <tr> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 
 			 
 			 // output data of each row
@@ -483,21 +654,29 @@
 			 echo "</table>";
 		
 	?>
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+</form>
 
-
-		<input type="submit" class="btn btn-waves" value="set1">
-		</form>
 	<?php
+
+
 			 	
 			 }
-
-
-
-
-
-
-	
-		 	
 		 
 	// Branch and year seprate sorting ends here
 
@@ -509,7 +688,7 @@
 		 	<form method="POST" action=""> 
 		 	<?php
 	if ($result->num_rows > 0) {
-		echo "<table class=\"striped centered responsive-table \"> <thead> <tr>  <th> CHECK </th> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
+		echo "<table class=\"striped centered responsive-table \"> <thead> <tr> <th><input type='checkbox' onchange='checkedbox(this)' name='chk'/></th> <th>Enrollment No.</th> <th>Name</th> <th>Branch</th>  <th>Year</th>  <th>Contact</th>  <th>Gender</th>  </tr></thead>";
 		 // output data of each row
 		 while($row = $result->fetch_assoc()) {
 		 	
@@ -529,8 +708,25 @@
 		 echo "</table>";
 	?>
 
-			<input type="submit" class="btn btn-waves" value="set">
-			</form>
+
+	<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<label for="subject">Email Subject</label>
+					<input type="text" name="subject">
+				</div>
+				<div class="col s12">
+					<label for="message">Email Content</label>
+					<textarea name="message"></textarea>
+				</div>
+					<div style="margin-top: 15px;" class="col s12 center">
+						
+				    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+					</div>
+			</div>
+		</div>
+	</form>
+	</div>
 		<?php
 	} 
 
@@ -540,15 +736,26 @@
 		$message = trim($_POST['message']);
 		$from = 'saurabhk201@gmail.com';
 		$reply = 'reply@akmedia.com';
-		
+
 		foreach($_POST['chk'] as $key => $value)
 		{
 		echo $value;
+		echo $subject;
+		echo $message;
 			// Set content-type for sending HTML email
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 			$headers .= "From: <".$from.">\r\n";
 			$headers .= "Reply-To: ".$reply."";
+
+
+
+			$notifyall =  mysqli_query($conn,"UPDATE users SET notification = notification + 1 WHERE userEmail = '$value'");
+
+			$notified = mysqli_query($conn,"SELECT notification FROM users WHERE userEmail = '$value'");
+			$notifiedarr = mysqli_fetch_array($notified);
+			$notcount = $notifiedarr['notification'];
+
 	 		if(mail($value,$subject,$message,$headers))
 			{	
 				echo '<div class="container-fluid" style="width:50%;">
@@ -559,9 +766,49 @@
 				echo '</div></div>';
 			} 
 			else{
-				echo "no email send up!";
+				echo "No email send!";
 			}
+			echo "notcount is :";
+			echo $notcount;
+
+			if($notcount > 4){
+				echo "Accddently I am in 4!";
+
+				$source = "notuser.php";
+				$destination = 'notuserarchive.php';
+
+
+				$data = file_get_contents($source);
+				$handle = fopen($destination,"w");
+				fwrite($handle,$data);
+				$sourcewrite = fopen("notuser.php","w");
+				fwrite($sourcewrite,$message);
+				fclose($handle);
+				fclose($sourcewrite);
+
+
+							
+			} else {
+				$file = fopen("notuser.php","a") or die("Unable to append in notuser.php"); 
+				fwrite($file,$message);
+				fclose($file);
+			}
+			// End of IF-ELSE
+			if($notcount > 4){
+				$notcount = 0;
+				echo 'May be my value is <4';
+				echo $notcount;
+
+			} 
+			echo "New value is ";
+			echo $notcount + 1;
+			$notifiedzero = mysqli_query($conn,"UPDATE users SET notification = '$notcount' WHERE userEmail = '$value'");
+
+
 		}
+		// End of FOREACH loop
+
+		
 	}
 
 
