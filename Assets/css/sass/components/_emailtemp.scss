@@ -1,0 +1,182 @@
+          /* DAT ANIMATION DOE */
+          .fadeIn {
+              animation-name: fadeIn;
+              -webkit-animation-name: fadeIn;
+              animation-duration: 3s;
+              -webkit-animation-duration: 3s;
+          }
+          @keyframes fadeIn {
+              0% {opacity: 0;transform: translateY(-30px);}
+              80% {opacity: 0;transform: translateY(-30px);}
+              100% {opacity: 1;opacity: 1;transform: translateY(0);}
+          }
+          @-webkit-keyframes fadeIn {
+              0% {opacity: 0;-webkit-transform: translateY(-30px);}
+              80% {opacity: 0;-webkit-transform: translateY(-30px);}
+              100% {opacity: 1;-webkit-transform: translateY(0);}
+          }
+          .fadeInDown {
+              animation-name: fadeInDown;
+              -webkit-animation-name: fadeInDown;
+              animation-duration: 1.2s;
+              -webkit-animation-duration: 1.2s;
+          }
+          @keyframes fadeInDown {
+              0% {opacity: 0;transform: translateY(-30px);}
+              40% {opacity: 0;transform: translateY(-30px);}
+              100% {opacity: 1;transform: translateY(0);}
+          }
+          @-webkit-keyframes fadeInDown {
+              0% {opacity: 0;-webkit-transform: translateY(-30px);}
+              40% {opacity: 0;-webkit-transform: translateY(-30px);}
+              100% {opacity: 1;-webkit-transform: translateY(0);}
+          }
+          .fadeInDown2 {
+              animation-name: fadeInDown2;
+              -webkit-animation-name: fadeInDown2;
+              animation-duration: 1.6s;
+              -webkit-animation-duration: 1.6s;
+          }
+          @keyframes fadeInDown2 {
+              0% {opacity: 0;transform: translateY(-30px);}
+              50% {opacity: 0;transform: translateY(-30px);}
+              100% {opacity: 1;transform: translateY(0);}
+          }
+          @-webkit-keyframes fadeInDown2 {
+              0% {opacity: 0;-webkit-transform: translateY(-30px);}
+              50% {opacity: 0;-webkit-transform: translateY(-30px);}
+              100% {opacity: 1;-webkit-transform: translateY(0);}
+          }
+          .fadeInDown3 {
+              animation-name: fadeInDown3;
+              -webkit-animation-name: fadeInDown3;
+              animation-duration: 2s;
+              -webkit-animation-duration: 2s;
+          }
+          @keyframes fadeInDown3 {
+              0% {opacity: 0;transform: translateY(-30px);}
+              60% {opacity: 0;transform: translateY(-30px);}
+              100% {opacity: 1;transform: translateY(0);}
+          }
+          @-webkit-keyframes fadeInDown3 {
+              0% {opacity: 0;-webkit-transform: translateY(-30px);}
+              60% {opacity: 0;-webkit-transform: translateY(-30px);}
+              100% {opacity: 1;-webkit-transform: translateY(0);}
+          }
+          .fadeInDown4 {
+              animation-name: fadeInDown4;
+              -webkit-animation-name: fadeInDown4;
+              animation-duration: 2.4s;
+              -webkit-animation-duration: 2.4s;
+          }
+          @keyframes fadeInDown4 {
+              0% {opacity: 0;transform: translateY(-30px);}
+              66% {opacity: 0;transform: translateY(-30px);}
+              100% {opacity: 1;transform: translateY(0);}
+          }
+          @-webkit-keyframes fadeInDown4 {
+              0% {opacity: 0;-webkit-transform: translateY(-30px);}
+              66% {opacity: 0;-webkit-transform: translateY(-30px);}
+              100% {opacity: 1;-webkit-transform: translateY(0);}
+          }
+          /* FIREWORKS ANIMATION COURTESY OF EDDIE LIN https://codepen.io/yshlin/pen/ylDEk */
+          .pyro > .before, .pyro > .after {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+        -moz-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+        -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+        -o-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+        -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+        animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+      }
+          .pyro > .after {
+            -moz-animation-delay: 1.25s, 1.25s, 1.25s;
+            -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+            -o-animation-delay: 1.25s, 1.25s, 1.25s;
+            -ms-animation-delay: 1.25s, 1.25s, 1.25s;
+            animation-delay: 1.25s, 1.25s, 1.25s;
+            -moz-animation-duration: 1.25s, 1.25s, 6.25s;
+            -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+            -o-animation-duration: 1.25s, 1.25s, 6.25s;
+            -ms-animation-duration: 1.25s, 1.25s, 6.25s;
+            animation-duration: 1.25s, 1.25s, 6.25s;
+          }
+          @-webkit-keyframes bang {
+            to {
+              box-shadow: -244px -313.66667px #0077ff, -132px -303.66667px #99ff00, -204px 80.33333px #00ff48, -178px -177.66667px #0051ff, 34px 51.33333px #ff1a00, -196px -214.66667px #00b7ff, 109px -134.66667px #ff00c4, 34px -268.66667px #ff00a6, 50px -164.66667px #00ffd5, -189px -14.66667px #ff8400, -213px 24.33333px #001eff, 53px 57.33333px #66ff00, -238px -181.66667px #2b00ff, 235px -182.66667px #0037ff, 107px -44.66667px #00ffc4, -164px -155.66667px #5eff00, -179px -318.66667px #ffc400, 186px -211.66667px #b700ff, -139px -15.66667px #ff00c4, -247px -374.66667px #00ffe6, -194px -45.66667px #00ff62, 73px 26.33333px #ff0033, 117px -165.66667px #ee00ff, -91px -382.66667px #00f2ff, 109px -250.66667px #00ff37, 53px -179.66667px #0022ff, -232px -354.66667px #00aaff, 119px -251.66667px #a6ff00, -106px -114.66667px #ff0015, 96px -88.66667px #0051ff, -65px -100.66667px #d5ff00, -213px
+23.33333px #00ff80, 113px -319.66667px #ff00d0, -20px -156.66667px #00ff77, 58px -193.66667px #00ff99, 5px -192.66667px lime, 112px -214.66667px #00ff88, 37px -231.66667px #6200ff, 186px -198.66667px #e600ff, -65px -211.66667px #00ff3c, 187px -240.66667px #5eff00, 220px -149.66667px #00ff22, 65px -84.66667px #1a00ff, -46px 2.33333px #ea00ff, 67px -180.66667px #c4ff00, -91px -367.66667px #d000ff, 128px 24.33333px #00ffbb, -153px -236.66667px #c8ff00, -115px -405.66667px cyan, 93px 5.33333px #ddff00, -169px -106.66667px #00ff88;
+            }
+          }
+          @keyframes bang {
+            to {
+              box-shadow: -244px -313.66667px #0077ff, -132px -303.66667px #99ff00, -204px 80.33333px #00ff48, -178px -177.66667px #0051ff, 34px 51.33333px #ff1a00, -196px -214.66667px #00b7ff, 109px -134.66667px #ff00c4, 34px -268.66667px #ff00a6, 50px -164.66667px #00ffd5, -189px -14.66667px #ff8400, -213px 24.33333px #001eff, 53px 57.33333px #66ff00, -238px -181.66667px #2b00ff, 235px -182.66667px #0037ff, 107px -44.66667px #00ffc4, -164px -155.66667px #5eff00, -179px -318.66667px #ffc400, 186px -211.66667px #b700ff, -139px -15.66667px #ff00c4, -247px -374.66667px #00ffe6, -194px -45.66667px #00ff62, 73px 26.33333px #ff0033, 117px -165.66667px #ee00ff, -91px -382.66667px #00f2ff, 109px -250.66667px #00ff37, 53px -179.66667px #0022ff, -232px -354.66667px #00aaff, 119px -251.66667px #a6ff00, -106px -114.66667px #ff0015, 96px -88.66667px #0051ff, -65px -100.66667px #d5ff00, -213px
+23.33333px #00ff80, 113px -319.66667px #ff00d0, -20px -156.66667px #00ff77, 58px -193.66667px #00ff99, 5px -192.66667px lime, 112px -214.66667px #00ff88, 37px -231.66667px #6200ff, 186px -198.66667px #e600ff, -65px -211.66667px #00ff3c, 187px -240.66667px #5eff00, 220px -149.66667px #00ff22, 65px -84.66667px #1a00ff, -46px 2.33333px #ea00ff, 67px -180.66667px #c4ff00, -91px -367.66667px #d000ff, 128px 24.33333px #00ffbb, -153px -236.66667px #c8ff00, -115px -405.66667px cyan, 93px 5.33333px #ddff00, -169px -106.66667px #00ff88;
+            }
+          }
+          @-webkit-keyframes gravity {
+            to {
+              transform: translateY(200px);
+              -moz-transform: translateY(200px);
+              -webkit-transform: translateY(200px);
+              -o-transform: translateY(200px);
+              -ms-transform: translateY(200px);
+              opacity: 0;
+            }
+          }
+          @keyframes gravity {
+            to {
+              transform: translateY(200px);
+              -moz-transform: translateY(200px);
+              -webkit-transform: translateY(200px);
+              -o-transform: translateY(200px);
+              -ms-transform: translateY(200px);
+              opacity: 0;
+            }
+          }
+          @-webkit-keyframes position {
+            0%, 19.9% {
+              margin-top: 10%;
+              margin-left: 40%;
+            }
+            20%, 39.9% {
+              margin-top: 40%;
+              margin-left: 30%;
+            }
+            40%, 59.9% {
+              margin-top: 20%;
+              margin-left: 70%;
+            }
+            60%, 79.9% {
+              margin-top: 30%;
+              margin-left: 20%;
+            }
+            80%, 99.9% {
+              margin-top: 30%;
+              margin-left: 80%;
+            }
+          }
+          @keyframes position {
+            0%, 19.9% {
+              margin-top: 10%;
+              margin-left: 40%;
+            }
+            20%, 39.9% {
+              margin-top: 40%;
+              margin-left: 30%;
+            }
+            40%, 59.9% {
+              margin-top: 20%;
+              margin-left: 70%;
+            }
+            60%, 79.9% {
+              margin-top: 30%;
+              margin-left: 20%;
+            }
+            80%, 99.9% {
+              margin-top: 30%;
+              margin-left: 80%;
+            }
+          }

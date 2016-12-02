@@ -774,22 +774,27 @@
 			if($notcount > 4){
 				echo "Accddently I am in 4!";
 
-				$source = "notuser.php";
-				$destination = 'notuserarchive.php';
+				$source_create = fopen("Notifications/Current/notuser_$value.php", r);
+				$destination_create = fopen("Notifications/Archives/notuserarchive_$value.php", r);
+				$source = "Notifications/Current/notuser_$value.php";
+				$destination = "Notifications/Archives/notuserarchive_$value.php";
 
 
 				$data = file_get_contents($source);
-				$handle = fopen($destination,"w");
+				$handle = fopen($destination,"c");
+				fseek($handle, 5);
 				fwrite($handle,$data);
-				$sourcewrite = fopen("notuser.php","w");
+				$sourcewrite = fopen("Notifications/Current/notuser_$value.php","w");
 				fwrite($sourcewrite,$message);
 				fclose($handle);
 				fclose($sourcewrite);
+				fclose($source_create);
+				fclose($destination_create);
 
 
 							
 			} else {
-				$file = fopen("notuser.php","a") or die("Unable to append in notuser.php"); 
+				$file = fopen("Notifications/Current/notuser_$value.php","a") or die("Unable to append in notuser.php"); 
 				fwrite($file,$message);
 				fclose($file);
 			}

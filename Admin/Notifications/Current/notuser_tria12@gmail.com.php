@@ -1,0 +1,215 @@
+<p>just for check</p><table class="mceTmpl" style="height: 1281px;" border="0" width="800" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; width: 1058.89px;" align="center" bgcolor="#262d3c">
+<div style="display: none; font-size: 1px; color: #444444; line-height: 1px; font-family: Arial, san-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">August news from Litmus: A game-changing announcement is coming, we recap TEDC London, and delve into what makes an email conversion.</div>
+</td>
+</tr>
+<tr>
+<td class="section-padding bg" style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; padding: 25px 15px 70px; background-color: #262d3c; width: 1058.89px;" align="center" bgcolor="#262d3c"><!-- [if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+              <tr>
+                <td align="center" valign="top" width="600">
+          <![endif]-->
+<div class="pyro">&nbsp;</div>
+&nbsp;
+<table class="max-width" style="max-width: 600px;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="fadeIn" style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; text-align: center;">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="mobile-hide" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="left" width="20%">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; padding: 2px 5px 0 0;" align="left" width="25"><img style="display: block; border: 0px; font-family: Helvetica, Arial, sans-serif;" src="http://pages.litmus.com/l/31032/2016-03-10/71wrb2/31032/84683/tweet_white.png" width="15" height="15" /></td>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="left" width="150"><a style="color: #ffffff; font-size: 12px; line-height: 12px; text-decoration: none; font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" href="http://pages.litmus.com/e/31032/20and20mobile-friendly20trends/8z2lcf/305374416" target="_blank" rel="noopener noreferrer">Tweet</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class="mobile-hide" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" width="50%">&nbsp;</td>
+<td class="mobile-hide" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="right" width="30%">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; padding: 0px 8px 0 40px;" align="right" valign="bottom" width="25"><img style="display: block; border: 0px; font-family: Helvetica, Arial, sans-serif;" src="http://pages.litmus.com/l/31032/2016-03-10/71wrb6/31032/84681/viewonline_white.png" width="14" height="14" /></td>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="left" valign="top" width="80"><a style="color: #ffffff; font-size: 12px; line-height: 12px; text-decoration: none; font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" href="http://pages.litmus.com/webmail/31032/305374416/cd796b25a2e6f431a680849dd3b85f6c87fc25f67b7fa2cfd60c40884e1b7741" target="_blank" rel="noopener noreferrer">View online</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class="logo" style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; padding: 20px 0px; text-align: center;" align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="fadeInDown" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center"><a href="http://pages.litmus.com/e/31032/2016-08-10/8z2lch/305374416"><img style="display: block; border: 0px; font-family: Arial, sans-serif; color: #ffffff; margin-left: auto; margin-right: auto;" src="http://pages.litmus.com/l/31032/2016-03-11/71ym5q/31032/84745/litmus_logo_w.png" alt="Litmus" width="50" height="50" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="fadeInDown" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; padding: 40px 0 25px 0;" align="center">
+<table width="150" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; padding: 10px 25px; border-radius: 3px 3px 0px 0px; text-align: center;" align="center" bgcolor="#f46d63">AUGUST</td>
+</tr>
+<tr>
+<td style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; font-size: 60px; color: #444444; padding: 10px 25px; border-radius: 0px 0px 3px 3px; text-align: center;" align="center" bgcolor="#ffffff">15</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class="fadeInDown2" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center">
+<h1 id="font-weight-normal" class="padding2" style="text-align: center; font-size: 40px; line-height: 48px; font-family: 'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif; color: #ffffff; padding: 10px; font-weight: bold; display: inline-block; margin: 0; -padding-top: 25px;">Be part of a historic first at WINGS&nbsp;Geca</h1>
+</td>
+</tr>
+<tr>
+<td class="padding2 fadeInDown3" style="font-family: Proxima Nova, 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; padding: 5px 0 0 0; font-size: 16px; line-height: 24px; color: #a1a3a8;" align="center">
+<p>Exciting news, email geeks! We&rsquo;re making a huge, epic, industry-changing announcement at The Email Design Conference in Boston. If you can&rsquo;t be there in person, you can still take part by <a class="link-hover" style="color: #a1a3a8;" href="http://pages.litmus.com/e/31032/source-pardot-utm-medium-email/8z2lb7/305374416" target="_blank" rel="noopener noreferrer">live streaming</a> the announcement on <span id="font-weight-normal" style="color: #ffffff; text-decoration: none; font-family: 'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif; font-weight: bold;">Tuesday, August 15th, at 4:20pm IST</span>.</p>
+<p>Admin, your content goes here.............................................................................................................................</p>
+<p>--------------------------------------------------------------------------------------------------------------</p>
+<p>--------------------------------------------------------------------------------------------------------------<br /> <br /> Don&rsquo;t miss out on this history-making announcement!</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; padding: 25px 0;" align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center" valign="top" width="100%" height="100%"><!-- [if (gte mso 9)|(IE)]>
+                                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                                      <tr>
+                                        <td align="center" valign="top" width="600">
+                                  <![endif]-->
+<table style="max-width: 600px;" border="0" width="100%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td class="fadeInDown4" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center" valign="top"><!-- [if (gte mso 9)|(IE)]><!-->
+<div class="not-gmail3" style="width: 0px; height: 0px; max-width: 0px; max-height: 0px; overflow: hidden; display: none;">
+<table class="max200 ol" border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center">
+<table>
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; border-radius: 28px;" align="center" bgcolor="#539be1"><a class="apple" style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; display: inline-block; padding: 15px 25px; border: 1px solid #539be1; border-radius: 28px; background: #539be1 url('http://pages.litmus.com/l/31032/2016-08-08/8xy24k/31032/95430/logo_apple.png') left 18px top 14px no-repeat; font-size: 17px;" href="http://pages.litmus.com/e/31032/-TEDC-Boston-Fireside-Chat-ics/8z2lcm/305374416" target="_blank" rel="noopener noreferrer"><span class="ical">&nbsp; &nbsp; &nbsp; iCal</span><span class="add-to" style="display: none;">Add to calendar</span></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="not-gmail2">
+<table class="max200" style="width: 47.8463%;" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; width: 100%;" align="center">
+<table style="height: 58px;" width="363">
+<tbody>
+<tr>
+<td style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; border-radius: 29px; width: 541.111px;" align="center" bgcolor="#539be1"><a style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; display: inline-block; padding: 15px 25px; border: 1px solid #539be1; border-radius: 28px; background: #539be1 url('http://pages.litmus.com/l/31032/2016-08-08/8xy24h/31032/95426/logo_gmail.png') left 18px top 14px no-repeat; font-size: 17px;" href="http://pages.litmus.com/e/31032/om-conference-live-eventpage-6/8z2lcp/305374416" target="_blank" rel="noopener noreferrer">&nbsp; &nbsp; &nbsp; <span class="add-to3">Add to calendar</span></a>
+<div class="gmail" style="display: none; height: 0px; max-height: 0px; overflow: hidden;">Gmail</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--<![endif]--> <!-- [if (gte mso 9)|(IE)]>
+                                            <table align="center" border="0" cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                <td align="center" valign="top" height="55">
+                                          <![endif]-->
+<div class="not-gmail1" style="width: 0px; height: 0px; max-width: 0px; max-height: 0px; overflow: hidden; display: none;">
+<table class="max200" style="float: right;" border="0" width="100%" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" align="center">
+<table>
+<tbody>
+<tr>
+<td style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; border-radius: 28px;" align="center" bgcolor="#539be1"><a style="font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; display: inline-block; padding: 15px 25px; border: 1px solid #539be1; border-radius: 28px; background: #539be1 url('http://pages.litmus.com/l/31032/2016-08-08/8xy24m/31032/95428/logo_outlook.png') left 18px top 14px no-repeat; font-size: 17px;" href="http://pages.litmus.com/e/31032/-TEDC-Boston-Fireside-Chat-ics/8z2lcm/305374416" target="_blank" rel="noopener noreferrer"><span class="add-to2">Add to calendar</span> <span class="outlook" style="display: none;">&nbsp; &nbsp; &nbsp; Outlook</span></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- [if (gte mso 9)|(IE)]>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                          <![endif]--></td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]>
+                                    </td>
+                                  </tr>
+                                </table>
+                                    <![endif]--></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class="padding2 fadeInDown4" style="font-family: Proxima Nova, 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; padding: 5px 0 0 0; font-size: 16px; line-height: 24px; color: #a1a3a8;" align="center">Also from WINGS: <a class="link-hover" style="color: #a1a3a8;" href="http://pages.litmus.com/e/31032/source-pardot-utm-medium-email/8z2lbc/305374416" target="_blank" rel="noopener noreferrer">Takeaways and tweets from The Email Design Conference, London</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]--></td>
+</tr>
+<tr>
+<td class="section-padding" style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; padding: 70px 15px; width: 1058.89px;" align="center" bgcolor="#f8f9fc">&nbsp;</td>
+</tr>
+<tr>
+<td style="font-family: proxima_nova_rgregular, 'Proxima Nova', Helvetica, Arial, sans-serif; padding: 0px 15px; width: 1058.89px;" align="center" bgcolor="#f8f9fc"><br /><!-- [if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]--></td>
+</tr>
+</tbody>
+</table>

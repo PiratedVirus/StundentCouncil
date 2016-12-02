@@ -64,26 +64,48 @@
   </div>
 
 
-  <?php 
-   
-         $sql = "SELECT * FROM users  WHERE userId ='".$_SESSION['stud_id']."'";
-         $result = mysqli_query($conn, $sql);
-         $row = mysqli_fetch_assoc($result);
-         echo $row['notification'];
-         if( $row['notification'] > '0'){
-           include 'Admin/notuser.php';
-           ?>
-           <a class="waves-effect waves-light btn-large update-btn" href="Admin/notuserarchive.php">LOAD ARCHIVES</a>
+<div class="container">
+  <div class="row">
+    <div class="col s12 center">
+      <?php 
+       
+             $sql = "SELECT * FROM users  WHERE userId ='".$_SESSION['stud_id']."'";
+             $result = mysqli_query($conn, $sql);
+             $row = mysqli_fetch_assoc($result);
 
-           <?php
+             if( $row['notification'] > '0'){
+               $emailnotf = $row['userEmail'];
 
-         }else{
-           include 'Core/msg.php';
-         }
+               include "Admin/Notifications/Current/notuser_$emailnotf.php";
 
-         $conn->close();
+          ?>
 
-    ?>
+               <form>
+                 <input type="submit" class="waves-effect waves-light btn-large update-btn center" name="archives" value="LOAD MORE">
+               </form>
+
+          <?php
+          
+               function loadmore(){
+                      include "Admin/Notifications/Archives/notuser_$emailnotf.php";
+               }
+
+               if(isset($_GET['archives'])){
+                loadmore();
+               }
+
+
+             } else{
+               include 'Core/msg.php';
+             }
+
+             $conn->close();
+
+        ?>
+    </div>
+  </div>
+</div>
+
 
 
   <footer class="page-footer white">

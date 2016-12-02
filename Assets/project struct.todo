@@ -16,8 +16,9 @@
    ✔ selecting checkboxes @done (16-12-01 23:39)
    ✔ fetching checkboxes into database @done (16-12-01 23:39)
  ✔ recheck skill sorting issue @done (16-12-01 13:33)
- ☐ Sending notifications on select like email
+ ✔ Sending notifications on select like email @done (16-12-02 17:09)
  ☐ changing enrollment number to  userId in enrollement table
+ ☐ Creating template for sending emails and notification in tinymce and proper code in fwrite() files
 
 
 
