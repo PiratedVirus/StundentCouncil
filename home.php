@@ -72,13 +72,64 @@
              $sql = "SELECT * FROM users  WHERE userId ='".$_SESSION['stud_id']."'";
              $result = mysqli_query($conn, $sql);
              $row = mysqli_fetch_assoc($result);
+             $username = $row['userName'];
 
              if( $row['notification'] > '0'){
-               $emailnotf = $row['userEmail'];
+                $enrollnotf = $row['userId'];
 
-               include "Admin/Notifications/Current/notuser_$emailnotf.php";
+               include "Admin/Notifications/Current/notuser_$enrollnotf.php";
 
           ?>
+          <script>
+            newnotification();
+            function newnotification() {
+
+
+
+              // Let's check if the browser supports notifications
+              if (!("Notification" in window)) {
+                alert("This browser does not support desktop notification");
+              }
+
+              // Let's check whether notification permissions have already been granted
+              else if (Notification.permission === "granted") {
+                // If it's okay let's create a notification
+
+                randomNotification();
+
+
+
+                function randomNotification() {
+              var name = '<?php echo $username ?>';
+              var number = '<?php echo $row['notification']?>';
+              console.log(name,number);
+                  var randomQuote = "You have " + number + " new notifications!";
+                  var options = {
+                      body: randomQuote,
+                      icon: 'Assets/img/letter.png',
+                  }
+
+                  var n = new Notification('Hi, '+ name + '!',options);
+                  setTimeout(n.close.bind(n), 5000); 
+                }
+
+              }
+
+              // Otherwise, we need to ask the user for permission
+              else if (Notification.permission !== 'denied') {
+                Notification.requestPermission(function (permission) {
+                  // If the user accepts, let's create a notification
+                  if (permission === "granted") {
+                  
+                      randomNotification();            
+
+                  }
+                });
+              }
+
+            }
+          </script>
+
 
                <form>
                  <input type="submit" class="waves-effect waves-light btn-large update-btn center" name="archives" value="LOAD MORE">
@@ -86,12 +137,14 @@
 
           <?php
           
-               function loadmore(){
-                      include "Admin/Notifications/Archives/notuser_$emailnotf.php";
+
+               function loadmore($enrollnotf_func){
+
+                      include "Admin/Notifications/Archives/notuserarchive_$enrollnotf_func.php";
                }
 
                if(isset($_GET['archives'])){
-                loadmore();
+                loadmore($enrollnotf);
                }
 
 

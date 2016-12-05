@@ -752,9 +752,10 @@
 
 			$notifyall =  mysqli_query($conn,"UPDATE users SET notification = notification + 1 WHERE userEmail = '$value'");
 
-			$notified = mysqli_query($conn,"SELECT notification FROM users WHERE userEmail = '$value'");
+			$notified = mysqli_query($conn,"SELECT notification,userId FROM users WHERE userEmail = '$value'");
 			$notifiedarr = mysqli_fetch_array($notified);
 			$notcount = $notifiedarr['notification'];
+			$notfenroll = $notifiedarr['userId'];
 
 	 		if(mail($value,$subject,$message,$headers))
 			{	
@@ -764,27 +765,29 @@
 	 		    echo '<strong>Success! </strong>'; 
 				echo ' Mail has been Successfully sent to '.$value.'</br>';
 				echo '</div></div>';
+
 			} 
 			else{
 				echo "No email send!";
 			}
+	
 			echo "notcount is :";
 			echo $notcount;
 
 			if($notcount > 4){
 				echo "Accddently I am in 4!";
 
-				$source_create = fopen("Notifications/Current/notuser_$value.php", r);
-				$destination_create = fopen("Notifications/Archives/notuserarchive_$value.php", r);
-				$source = "Notifications/Current/notuser_$value.php";
-				$destination = "Notifications/Archives/notuserarchive_$value.php";
+				$source_create = fopen("Notifications/Current/notuser_$notfenroll.php", r);
+				$destination_create = fopen("Notifications/Archives/notuserarchive_$notfenroll.php", r);
+				$source = "Notifications/Current/notuser_$notfenroll.php";
+				$destination = "Notifications/Archives/notuserarchive_$notfenroll.php";
 
 
 				$data = file_get_contents($source);
 				$handle = fopen($destination,"c");
 				fseek($handle, 5);
 				fwrite($handle,$data);
-				$sourcewrite = fopen("Notifications/Current/notuser_$value.php","w");
+				$sourcewrite = fopen("Notifications/Current/notuser_$notfenroll.php","w");
 				fwrite($sourcewrite,$message);
 				fclose($handle);
 				fclose($sourcewrite);
@@ -794,19 +797,20 @@
 
 							
 			} else {
-				$file = fopen("Notifications/Current/notuser_$value.php","a") or die("Unable to append in notuser.php"); 
+				$file = fopen("Notifications/Current/notuser_$notfenroll.php","a") or die("Unable to append in notuser.php"); 
 				fwrite($file,$message);
 				fclose($file);
 			}
 			// End of IF-ELSE
 			if($notcount > 4){
-				$notcount = 0;
+				$notcount = 1;
 				echo 'May be my value is <4';
 				echo $notcount;
 
 			} 
-			echo "New value is ";
-			echo $notcount + 1;
+			// echo "New value is ";
+			// $newcount = $notcount + 1;
+			echo $notcount;
 			$notifiedzero = mysqli_query($conn,"UPDATE users SET notification = '$notcount' WHERE userEmail = '$value'");
 
 

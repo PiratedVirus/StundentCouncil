@@ -103,22 +103,22 @@
 
 
             <div class="input-field">
-                <input type="text" name="enroll" id="new-enroll" data-error=".errorTxt0" length="11" maxlength="11" value="<?php echo $enroll ?>" />
                 <label for="new-enroll">Enrollment Number</label>
+                <input type="text" name="enroll" id="new-enroll" data-error=".errorTxt0" length="11" maxlength="11" value="<?php echo $enroll ?>" />
                 <div class="errorTxt0"></div>
             </div>
 
 
             <div class="input-field">
-                <input type="text" name="uname" class="inser" id="new-name" style="text-transform: capitalize;" data-error=".errorTxt1" maxlength="50" value="" />
                 <label  for="uname">Name</label>
+                <input type="text" name="uname" class="inser" id="new-name" style="text-transform: capitalize;" data-error=".errorTxt1" maxlength="50" value="" />
                 <div class="errorTxt1"></div>
             </div>
 
 
             <div class="input-field">
-                <input type="email" name="cemail" id="new-email" data-error=".errorTxt7"/>
                 <label for="new-email">Email</label>
+                <input type="email" name="cemail" id="new-email" data-error=".errorTxt7"/>
                 <div class="errorTxt7"></div>
             </div>
 

@@ -3,6 +3,8 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
    <title>Student Council</title>
+ 
+
  </head>
  <body>
 
@@ -467,6 +469,18 @@
 
         </div>
 
+        <div class="col s12">
+          <h2>Order <span>your</span> favourite</h2>
+
+          <ol>
+            <li>Coke</li>
+            <li>Pepsi</li>
+            <li>Sprite</li>
+            <li>Fanta</li>
+            <li>Dr Pepper</li>
+          </ol>   
+        </div>
+
 
            
 
@@ -528,6 +542,7 @@
 
    });
  </script>
+
  <script src="../Assets/js/materialize.js"></script>
  <script src="../Assets/js/init.js"></script>
 

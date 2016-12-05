@@ -146,14 +146,14 @@
 				?>
 	
             <div class="input-field">
-            	<input type="text" name="id" id="label-enroll-stud" class="validate" length="11" value="<?php echo $id; ?>" maxlength="11" />
             	<label for="label-enroll-stud" data-error = "<?php echo $idError; ?>">Enrollment Number</label>
+            	<input type="text" name="id" id="label-enroll-stud" class="validate" length="11" value="<?php echo $id; ?>" maxlength="11" />
             	<span class="text-danger"><?php echo $idError; ?></span>
             </div>
 
             <div class="input-field">
-            	<input type="password" name="password" id="label-pass" class="validate" maxlength="15" />
             	<label for="label-pass" data-error = "<?php echo $idError; ?>">Password</label>
+            	<input type="password" name="password" id="label-pass" class="validate" maxlength="15" />
             	<span class="text-danger"><?php echo $passError; ?></span>
 
             </div>

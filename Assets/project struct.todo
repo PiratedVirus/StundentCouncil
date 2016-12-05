@@ -18,7 +18,8 @@
  ✔ recheck skill sorting issue @done (16-12-01 13:33)
  ✔ Sending notifications on select like email @done (16-12-02 17:09)
  ☐ changing enrollment number to  userId in enrollement table
- ☐ Creating template for sending emails and notification in tinymce and proper code in fwrite() files
+ ✔ Creating template for sending emails and notification in tinymce and proper code in fwrite() files @done (16-12-05 11:28)
+ ☐ Creating sticky footer all over the site
 
 
 

@@ -122,14 +122,14 @@
 			?>
 
             <div class="input-field">
-            	<input type="text" name="id" class="form-control" id="label-enroll-admin" value="<?php echo $id; ?>" maxlength="40" />
             	<label for="label-enroll-admin" data-error = "<?php echo $idError; ?>">Admin ID</label>
+            	<input type="text" name="id" class="form-control" id="label-enroll-admin" value="<?php echo $id; ?>" maxlength="40" />
                 <span class="text-danger"><?php echo $idError; ?></span>
             </div>
 
             <div class="input-field">
-            	<input type="password" id="label-pass-admin" name="password" class="form-control"  maxlength="15" />
             	<label for="label-pass-admin" data-error = "<?php echo $idError; ?>">Password</label>
+            	<input type="password" id="label-pass-admin" name="password" class="form-control"  maxlength="15" />
                 <span class="text-danger"><?php echo $passError; ?></span>
             </div>
 
