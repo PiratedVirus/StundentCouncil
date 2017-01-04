@@ -1,4 +1,13 @@
+<?php 
+session_start();
+include '../Core/dbconnect.php';
+if ( isset($_SESSION['user']) =="" ) {
+    header("Location: ../Login");
+    exit;
+}
 
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +18,12 @@
   <title>Welcome  Admin </title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link rel="stylesheet" href="../Assets/css/nockeckbox.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+
 
   <script src="../Assets/js/jquery-1.11.3-jquery.min.js"></script>
   <script src="../Assets/js/ajaxsearch.js"></script>
+  <script src="../Assets/js/analytics.js"></script>
 
   <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
   <script>
@@ -31,7 +43,8 @@
       toolbar2: 'link image print preview media | forecolor backcolor emoticons | codesample',
       image_advtab: true,
 
-      templates: "template.php",
+      // templates: "http://www.scouncilgeca.com/Admin/template.php",
+      templates: "../Admin/template.php",
       
       content_css: [
         '../Assets/css/base.css'
@@ -69,10 +82,9 @@
 
         <ul id="slide-out" class="side-nav">
             <li><div class="userView">
-              <img class="background" src="../Assets/img/2.jpg">
-              <a href="#"><img class="circle" src="../Assets/img/user.png"></a>
-              <a href="#"><span  class="black-text name slide-username"> <b>Admin</b></span></a>
-              <a href="#"><span class="black-text email"></span></a>
+              <img class="background" src="../Assets/img/b (5).jpg">
+              <a href="#"><img class="circle" src="../Assets/img/userios.png"></a>
+              <a href="#"><span style="padding-bottom: 15px;" class="white-text name slide-username"> <b>Admin</b></span></a>
             </div></li>
           
             <li><a href="#combolink">Combo sort</a></li>
@@ -84,11 +96,12 @@
             <li><a href="../logout.php?logout"><img class="slideicon" src="../Assets/img/logout.png"  alt="">Log Out</a></li>
             <li><div class="divider"></div></li>
             <li><a href="../default.html"><b>STUDENT COUNCIL</b></a></li>
+            <li><a href="../default.html#team-link">Team</a></li>
+            <li><a href="../default.html#contact-link">Contact Us</a></li>
 
 
 
-            <li><a class="waves-effect" href="#">Events</a></li>
-            <li><a class="waves-effect" href="#">Something</a></li>
+
         </ul>
 
         <a href="#" id="user-menu" data-activates="slide-out" class="button-collapse">
@@ -125,9 +138,9 @@
 
 
 
-        <p class="info-admin center">
+        <p class="info-admin center col">
           Use following filters for specific results.There is a COMBO SORT which sorts Year and Branch together.Branches and Year filters are sperate for sorting indivisiuls.'Skills' filter is very useful, Lorem ipsum dolor sit.To
-           view all details without any filters <a href="../core/display.php" target="_blank"> click here</a>
+           view all details without any filters <a href="http://www.scouncilgeca.com/Admin/display" target="_blank"> click here</a>
         </p>
       </div>
     </div>
@@ -135,19 +148,19 @@
   </div>
 
     <div class="row">
-      <div class="col s12">
+      <div class="col s12" style="padding-top: 15px;">
         <div  id ="result" ></div>
       </div>
+      <div class="col s12">
+        <div id="resultlink"></div>
+        <?php include 'sorters.php';?>
+      </div>
     </div>
-    <div id="resultlink">
+
 
     
-     <?php 
-      include 'sorters.php';
-      ?>
 
-  </div>
-
+<div class="container">
   <form action="" id="combolink" class = "combo" method="POST">
     <hr class="header-holder top-line">
     <div class="container" >
@@ -212,6 +225,7 @@
           
       </div>
     </div>
+
         <hr class="header-holder">
 
         <!-- <div style="height: 100%;border: 2px solid black" id ="result" ></div> -->
@@ -219,7 +233,7 @@
 
 
   </form>
-
+</div>
     <div class="container edit" id="bracheslink" style="margin-bottom: 50px;"">
       <h5 class="form-header">Branches</h5>
       <div class="row inline-form">
@@ -289,6 +303,66 @@
         <form action="" method="POST" name="singular">
 
           <input type="submit" value="BE" class="imgbtn  col m2 s4 offset-m1" name="single-be">
+
+        </form>
+        
+      </div>
+
+    </div>
+      <hr class="header-holder">
+
+    <div class="container edit" id="yearlink"style="margin-bottom: 50px;color: #9e9e9e;" "="">
+      <h5 class="form-header">Wings &nbsp;&nbsp;  </h5>
+
+      <div class="row inline-form">
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Sponsors" class="imgbtn  col m2 s4 offset-m1" name="Sponsorship">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Publicity" class="imgbtn  col m2 s4 offset-m1" name="Publicity">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Design" class="imgbtn  col m2 s4 offset-m1" name="Design">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Decoration" class="imgbtn  col m2 s4 offset-m1" name="Decoration">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="INFRA" class="imgbtn  col m2 s4 offset-m1" name="Infrastructure">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="DOCs" class="imgbtn  col m2 s4 offset-m1" name="Documentation">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Facility" class="imgbtn  col m2 s4 offset-m1" name="Facility">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Cultural" class="imgbtn  col m2 s4 offset-m1" name="Cultural">
 
         </form>
         
@@ -523,17 +597,20 @@
 
         </form>
 
+       <form action="" method="POST">
+
+
+       <input type="submit" name="notifyWings" class="btn-large combo-sort" value="Notify for Wings">
+
+       </form>
+
+
+
       </div>
       <hr class="header-holder">
 
     </div>
-      
-    <form action="" method="POST">
 
-    <input type="submit" name="notify" class="btn-large combo-sort" value="Notify for SAT">
-
-      
-    </form>
     
        <script src="../Assets/js/materialize.js"></script>
        <script src="../Assets/js/init.js"></script>
@@ -541,3 +618,4 @@
     
   </body>
   </html>
+  <?php ob_end_flush(); ?>

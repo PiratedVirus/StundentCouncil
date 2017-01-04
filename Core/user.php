@@ -5,7 +5,7 @@
 	
 	// it will never let you open index(login) page if session is set
 	if ( isset($_SESSION['user'])!="" ) {
-		header("Location: home.php");
+		header("Location: home");
 		exit;
 	}
 	
@@ -65,6 +65,13 @@
 			//passing array for retring whole info
 			$get = mysqli_query($conn,"SELECT * FROM users WHERE userId='$id'");
 			$arr = mysqli_fetch_array($get);
+			// Query to get everyting from skills table
+			$getskills = mysqli_query($conn,"SELECT * FROM skills WHERE userId='$id'");
+			$arrskills = mysqli_fetch_array($getskills);
+
+
+
+
 
 			// Below 4 values are unique, don't disturb them....
 			$user_name = $arr['userName'];
@@ -72,11 +79,22 @@
 			$user_id = $arr['userId'];
 			$user_pass = $arr['userPass'];
 
+
 			$_SESSION['stud_name'] = $user_name;
 			$_SESSION['stud_email'] = $user_email;
 			$_SESSION['stud_id'] = $user_id;
 			$_SESSION['stud_pass'] = $user_pass;
 			// Above 4 values are unique, don't disturb them....
+
+			// Getting first word of the name
+			// $myvalue = $_SESSION['stud_name'];
+			// $arr = explode(' ',trim($myvalue));
+			// global $firstname;
+			// $firstname = $arr[0];
+			// echo $firstname; 
+
+			// // Creating session var for this
+			// $_SESSION['fname'] = $firstname;
 
 			// New updations cols should appear here
 			$user_skills = $arr['Skills'];
@@ -84,12 +102,19 @@
 			$user_academic_year = $arr['academic_year'];
 			$user_dob = $arr['dob'];
 			$user_state = $arr['state'];
+			$user_add = $arr['userAdd'];
+
+			$user_tech = $arrskills['hightech'];
+
 
 			$_SESSION['stud_skills'] = $user_skills;
 			$_SESSION['stud_mobile'] = $user_mobile;
 			$_SESSION['stud_academic_year'] = $user_academic_year;
 			$_SESSION['stud_dob'] = $user_dob;
 			$_SESSION['stud_state'] = $user_state;
+			$_SESSION['stud_address'] = $user_add;
+
+			$_SESSION['stud_tech'] = $user_tech;
 
 			// Legacy, Deleted before public release (for testing purpose..)
 			$user_class = $arr['class'];
@@ -109,7 +134,7 @@
 
 			if( $count == 1 && $row['userPass']==$encrypted ) {
 				$_SESSION['user'] = $row['userId'];
-				header("Location: home.php");
+				header("Location: home");
 
 			} else {
 				$errMSG = "Incorrect Credentials, Try again...";
@@ -124,11 +149,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title style="text-transform: capitalize;">Welcome  <?php echo $_SESSION['stud_name']; ?></title>
-  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+<main>
 	<div class="row">
     	<form class="col m6 s12 offset-m3" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
     
@@ -153,10 +176,12 @@
 
             <div class="input-field">
             	<label for="label-pass" data-error = "<?php echo $idError; ?>">Password</label>
-            	<input type="password" name="password" id="label-pass" class="validate" maxlength="15" />
+            	<input type="password" name="password" id="label-pass" class="validate"/>
             	<span class="text-danger"><?php echo $passError; ?></span>
 
             </div>
+
+            <div class="forget right" style="font-size: 12px;"><a href="Core/forget">Forgot Password ?</a></div>
             
             
             <button type="submit" class="btn btn-block btn-primary" name="user-login">Log In</button>
@@ -165,5 +190,6 @@
 
     </form>
 </div>	
+</main>
 </body>
 </html>

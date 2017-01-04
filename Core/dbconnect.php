@@ -4,11 +4,12 @@
  error_reporting( ~E_DEPRECATED & ~E_NOTICE );
  
  define('DBHOST', 'localhost');
- define('DBUSER', 'root');
- define('DBPASS', '');
- define('DBNAME', 'students');
+ define('DBUSER', 'santdbgd_geca');
+ define('DBPASS', 'Saurabh@123#');
+ define('DBNAME', 'santdbgd_saurabh');
  
  global $conn;
+
  
  $conn = mysqli_connect(DBHOST,DBUSER,DBPASS);
  $dbcon = mysqli_select_db($conn,DBNAME);

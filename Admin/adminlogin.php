@@ -1,13 +1,6 @@
 <?php
-	ob_start();
 	session_start();
-	require_once 'dbconnect.php';
-
-	// it will never let you open index(login) page if session is set
-	// if ( isset($_SESSION['user'])!="" ) {
-	// 	header("Location: adminhome.php");
-	// 	exit;
-	// }
+	include 'Core/dbconnect.php';
 
 	// For admin login there must be a normal account created ( by main admin (that passwordis used for admin acc too!)) and then in database a id should be enterd in adminId col.
 
@@ -79,10 +72,11 @@
 			$_SESSION['stud_id'] = $user_id;
 			$_SESSION['stud_pass'] = $user_pass;
 			$_SESSION['stud_skills'] = $user_skills;
+			$_SESSION['sql_userid'] = $row['userId'];
 
 			if( $count == 1 && $row['userPass']==$encrypted ) {
 				$_SESSION['user'] = $row['userId'];
-				header("Location: admin/adminhome.php");
+				header("Location: admin/home");
 
 			} else {
 				$errMSG = "Incorrect Credentials, Try again...";

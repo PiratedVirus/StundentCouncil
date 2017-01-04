@@ -1,6 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Amatic+SC');
 body
   font-family: 'Open Sans', sans-serif
+
+
+.main-text
+  font-family: 'Bradley Hand ITC'
+  // font-family: 'Sacramento'
+  font-size: 108px
+  letter-spacing: 15px
 
 nav#show-menu
   background-color: transparent
@@ -43,6 +50,11 @@ nav#home-menu,nav#success-menu
     color: #000
   .brand-logo
     padding: 2px 15px
+
+.button-collapse
+  color: #000
+.material-icons
+  color: #000
 
 .text-danger
   color: red
@@ -214,6 +226,15 @@ nav#subpages
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0)
     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0)
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0) 
+
+.teal-line
+    border: 0 
+    height: 1px 
+    margin-top: 25px
+    background-image: -webkit-linear-gradient(left, #f0f0f0, teal, #f0f0f0)
+    background-image: -moz-linear-gradient(left, #f0f0f0, teal, #f0f0f0)
+    background-image: -ms-linear-gradient(left, #f0f0f0, teal, #f0f0f0)
+    background-image: -o-linear-gradient(left, #f0f0f0, teal, #f0f0f0) 
 
 .imgbtn
     border:1px solid transparent
@@ -394,3 +415,28 @@ footer.page-footer
 // First letter capital 
 .fir-cap
   text-transform: capitalize
+
+// Admin view profile
+
+.admin-view 
+  padding-top: 55px
+
+.hi-header
+  color: #fff
+
+.spin
+  color: #fff
+  &:hover
+    transform: rotate(360deg)
+    transition: 1s
+
+.small-wings
+  font-size: 12px
+
+#pref1ans,#pref2ans,#pref3ans,#ques1,#ques2txt
+  border: 1px solid teal
+  border-radius: 6px
+  font-size: 20px
+  font-weight: 100
+  padding: 6px 0px 2px 10px
+  margin-bottom: 30px

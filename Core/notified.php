@@ -87,8 +87,8 @@
 
 		    <ul id="slide-out" class="side-nav">
 		        <li><div class="userView">
-		          <img class="background" src="../Assets/img/2.jpg">
-		          <a href="#"><img class="circle" src="../Assets/img/user.png"></a>
+		          <img class="background" src="../Assets/img/b (5).jpg">
+		          <a href="#"><img class="circle" src="../Assets/img/userios.png"></a>
 		          <a href="#"><span  class="black-text name slide-username"> <b><?php echo $_SESSION['stud_name']; ?></b></span></a>
 		          <a href="#"><span class="black-text email"><?php echo $_SESSION['stud_email']; ?></span></a>
 		        </div></li>

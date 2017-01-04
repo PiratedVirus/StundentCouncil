@@ -226,6 +226,12 @@
         $fet = mysqli_query($conn,"UPDATE skills SET painting = '1' WHERE userId ='".$_SESSION['stud_id']."'");
     }
 
+    // Checking decoration
+    if (isset($_POST['sandart'])) {
+        $sandart = '1';
+        $fet = mysqli_query($conn,"UPDATE skills SET sandart = '1' WHERE userId ='".$_SESSION['stud_id']."'");
+    }
+
 
 
     // Checking Cricket
@@ -294,9 +300,15 @@
     }
 
     // Checking Member
-    if (isset($_POST['Member'])) {
-        $member = '1';
-        $fet = mysqli_query($conn,"UPDATE skills SET member = '1' WHERE userId ='".$_SESSION['stud_id']."'");
+    if (isset($_POST['communication'])) {
+        $communication = '1';
+        $fet = mysqli_query($conn,"UPDATE skills SET communication = '1' WHERE userId ='".$_SESSION['stud_id']."'");
+    }
+
+    // Checking Member
+    if (isset($_POST['otherlang'])) {
+        $otherlang = '1';
+        $fet = mysqli_query($conn,"UPDATE skills SET otherlang = '1' WHERE userId ='".$_SESSION['stud_id']."'");
     }
 
     if (isset($_POST['SAT'])) {
