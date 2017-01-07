@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.scouncilgeca.com/</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/Login</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/index.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/register.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/Core/forget</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/Register</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/default.html</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/Core/register.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/Core/Login</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.scouncilgeca.com/Core/Register</loc>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>

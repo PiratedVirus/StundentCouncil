@@ -4,7 +4,13 @@
 
 <head>
    <meta http-equiv="Content-Type" content="text/html"/>
+   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+   <meta name="theme-color" content="#009688 ">
+   <meta name="msapplication-navbutton-color" content="#009688 ">
+   <meta name="apple-mobile-web-app-status-bar-style" content="#009688 ">
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 
    <title>Sign Up</title>
 
@@ -13,17 +19,15 @@
    
    <script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>
    <script src="Assets/js/ajaxvailator.js"></script>
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script> -->
-
-
+   <script src="Assets/js/analytics.js"></script>
 
 
 </head>
 
 <style type="text/css">
-  .input-field div.error,.errorTxt0,.errorTxt7,.errorTxt8,#mpassword-strength-text{
+  .input-field div.error,.errorTxt8,#mpassword-strength-text{
     position: relative;
-    top: -1rem;
+    top: 0rem;
     left: 0rem;
     font-size: 0.8rem;
     color:red;
@@ -32,6 +36,19 @@
     -o-transform: translateY(0%);
     transform: translateY(0%);
   }
+  .errorTxt0,.errorTxt7{
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    font-size: 0.8rem;
+    color:red;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+
+  }
+
   .input-field label.active{
       width:100%;
   }
@@ -140,20 +157,22 @@
 
 
             <div class="input-field">
-              <select required id="branch" name="branch" class="branch"  data-error=".errorTxt5">
+              <select required required="required" id="branch" name="branch" class="branch click"  data-error=".errorTxt5">
                 <option value="" disabled selected="selected" >Select Branch</option>
                 <option value="Civil Engineering" data-icon="Assets/img/civil.png" class="circle">Civil Engineering</option>
-                <option value="Computer Science And Engineering" data-icon="Assets/img/cse.png" class="circle">Computer Science And Engineering</option>
                 <option value="Electrical Engineering" data-icon="Assets/img/electrical.png" class="circle">Electrical Engineering</option>
-                <option value="Electronics And Telecommunications" data-icon="Assets/img/entc.png" class="circle">Electronics And Telecommunications</option>
+                <option value="Mechanical Engineering" data-icon="Assets/img/mech.png" class="circle">Mechanical Engineering</option>
+                <option value="Electronics And Telecommunications" data-icon="Assets/img/entc.png" class="circle">Electronics & Telecommunication Engineering</option>
+                <option value="Computer Science And Engineering" data-icon="Assets/img/cse.png" class="circle">Computer Science And Engineering</option>
                 <option value="Information Technology" data-icon="Assets/img/it.png" class="circle">Information Technology</option>
                 <option value="MCA" data-icon="Assets/img/mca.png" class="circle">Master of Computer Application</option>
-                <option value="Mechanical Engineering" data-icon="Assets/img/mech.png" class="circle">Mechanical Engineering</option>
               </select>
               <label for="">Branch</label>
 
               <div class="errorTxt5"></div>
             </div>
+
+
 
 
 
@@ -174,29 +193,40 @@
 
 
 
-             <button type="submit" class="btn waves-effect waves-light new-submit" name="btn-signup">Sign Up</button>
+             <button type="submit" disabled id="reg" class="btn waves-effect waves-light new-submit" name="btn-signup">Sign Up</button>
         </div>
     </form>
     </div>
 </div>
 <div class="center-align">
-     <a href="index.php">Log in here</a>
+     <a style="font-size: 22px;" href="Login">Log in here</a>
 </div>
 
-<footer class="page-footer white">
+<footer class="page-footer white custom">
 
   <div class="footer-copyright">
-    <div class="container center">
-      <p class="black-text"><i class="material-icons">code</i>with<i class="material-icons" style="color: #f44336">favorite</i>by <span class="ftr"><a class="ftr" href="https://github.com/piratedvirus">Saurabh Kulkarni</a> </span>, SE CSE</p>
+    <div class="container">
+     <div class="left">
+      <p class="black-text center"><i class="material-icons">code</i>with<i class="material-icons" style="color: #f44336">favorite</i>by <span class="ftr"><a class="ftr" href="https://www.facebook.com/saurabhk20">Saurabh Kulkarni</a> </span>, SE CSE</p>
+
+     </div>
+
+     <div class="right">
+      <p class="black-text center">Intiated by <span class="ftr"><a class="ftr" href="https://www.facebook.com/people/Nikhil-Badave/100004117724825">Nikhil Badave</a></span>, Cultural Secretary 2016-17 </p>
+
+     </div>
     </div>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.1/zxcvbn.js"></script>
+<script src="Assets/js/zxcvbn.js"></script>
 <!-- <script src="Assets/js/password.js"></script> -->
 <script src="Assets/js/materialize.js"></script>
 <script src="Assets/js/init.js"></script>
+<script src="Assets/js/password.js"></script>
+<script src="Assets/js/formvalidate.js"></script>
 <script src="Assets/js/jquery.validate.min.js"></script>
+
 
 
 </body>

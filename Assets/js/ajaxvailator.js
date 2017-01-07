@@ -11,7 +11,7 @@ $(document).ready(function(){
        $.ajax({
          
          type : 'POST',
-         url  : 'core/enrollcheck.php',
+         url  : 'Core/enrollcheck.php',
          data : $(this).serialize(),
          success : function(data)
                {
@@ -35,7 +35,7 @@ $(document).ready(function(){
        $.ajax({
          
          type : 'POST',
-         url  : 'core/emailcheck.php',
+         url  : 'Core/emailcheck.php',
          data : $(this).serialize(),
          success : function(data)
                {
@@ -51,6 +51,29 @@ $(document).ready(function(){
    });
 
 
+   $('.with-gap').click(function(){ branchvalidate(); });
+
+   function branchvalidate(){
+
+
+      if ($("#branch").val() != null) {
+
+          var checkbtn = $("#reg").data("cross");
+
+          
+          if(checkbtn == 'disabled'){
+              $('#reg').attr('disabled', 'disabled');
+            
+          } else{
+              $('#reg').attr('disabled', false);
+          }
+
+      } else {
+          $('#reg').attr('disabled', 'disabled');
+      }
+
+   }
 
  
 });
+

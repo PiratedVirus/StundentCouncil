@@ -73,7 +73,7 @@
 
    if ($res) {
     $errTyp = "success";
-    $link = "<a href='index.php'>Login Now</a>";
+    $link = "<a href='Login'>Login Now</a>";
     $errMSG = "Successfully registered, you may $link !";
     unset($name);
     unset($enroll);
@@ -82,7 +82,7 @@
     unset($skill);
    } else {
     $errTyp = "danger";
-    $errMSG = "Something went wrong, try again later...";
+    $errMSG = "<h4 style='color: red' >Something went wrong, try again later...</h4>";
    }
 
   }

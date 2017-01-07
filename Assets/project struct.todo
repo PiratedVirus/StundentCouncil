@@ -1,12 +1,14 @@
  ✔ Adding Open Sans as Google font @done (16-11-29 08:44)
+ ✔ Working on loading time for formvalidate.js and others @done (16-12-30 18:41)
+ ✔ Solving pos issue for messages @done (16-12-30 18:41)
  ✔ Retriving after GECA @done (16-11-29 08:44)
  ✔ All achivements @done (16-11-29 08:44)
  ✔ suggestions @done (16-11-29 08:44)
  ✔ Password strength @done (16-11-29 13:47)
  ✔ After geca multiple checkboxes @done (16-11-29 17:16)
  ✔ form validation @done (16-11-29 17:16)
- ☐ DOB validation
- ☐ Dropdown validations
+ ✔ DOB validation @done (16-12-16 00:21)
+ ✔ Dropdown validations @done (16-12-16 00:21)
  ✔ Admin up and running @done (16-11-29 17:27)
  ✔ Solving admin problem @done (16-11-29 18:23) <- AWESOME CODE on line 278-280 of sorters.php
  ✔ Adding custom search for admins @done (16-11-29 23:33)
@@ -17,14 +19,28 @@
    ✔ fetching checkboxes into database @done (16-12-01 23:39)
  ✔ recheck skill sorting issue @done (16-12-01 13:33)
  ✔ Sending notifications on select like email @done (16-12-02 17:09)
- ☐ changing enrollment number to  userId in enrollement table
+ ✔ changing enrollment number to  userId in enrollement table @done (16-12-30 18:41)
  ✔ Creating template for sending emails and notification in tinymce and proper code in fwrite() files @done (16-12-05 11:28)
- ☐ Creating sticky footer all over the site
+ ✔ Creating sticky footer all over the site @done (16-12-16 00:20)
+ ✔ Giving preferecences @done (16-12-16 00:45)
+ ✔ changing front page @done (16-12-30 18:41)
+ ☐ addiong clubs
+ ✔ If possoble sorters for pref @done (16-12-16 00:45)
+ ☐ AND gate sorter for admin 
+ ✔ Adding htaaccess @done (16-12-30 18:41)
 
-
+You nailed it man....It's 30.12.16 and we almost reach to the end....fully functional site
 
 New improved file structure
 
+FINAL TODO's
+
+WE already launched a bug free version.....Running really fine.
+Now with some additional functions...
+  1.Forget Password 
+  2.View profile both admin and users
+  3.Google Analytics
+  4.SEO and Setting Google My Bussiness
 
 
 New features to add

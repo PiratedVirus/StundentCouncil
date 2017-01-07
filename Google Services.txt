@@ -1,0 +1,19 @@
+-------------------OAuth ------------------
+Client ID :
+212073603669-1m90hnb39c60pjejibmfilmal8dpvfug.apps.googleusercontent.com
+Client Secret :
+kUvptzAYs3U4NZwCryFnzt9A
+------------------Firebase-----------------
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBrTgaQCUR_dd2a_tHjKCZpyAkRZDt2GgU",
+    authDomain: "student-council-154816.firebaseapp.com",
+    databaseURL: "https://student-council-154816.firebaseio.com",
+    storageBucket: "student-council-154816.appspot.com",
+    messagingSenderId: "212073603669"
+  };
+  firebase.initializeApp(config);
+</script>

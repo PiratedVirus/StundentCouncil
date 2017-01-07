@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d    [NC]
+RewriteCond %{REQUEST_FILENAME}.php -f [NC]
+RewriteRule ^(.*)$ $1.php
+
+DirectoryIndex default.html
+
+#RewriteCond %{REQUEST_FILENAME}.html -f [NC]
+#RewriteRule . default.html
+
+
+RewriteRule Login index.php [NC]
+RewriteRule Register register.php [NC]
+#RewriteRule home home.php [NC]
+RewriteRule user/update Core/edit.php [NC]
+RewriteRule user/wings Core/wingsform.php [NC]
+RewriteRule user/success Core/testing.php [NC]
+RewriteRule user/password Core/changepass.php [NC]
+RewriteRule admin/home Admin/adminhome.php [NC]
+
+</IfModule>

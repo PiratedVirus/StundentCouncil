@@ -1,9 +1,10 @@
 <?php
   include 'dbconnect.php';
   $host="localhost";
-  $user="root";
-  $pass="";
-  $dbname="students";
+  $user="santdbgd_geca";
+  $pass="Saurabh@123#";
+  $dbname="santdbgd_saurabh";
+
   
   $dbcon = new PDO("mysql:host={$host};dbname={$dbname}",$user,$pass);
   
@@ -27,6 +28,14 @@
 
 	  if($enrollcount!=0) {
 	  	echo "<span style='color:red;'>Somebody hacked you before you!</span>";
+	  	  		  ?>
+	  				<script>
+	  				  
+	  				$('#reg').attr('disabled', true);
+	  				$("#reg").data("cross", "disabled");
+	  				</script>
+
+	  	  		  <?php
 
 	  }  else{
 	  	  if($count>0)
@@ -36,6 +45,13 @@
 	  	  else
 	  	  {
 	  		  echo "<span style='color:red;'>Uh Oh ! Seems like you are not from 'The GECA'</span>";
+	  		  ?>
+				<script>
+				  $('#reg').attr('disabled', 'disabled');
+				  $("#reg").data("cross", "disabled");
+				</script>
+
+	  		  <?php
 	  	  }
 	  }
 	  
