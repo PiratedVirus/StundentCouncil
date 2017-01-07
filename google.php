@@ -7,6 +7,10 @@
 		<meta name="theme-color" content="#009688 ">
 		<meta name="msapplication-navbutton-color" content="#009688 ">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#009688 ">
+		<!-- Googel OAuth -->
+		<meta name="google-signin-client_id" content="212073603669-1m90hnb39c60pjejibmfilmal8dpvfug.apps.googleusercontent.com">
+
+
 
 		<title>Log In</title>
 
@@ -34,6 +38,8 @@
 
 
 		<script src="Assets/js/analytics.js"></script>
+		<!-- Google OAuth -->
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 	</head>
 	<body>
@@ -77,10 +83,58 @@
 
 		  </div>
 		</div>
+<!-- Google OAuth  -->
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<a href="#" onclick="signOut();">Sign out</a>
+		<script>
+		  function signOut() {
+		    var auth2 = gapi.auth2.getAuthInstance();
+		    auth2.signOut().then(function () {
+		      console.log('User signed out.');
+		    });
+		  }
+		</script>
+<!-- Google OAuth Ends here -->
+<!-- Facebook Authentication -->
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '652806264891486',
+		      xfbml      : true,
+		      version    : 'v2.8'
+		    });
+		  };
 
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
 
+		<div
+		  class="fb-like"
+		  data-share="true"
+		  data-width="450"
+		  data-show-faces="true">
+		</div>
+		<div id="fb-root"></div>
+
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=652806264891486";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="true"></div>
 		            
+<!-- Facebook Authentication ends here -->
 
+<!-- Firebase Push Notifications -->
 
 		<div class="center-align container">
 			<a style="font-size: 22px; " href="Register">Not a Member? Create new Account</a>
@@ -103,6 +157,15 @@
 		<script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>  
 		<script src="Assets/js/materialize.js"></script>  
 		<script src="Assets/js/init.js"></script>
+		<script>
+			function onSignIn(googleUser) {
+			  var profile = googleUser.getBasicProfile();
+			  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+			  console.log('Name: ' + profile.getName());
+			  console.log('Image URL: ' + profile.getImageUrl());
+			  console.log('Email: ' + profile.getEmail());
+			}
+		</script>
 
 
 	</body>

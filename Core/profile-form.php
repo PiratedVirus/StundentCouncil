@@ -131,7 +131,7 @@
             <div class="input-field col m4 s8 ">
               <label for="birthdate">Birth Date</label>
               <input requried required="requried" id="birthdate" type="text" name="dob" value="<?php echo $_SESSION['stud_dob'] ?>" class="datepicker tooltipped" data-position="top" data-delay="40" data-tooltip="Verify to Proceed">
-              <div class="errorTxt20"></div>
+              <div class="errorTxt20">Verify to Proceed</div>
             </div>
 
             <div class="input-field col m2 s4" >
@@ -294,7 +294,7 @@
 
  		        	          	    <p class="col m4 s6">
  		        	          	      <input type="checkbox" name="Rassberry" id="Rassberry Pie" <?php if ($arr['Rassberry'] == '1') echo "checked='checked'"; ?> />
- 		        	          	      <label for="Rassberry Pie">Rassberry Pie</label>
+ 		        	          	      <label for="Rassberry Pie">Rassberry PI</label>
  		        	          	    </p>
                                 
                                 <div class="col center update-bultton">
