@@ -1,0 +1,23 @@
+-------------------OAuth ------------------
+Client ID :
+212073603669-1m90hnb39c60pjejibmfilmal8dpvfug.apps.googleusercontent.com
+Client Secret :
+kUvptzAYs3U4NZwCryFnzt9A
+------------------Firebase-----------------
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBrTgaQCUR_dd2a_tHjKCZpyAkRZDt2GgU",
+    authDomain: "student-council-154816.firebaseapp.com",
+    databaseURL: "https://student-council-154816.firebaseio.com",
+    storageBucket: "student-council-154816.appspot.com",
+    messagingSenderId: "212073603669"
+  };
+  firebase.initializeApp(config);
+</script>
+
+curl --header "Authorization: key=AAAAMWCSYlU:APA91bFSktx1FX5JsiYRVD78q1Sgm1drtUR7IQYICuoZ7Dmu6Wbx7yyW1b1oDAdwQAIHdFiFwIVpp8rcjwz8EBXTdnCEXOX9J8XkLZCFQfeAaAeVJhE1tRK1qSSicyvlFCLTYxGR2fdw" --header "Content-Type: application/json" -d "{"to":"faUjUpSg7mg:APA91bHgmHk2CQ6h_ZPW2HRWQuoG8vYYVf-qVa8t2DfJKJP42eurrVJg1vMW8VKjkv6Fb55-lh_154wy0hGZs3AC1eo0Yp2O6t3q5ZbIJvdRe0ua5z2DRYNlTk41g5WlPg7meDYKB3bS","priority":"high","notification":{"body": "FOO BAR BLA BLA\"}}"﻿ https://fcm.googleapis.com/fcm/send
+
+curl -X POST -H "Authorization: key=<AAAAMWCSYlU:APA91bFSktx1FX5JsiYRVD78q1Sgm1drtUR7IQYICuoZ7Dmu6Wbx7yyW1b1oDAdwQAIHdFiFwIVpp8rcjwz8EBXTdnCEXOX9J8XkLZCFQfeAaAeVJhE1tRK1qSSicyvlFCLTYxGR2fdw>" -H "Content-Type: application/json" -d '{"to":"dzDIJS_2xZc:APA91bEAId_RzDuiCal_I79YIYrpQ_ZENnp9N544diYjMghffobWa0qjvwKUeeXy8Il728SsG4mMdRUdANdPajWhYn7-JYzo-grCJwWPUZSswL6xaeiLy3TmdtQAAeCzeI11OJji326X","notification": {"title": "Background Message Title","body": "Background message body","click_action" : "https://dummypage.com"},"priority": "high","registration_ids" : ["<TOKEN-FIREFOX>", "<TOKEN-CHROME>"]}' "https://fcm.googleapis.com/fcm/send"

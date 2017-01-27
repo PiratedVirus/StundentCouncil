@@ -36,7 +36,7 @@
    }
 
    function printInfo($userEmail,$userId,$userName,$skills,$academic_year,$mobile,$Gender){
-    $url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+    $url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
       echo "
       <tr> 
@@ -46,7 +46,7 @@
         <td>$skills</td>  
         <td>$academic_year</td> 
         <td><span class =\"bold-text\"> <a href=tel:$mobile> $mobile </a> </span> <br> $userEmail </td>  <td>$Gender</td>   
-        <td><a href=$url>View</a></td>  
+        <td><a href=$url target=\"_blank\">View</a></td>  
 
       </tr>";   
 

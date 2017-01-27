@@ -47,9 +47,9 @@
            <li><a href="../logout.php?logout"><img class="slideicon" src="../Assets/img/logout.png"  alt="">Log Out</a></li>
            <li><div class="divider"></div></li>
 
-           <li><a href="http://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
-           <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-           <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+           <li><a href="https://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
+           <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+           <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 
        </ul>
 
@@ -60,8 +60,8 @@
 
        <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li><a href="../logout.php?logout">Log out</a></li>
-         <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-         <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+         <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+         <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
        </ul>
 
 
@@ -143,10 +143,10 @@
             <div class="input-field col s12 m6">
               <select required  required="requried" id="year" type="text" name="year" class="year">
                 <option value="" disabled selected="selected" >Select Year</option>
-                <option value="First Year" >First Year</option>
-                <option value="Second Year" >Second Year</option>
-                <option value="Third Year" >Third Year</option>
-                <option value="Final Year" >Final Year</option>
+                <option value="First Year" <?=$arruser['academic_year'] == 'First Year' ? ' selected="selected"' : '';?>>First Year</option>
+                <option value="Second Year" <?=$arruser['academic_year'] == 'Second Year' ? ' selected="selected"' : '';?>>Second Year</option>
+                <option value="Third Year" <?=$arruser['academic_year'] == 'Third Year' ? ' selected="selected"' : '';?>>Third Year</option>
+                <option value="Final Year" <?=$arruser['academic_year'] == 'Final Year' ? ' selected="selected"' : '';?>>Final Year</option>
               </select>
               <label for="">Year of Study</label>
 
@@ -155,14 +155,14 @@
             <div class="input-field col m6 s12">
               <select required  required="requried" id="bloodgroup" type="text" name="bloodgroup" class="bloodgroup">
                 <option value="" disabled selected="selected" >Select Blood Group</option>
-                <option value="A+" >A +</option>
-                <option value="A-" >A -</option>
-                <option value="B+" >B +</option>
-                <option value="B-" >B -</option>
-                <option value="O+" >O +</option>
-                <option value="O-" >O -</option>
-                <option value="AB+" >AB +</option>
-                <option value="AB-" >AB -</option>
+                <option value="A+" <?=$arruser['bloodgroup'] == 'A+' ? ' selected="selected"' : '';?>>A +</option>
+                <option value="A-" <?=$arruser['bloodgroup'] == 'A-' ? ' selected="selected"' : '';?>>A -</option>
+                <option value="B+" <?=$arruser['bloodgroup'] == 'B+' ? ' selected="selected"' : '';?>>B +</option>
+                <option value="B-" <?=$arruser['bloodgroup'] == 'B-' ? ' selected="selected"' : '';?>>B -</option>
+                <option value="O+" <?=$arruser['bloodgroup'] == 'O+' ? ' selected="selected"' : '';?>>O +</option>
+                <option value="O-" <?=$arruser['bloodgroup'] == 'O-' ? ' selected="selected"' : '';?>>O -</option>
+                <option value="AB+" <?=$arruser['bloodgroup'] == 'AB+' ? ' selected="selected"' : '';?>>AB +</option>
+                <option value="AB-" <?=$arruser['bloodgroup'] == 'AB-' ? ' selected="selected"' : '';?>>AB -</option>
               </select>
               <label for="">Blood Group</label>
             </div>
@@ -532,17 +532,17 @@
 
                   <select name="club1" id="club1" onchange="myFunction()" required>
                             <option value="" disabled selected>Choose your Preference</option>
-                            <option value="Astronomy"  data-icon="../Assets/img/technology-1.png" class="circle" >Astronomy Club</option>
-                            <option value="Design"  data-icon="../Assets/img/design-tool.png" class="circle">Design Team</option>
-                            <option value="Art and Craft"  data-icon="../Assets/img/palette.png" class="circle">Art and Craft Club</option>
-                            <option value="Drama"  data-icon="../Assets/img/drama.png" class="circle">Drama Club</option>
-                            <option value="Music and Dance"  data-icon="../Assets/img/dancer.png" class="circle">Music and Dance Club</option>
-                            <option value="Vikasa"  data-icon="../Assets/img/vikasa.png" class="circle">Vikasa Club</option>
-                            <option value="Writers"  data-icon="../Assets/img/pen.png" class="circle">Writers' Club</option>
-                            <option value="Samvedena"  data-icon="../Assets/img/samvedena.png" class="circle">SAMVEDENA Club</option>  
-                            <option value="Science on Street"  data-icon="../Assets/img/science.png" class="circle">Science on Street Club</option>  
-                            <option value="Indoor games"  data-icon="../Assets/img/indoor.png" class="circle">Indoor Games Club</option>  
-                            <option value="Outdoor games"  data-icon="../Assets/img/pikachu.png" class="circle">Outdoor Games Club</option>  
+                            <option value="Astronomy" <?=$arr['club1'] == 'Astronomy' ? ' selected="selected"' : '';?> data-icon="../Assets/img/technology-1.png" class="circle" >Astronomy Club</option>
+                            <option value="Design" <?=$arr['club1'] == 'Design' ? ' selected="selected"' : '';?>  data-icon="../Assets/img/design-tool.png" class="circle">Design Team</option>
+                            <option value="Art and Craft" <?=$arr['club1'] == 'Art and Craft' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/palette.png" class="circle">Art and Craft Club</option>
+                            <option value="Drama" <?=$arr['club1'] == 'Drama' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/drama.png" class="circle">Drama Club</option>
+                            <option value="Music and Dance" <?=$arr['club1'] == 'Music and Dance' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/dancer.png" class="circle">Music and Dance Club</option>
+                            <option value="Vikasa" <?=$arr['club1'] == 'Vikasa' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/vikasa.png" class="circle">Vikasa Club</option>
+                            <option value="Writers" <?=$arr['club1'] == 'Writers' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/pen.png" class="circle">Writers' Club</option>
+                            <option value="Samvedena" <?=$arr['club1'] == 'Samvedena' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/samvedena.png" class="circle">SAMVEDENA Club</option>  
+                            <option value="Science on Street" <?=$arr['club1'] == 'Science on Street' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/science.png" class="circle">Science on Street Club</option>  
+                            <option value="Indoor games" <?=$arr['club1'] == 'Indoor games' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/indoor.png" class="circle">Indoor Games Club</option>  
+                            <option value="Outdoor games" <?=$arr['club1'] == 'Outdoor games' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/pikachu.png" class="circle">Outdoor Games Club</option>  
                        </select>
                   <label for="club1">Preference 1</label>
                   <div class="small-txt gray-text" id="info" hidden><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p></div>
@@ -552,18 +552,18 @@
 
             <div class="input-field col s12">
                       <select name="club2" id="club2" onchange="myFunction()" required>
-                            <option value="" disabled selected>Choose your Preference</option>
-                            <option value="Astronomy"  data-icon="../Assets/img/technology-1.png" class="circle" >Astronomy Club</option>
-                            <option value="Design"  data-icon="../Assets/img/design-tool.png" class="circle">Design Team</option>
-                            <option value="Art and Craft"  data-icon="../Assets/img/palette.png" class="circle">Art and Craft Club</option>
-                            <option value="Drama"  data-icon="../Assets/img/drama.png" class="circle">Drama Club</option>
-                            <option value="Music and Dance"  data-icon="../Assets/img/dancer.png" class="circle">Music and Dance Club</option>
-                            <option value="Vikasa"  data-icon="../Assets/img/vikasa.png" class="circle">Vikasa Club</option>
-                            <option value="Writers"  data-icon="../Assets/img/pen.png" class="circle">Writers' Club</option>
-                            <option value="Samvedena"  data-icon="../Assets/img/samvedena.png" class="circle">SAMVEDENA Club</option>  
-                            <option value="Science on Street"  data-icon="../Assets/img/science.png" class="circle">Science on Street Club</option>  
-                            <option value="Indoor games"  data-icon="../Assets/img/indoor.png" class="circle">Indoor Games Club</option>  
-                            <option value="Outdoor games"  data-icon="../Assets/img/pikachu.png" class="circle">Outdoor Games Club</option>  
+                      <option value="" disabled selected>Choose your Preference</option>
+                      <option value="Astronomy" <?=$arr['club2'] == 'Astronomy' ? ' selected="selected"' : '';?> data-icon="../Assets/img/technology-1.png" class="circle" >Astronomy Club</option>
+                      <option value="Design" <?=$arr['club2'] == 'Design' ? ' selected="selected"' : '';?>  data-icon="../Assets/img/design-tool.png" class="circle">Design Team</option>
+                      <option value="Art and Craft" <?=$arr['club2'] == 'Art and Craft' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/palette.png" class="circle">Art and Craft Club</option>
+                      <option value="Drama" <?=$arr['club2'] == 'Drama' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/drama.png" class="circle">Drama Club</option>
+                      <option value="Music and Dance" <?=$arr['club2'] == 'Music and Dance' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/dancer.png" class="circle">Music and Dance Club</option>
+                      <option value="Vikasa" <?=$arr['club2'] == 'Vikasa' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/vikasa.png" class="circle">Vikasa Club</option>
+                      <option value="Writers" <?=$arr['club2'] == 'Writers' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/pen.png" class="circle">Writers' Club</option>
+                      <option value="Samvedena" <?=$arr['club2'] == 'Samvedena' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/samvedena.png" class="circle">SAMVEDENA Club</option>  
+                      <option value="Science on Street" <?=$arr['club2'] == 'Science on Street' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/science.png" class="circle">Science on Street Club</option>  
+                      <option value="Indoor games" <?=$arr['club2'] == 'Indoor games' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/indoor.png" class="circle">Indoor Games Club</option>  
+                      <option value="Outdoor games" <?=$arr['club2'] == 'Outdoor games' ? ' selected="selected"' : '';?>   data-icon="../Assets/img/pikachu.png" class="circle">Outdoor Games Club</option>  
                        </select>
                   <label for="club2">Preference 2</label>
                   <div class="small-txt gray-text" id="info2" hidden><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p></div>
@@ -623,14 +623,14 @@
  		        </div> -->
 
             <div class="input-field col s12">
-                <select multiple required required="requried" id="future" name="future[]" class="future">
+                <select multiple  id="future" name="future[]" class="future">
                   <option value="" disabled selected>Choose your option</option>
                   <option value="GATE">GATE </option>
                   <option value="CAT">CAT </option>
                   <option value="UPSC / MPSC">UPSC / MPSC </option>
                   <option value="Masters">Masters </option>
                   <option value="Job">Job </option>
-                  <option value="Bussiness">Bussiness </option>
+                  <option value="Bussiness">Business </option>
                   <option value="Other">Other </option>
                   <!-- <option value="Option">Option </option> -->
                 </select>
@@ -688,7 +688,7 @@
    </div>
    <div class="footer-copyright">
      <div class="container center">
-       <p class="black-text"><i class="material-icons">code</i>with<i class="material-icons" style="color: #f44336">favorite</i>by <span class="ftr"><a class="ftr" href="https://github.com/piratedvirus">Saurabh Kulkarni</a> </span>, SE CSE</p>
+     <p class="black-text center"><span class="ftr"><a class="ftr" href="https://www.scouncilgeca.com">Student Council, GECA</a> </span></p>
 
      </div>
    </div>

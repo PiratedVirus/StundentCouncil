@@ -11,10 +11,9 @@
 		<meta name="google-signin-client_id" content="212073603669-1m90hnb39c60pjejibmfilmal8dpvfug.apps.googleusercontent.com">
 
 
-
 		<title>Log In</title>
 
-		<META NAME="description" CONTENT="Student Council, GECA. The website would turn out to be the break-through for the dawn of \'Cybernated Automatized GECA\' .It would be \'THE\' portal for all the students of the college, and not just students, but even the faculty and staff members. The site would minimize the manual error drastically. It would be easy to get information about all the activities going on.">
+		<META NAME="description" CONTENT="Student Council, GECA. The website would turn out to be the break-through for the dawn of 'Cybernated Automatized GECA' .It would be 'THE' portal for all the students of the college, and not just students, but even the faculty and staff members. The site would minimize the manual error drastically. It would be easy to get information about all the activities going on.">
 		<META NAME="keywords" CONTENT="Student Council, Student Council login, GECA Student Council, Governement College of Engineering Aurangabad , Government Institute in Marathwada, Autonomous Goevernment Engineering College,Student Coucil geca">
 		<META NAME="robot" CONTENT="index,follow">
 		<META NAME="author" CONTENT="Saurabh Kulkarni">
@@ -36,53 +35,53 @@
 			}
 		</style>
 
-
+	
 		<script src="Assets/js/analytics.js"></script>
+		<!-- Manifest File Web App -->
+		<!-- <link rel="manifest" href="Assets/js/manifest.json"> -->
+		<link rel="manifest" href="manifest.json">
+
 		<!-- Google OAuth -->
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<!-- Firebase Notification -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyBrTgaQCUR_dd2a_tHjKCZpyAkRZDt2GgU",
+		    authDomain: "student-council-154816.firebaseapp.com",
+		    databaseURL: "https://student-council-154816.firebaseio.com",
+		    storageBucket: "student-council-154816.appspot.com",
+		    messagingSenderId: "212073603669"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script src="serviceworker.js"></script>
+
+
+
+
 
 	</head>
 	<body>
 
 	<nav id="subpages">
-	  <div class="nav-wrapper"><a href="http://www.scouncilgeca.com" class="brand-logo">Student Council</a><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	  <div class="nav-wrapper"><a href="https://www.scouncilgeca.com" class="brand-logo">Student Council</a><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	    <ul class="right hide-on-med-and-down">
 	  	  <a href="http://geca.ac.in" target="_blank" class="brand-logo center"><img src="Assets/img/final_small.png"></a>
 	      <li><a href="register.php">Sign Up</a></li>
-	      <li><a href="http://www.scouncilgeca.com#team-link">Collaborators</a></li>
-	      <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	      <li><a href="https://www.scouncilgeca.com#team-link">Collaborators</a></li>
+	      <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 	    </ul>
 	    <ul id="mobile-demo" class="side-nav">
 	    <li><a href="register.php">Sign Up</a></li>
-	    <li><a href="http://www.scouncilgeca.com#team-link">Collaborators</a></li>
-	    <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	    <li><a href="https://www.scouncilgeca.com#team-link">Collaborators</a></li>
+	    <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 	    </ul>
 	  </div>
 	</nav>
 <main>
-		<div class="row shifter">
 
-		  <div class="col s12">
-
-		    <ul class="tabs">
-		      <li class="tab col s3"><a  href="#students">Students</a></li>
-		      <li class="tab col s3"><a  href="#admin">Admin</a></li>
-		    </ul>
-
-		  </div>
-
-		  <div id="students" class="container form-holder col s12">
-		  		<?php   require_once 'Core/user.php'; ?>
-
-
-		  </div>
-
-		  	<div id="admin" class="container form-holder col s12">
-	  			<?php   require_once 'Admin/adminlogin.php'; ?>
-		  	</div>
-
-		  </div>
-		</div>
 <!-- Google OAuth  -->
 		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 		<a href="#" onclick="signOut();">Sign out</a>
@@ -95,6 +94,7 @@
 		  }
 		</script>
 <!-- Google OAuth Ends here -->
+
 <!-- Facebook Authentication -->
 		<script>
 		  window.fbAsyncInit = function() {
@@ -134,7 +134,7 @@
 		            
 <!-- Facebook Authentication ends here -->
 
-<!-- Firebase Push Notifications -->
+	<a href="firebase.html">Firebase</a>
 
 		<div class="center-align container">
 			<a style="font-size: 22px; " href="Register">Not a Member? Create new Account</a>

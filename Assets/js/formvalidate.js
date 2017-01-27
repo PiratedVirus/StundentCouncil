@@ -45,7 +45,7 @@
           },
           cpassword:{
               required: "Don't leave me alone! Please fill me.",
-              minlength: "Where did you learn to type ? Type excat same password."
+              minlength: "Where did you learn to type ? Type exact same password."
           },
           branch:{
               required: "How could be you confuse on your Branch ?"

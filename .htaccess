@@ -1,6 +1,8 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 RewriteCond %{REQUEST_FILENAME} !-d    [NC]
 RewriteCond %{REQUEST_FILENAME}.php -f [NC]
 RewriteRule ^(.*)$ $1.php
@@ -19,5 +21,6 @@ RewriteRule user/wings Core/wingsform.php [NC]
 RewriteRule user/success Core/testing.php [NC]
 RewriteRule user/password Core/changepass.php [NC]
 RewriteRule admin/home Admin/adminhome.php [NC]
+RewriteRule admin/classAdmin Admin/classadmin.php [NC]
 
 </IfModule>

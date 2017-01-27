@@ -43,7 +43,7 @@ if ( isset($_SESSION['user']) =="" ) {
       toolbar2: 'link image print preview media | forecolor backcolor emoticons | codesample',
       image_advtab: true,
 
-      // templates: "http://www.scouncilgeca.com/Admin/template.php",
+      // templates: "https://www.scouncilgeca.com/Admin/template.php",
       templates: "../Admin/template.php",
       
       content_css: [
@@ -109,6 +109,7 @@ if ( isset($_SESSION['user']) =="" ) {
 
         <a href="../default.html" class="brand-logo center">Student Council</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="../Admin/adminsms.php">SMS</a></li>
           <li><a href="#combolink">Combo sort</a></li>
           <li><a href="#bracheslink">Branches</a></li>
           <li><a href="#yearlink">Year</a></li>
@@ -140,7 +141,7 @@ if ( isset($_SESSION['user']) =="" ) {
 
         <p class="info-admin center col">
           Use following filters for specific results.There is a COMBO SORT which sorts Year and Branch together.Branches and Year filters are sperate for sorting indivisiuls.'Skills' filter is very useful, Lorem ipsum dolor sit.To
-           view all details without any filters <a href="http://www.scouncilgeca.com/Admin/display" target="_blank"> click here</a>
+           view all details without any filters <a href="https://www.scouncilgeca.com/Admin/display" target="_blank"> click here</a>
         </p>
       </div>
     </div>
@@ -369,6 +370,87 @@ if ( isset($_SESSION['user']) =="" ) {
       </div>
 
     </div>
+
+    <div class="container edit" id="yearlink"style="margin-bottom: 50px;color: #9e9e9e;" "="">
+      <h5 class="form-header">CLUBS &nbsp;&nbsp;  </h5>
+
+      <div class="row inline-form">
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Astronomy" class="imgbtn  col m2 s4 offset-m1" name="Astronomy">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Design" class="imgbtn  col m2 s4 offset-m1" name="Designclub">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Art and Craft" class="imgbtn  col m2 s4 offset-m1" name="ArtnCraft">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Drama" class="imgbtn  col m2 s4 offset-m1" name="Drama">
+
+        </form>
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Music and Dance" class="imgbtn  col m2 s4 offset-m1" name="MusicnDance">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Vikasa" class="imgbtn  col m2 s4 offset-m1" name="Vikasa">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Writers" class="imgbtn  col m2 s4 offset-m1" name="Writers">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Samvedena" class="imgbtn  col m2 s4 offset-m1" name="Samvedena">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Science on Street" class="imgbtn  col m2 s4 offset-m1" name="SciencenStreet">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Indoor" class="imgbtn  col m2 s4 offset-m1" name="Indoor">
+
+        </form>
+        
+
+        <form action="" method="POST" name="singular">
+
+          <input type="submit" value="Outdoor" class="imgbtn  col m2 s4 offset-m1" name="Outdoor">
+
+        </form>
+        
+      </div>
+
+    </div>
+
     <hr class="header-holder">
 
     <div class="container " id="skillink">

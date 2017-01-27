@@ -19,7 +19,7 @@
 
       function randomNotification() {
     var name = '<?php echo $username ?>';
-        var randomQuote = "If we don't care, who will ? Let's make 'GECA' A wonderfull place... Welcome " + name + " !" ;
+        var randomQuote = "If we don't care, who will ? Let's make 'GECA' A wonderful place... Welcome " + name + " !" ;
         var options = {
             body: randomQuote,
             icon: 'Assets/img/welcome.png',

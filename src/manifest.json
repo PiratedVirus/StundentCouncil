@@ -1,0 +1,25 @@
+{
+  "gcm_sender_id": "212073603669",
+  "name": "Student Council, GECA",
+  "short_name": "Student Council",
+  "start_url": "./?utm_source=homescreen",
+  "display": "standalone",
+  "theme_color": "#ECEFF1",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "../Assets/img/Logo/Logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../Assets/img/Logo/Logo500.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/logo.svg",
+      "type": "image/svg+xml"
+    }
+  ]
+}

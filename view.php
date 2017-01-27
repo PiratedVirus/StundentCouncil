@@ -30,7 +30,7 @@
 	  <li><a href="Core/changepass">Change Password</a></li>
 	  <li><a href="logout.php?logout">Log Out</a></li>
 	  <li class="divider"></li>
-	  <li><a href="http://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
+	  <li><a href="https://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
 	</ul>
 
 
@@ -52,21 +52,21 @@
 	          <li><a class="dropdown-button" href="#!" data-activates="settings">Settings<i class="material-icons right">settings</i></a></li>
 
 	          <li><div class="divider"></div></li>
-	          <li><a href="http://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
-	          <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-	          <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	          <li><a href="https://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
+	          <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+	          <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 
 	      </ul>
 
 	      <a href="#" id="user-menu" data-activates="slide-out" class="button-collapse">
 	      <i class="material-icons">menu</i></a>
 
-	      <!-- <a href="http://www.scouncilgeca.com" class="brand-logo center">Student Council</a> -->
+	      <!-- <a href="https://www.scouncilgeca.com" class="brand-logo center">Student Council</a> -->
 	      <a href="http://geca.ac.in" target="_blank" class="brand-logo center downlift"><img src="Assets/img/final_small.png"></a>
 	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	      <li><a href="logout.php?logout">Log out</a></li>
-	      <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-	      <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	      <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+	      <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 	      <li><a class="dropdown-button white-text" href="#!" data-activates="settings"><img class="slideicon" style="bottom: -7px;" src="Assets/img/userios.png"><b><?php echo $fname ?></b><i style="color: #fff; " class="material-icons right spin">settings</i></a></li>
 
 	      </ul>

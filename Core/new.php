@@ -37,6 +37,11 @@
   $pass = strip_tags($pass);
   $pass = htmlspecialchars($pass);
 
+
+  $mobile = trim($_POST['mobile']);
+  $mobile = strip_tags($mobile);
+  $mobile = htmlspecialchars($mobile);
+
   $skill = trim($_POST['branch']);
   $skill = strip_tags($skill);
   $skill = htmlspecialchars($skill);
@@ -67,7 +72,7 @@
   if( !$error ) {
 
    $addskill = mysqli_query($conn,"INSERT INTO skills(userId,userName) VALUES('$enroll','$name')");
-   $query = "INSERT INTO users(userId,userName,userEmail,userPass,skills,gender) VALUES('$enroll','$name','$email','$encrypted','$skill','$gender')";
+   $query = "INSERT INTO users(userId,userName,userEmail,userPass,skills,gender,mobile) VALUES('$enroll','$name','$email','$encrypted','$skill','$gender',$mobile)";
 
    $res = mysqli_query($conn,$query);
 
@@ -75,6 +80,11 @@
     $errTyp = "success";
     $link = "<a href='Login'>Login Now</a>";
     $errMSG = "Successfully registered, you may $link !";
+    // $finalsql = mysqli_query($conn,"SELECT * FROM users WHERE userId='$enroll'");
+    // $finalarr = mysqli_fetch_array($finalsql);
+    // echo $finalarr['userId'];
+    // echo $finalarr['userName'];
+    header('Location: https://www.scouncilgeca.com/Login');
     unset($name);
     unset($enroll);
     unset($email);

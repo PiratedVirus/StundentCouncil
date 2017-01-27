@@ -74,17 +74,80 @@
 	}
 
 
-	if (isset($_POST['Facility'])) {
-		$Facility = 'Facility';
+	if (isset($_POST['Astronomy'])) {
+		$Astronomy = 'Astronomy';
 	} else {
-		$Facility ='';
+		$Astronomy ='';
 	}
 
 
-	if (isset($_POST['Cultural'])) {
-		$Cultural = 'Cultural';
+	if (isset($_POST['Designclub'])) {
+		$Designclub = 'Design';
 	} else {
-		$Cultural ='';
+		$Designclub ='';
+	}
+
+
+	if (isset($_POST['ArtnCraft'])) {
+		$ArtnCraft = 'Art and Craft';
+	} else {
+		$ArtnCraft ='';
+	}
+
+
+	if (isset($_POST['Drama'])) {
+		$Drama = 'Drama';
+	} else {
+		$Drama ='';
+	}
+
+
+	if (isset($_POST['MusicnDance'])) {
+		$MusicnDance = 'Music and Dance';
+	} else {
+		$MusicnDance ='';
+	}
+
+
+	if (isset($_POST['Vikasa'])) {
+		$Vikasa = 'Vikasa';
+	} else {
+		$Vikasa ='';
+	}
+
+
+	if (isset($_POST['Writers'])) {
+		$Writers = 'Writers';
+	} else {
+		$Writers ='';
+	}
+
+
+	if (isset($_POST['Samvedena'])) {
+		$Samvedena = 'Samvedena';
+	} else {
+		$Samvedena ='';
+	}
+
+
+	if (isset($_POST['SciencenStreet'])) {
+		$SciencenStreet = 'Science on Street';
+	} else {
+		$SciencenStreet ='';
+	}
+
+
+	if (isset($_POST['Indoor'])) {
+		$Indoor = 'Indoor games';
+	} else {
+		$Indoor ='';
+	}
+
+
+	if (isset($_POST['Outdoor'])) {
+		$Outdoor = 'Outdoor games';
+	} else {
+		$Outdoor ='';
 	}
 
 	
@@ -138,7 +201,7 @@ function printHead(){
 }
 
 function printInfo($userEmail,$userId,$userName,$skills,$academic_year,$mobile,$Gender){
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 	<tr> 
@@ -148,7 +211,7 @@ function printInfo($userEmail,$userId,$userName,$skills,$academic_year,$mobile,$
 		 	<td>$skills</td>  
 		 	<td>$academic_year</td> 
 		 	<td><span class =\"bold-text\"> <a href=tel:$mobile> $mobile </a> </span> <br> $userEmail </td>  <td>$Gender</td> 
-		 	<td><a href=$url>View</a></td>  
+		 	<td><a href=$url target=\"_blank\">View</a></td>  
 	 	</tr>";   
 
 };
@@ -687,7 +750,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($Sponsorship_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -697,7 +760,7 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 	 				 	</tr>";   
 	 }
@@ -750,7 +813,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($Publicity_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -760,7 +823,7 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 	 				 	</tr>";   
 	 }
@@ -791,7 +854,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($Design_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -801,7 +864,7 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 	 				 	</tr>";   
 	 }
@@ -854,7 +917,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($Decoration_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -864,7 +927,7 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 	 				 	</tr>";   
 	 }
@@ -917,7 +980,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($Infrastructure_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -927,7 +990,7 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 	 				 	</tr>";   
 	 }
@@ -981,7 +1044,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($FacilityProvider_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -991,7 +1054,7 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 	 				 	</tr>";   
 	 }
@@ -1044,7 +1107,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($Documentation_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -1054,12 +1117,17 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a Assets/>View</a></td>  
 
 	 				 	</tr>";   
 	 }
 	 echo "</table>";
+
 ?>
+
+
+
+
 <div class="container">
 		<div class="row">
 			<div class="col s12">
@@ -1107,7 +1175,7 @@ if ($result->num_rows > 0) {
 	 	$result_user = $conn->query($CulturalEvent_user);
 	 	$newrow = $result_user->fetch_assoc();
 	 	$userId = $row['userId'];
-	 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 	 	echo "
 	 				 	<tr> 
@@ -1117,13 +1185,707 @@ if ($result->num_rows > 0) {
 	 					 	<td>".$newrow["Skills"]."</td>  
 	 					 	<td>".$newrow["academic_year"]."</td> 
 	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-	 					 	<td><a href=$url>View</a></td>  
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 	 				 	</tr>";   
 	 }
 	 echo "</table>";
 ?>
 
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div>
+<?php
+		 }
+		}
+
+		 if (isset($_POST['Designclub'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Designclub = "SELECT * FROM skills WHERE (club1 = '$Designclub') OR (club2 = '$Designclub')";
+
+$result = $conn->query($Designclub);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Designclub_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Designclub_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Astronomy'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Astronomy = "SELECT * FROM skills WHERE (club1 = '$Astronomy') OR (club2 = '$Astronomy')";
+
+$result = $conn->query($Astronomy);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Astronomy_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Astronomy_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['ArtnCraft'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$ArtnCraft = "SELECT * FROM skills WHERE (club1 = '$ArtnCraft') OR (club2 = '$ArtnCraft')";
+
+$result = $conn->query($ArtnCraft);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$ArtnCraft_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($ArtnCraft_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Drama'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Drama = "SELECT * FROM skills WHERE (club1 = '$Drama') OR (club2 = '$Drama')";
+
+$result = $conn->query($Drama);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Drama_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Drama_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['MusicnDance'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$MusicnDance = "SELECT * FROM skills WHERE (club1 = '$MusicnDance') OR (club2 = '$MusicnDance')";
+
+$result = $conn->query($MusicnDance);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$MusicnDance_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($MusicnDance_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Vikasa'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Vikasa = "SELECT * FROM skills WHERE (club1 = '$Vikasa') OR (club2 = '$Vikasa')";
+
+$result = $conn->query($Vikasa);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Vikasa_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Vikasa_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Writers'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Writers = "SELECT * FROM skills WHERE (club1 = '$Writers') OR (club2 = '$Writers')";
+
+$result = $conn->query($Writers);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Writers_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Writers_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Samvedena'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Samvedena = "SELECT * FROM skills WHERE (club1 = '$Samvedena') OR (club2 = '$Samvedena')";
+
+$result = $conn->query($Samvedena);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Samvedena_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Samvedena_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Designclub'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$SciencenStreet = "SELECT * FROM skills WHERE (club1 = '$SciencenStreet') OR (club2 = '$SciencenStreet')";
+
+$result = $conn->query($SciencenStreet);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$SciencenStreet_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($SciencenStreet_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Indoor'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Indoor = "SELECT * FROM skills WHERE (club1 = '$Indoor') OR (club2 = '$Indoor')";
+
+$result = $conn->query($Indoor);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Indoor_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Indoor_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<label for="subject">Email Subject</label>
+				<input type="text" name="subject">
+			</div>
+			<div class="col s12">
+				<label for="message">Email Content</label>
+				<textarea name="message"></textarea>
+			</div>
+				<div style="margin-top: 15px;" class="col s12 center">
+					
+			    		<input type="submit" class="waves-effect waves-light btn-large center" value="SEND EMAIL">
+				</div>
+		</div>
+	</div>
+
+
+</form>
+
+
+
+</div><?php
+		 }
+		}
+
+		 if (isset($_POST['Outdoor'])) {
+
+	 
+// Branch and year seprate sorting ends here
+
+$Outdoor = "SELECT * FROM skills WHERE (club1 = '$Outdoor') OR (club2 = '$Outdoor')";
+
+$result = $conn->query($Outdoor);
+
+	 	?>
+	 	<form method="POST" action=""> 
+	 	<?php
+if ($result->num_rows > 0) {
+	printHead();
+	 // output data of each row
+	 while($row = $result->fetch_assoc()) {
+	 	
+	 	$Outdoor_user = "SELECT * FROM users WHERE userId ='".$row['userId']."' ";
+	 	$result_user = $conn->query($Outdoor_user);
+	 	$newrow = $result_user->fetch_assoc();
+	 	$userId = $row['userId'];
+	 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+
+	 	echo "
+	 				 	<tr> 
+	 					 	<td class =\"uppercase\"> <input value='".$newrow['userEmail']."' type= \"checkbox\" name= \"chk[]\">  
+	 					 	</td> <td class =\"uppercase\"> ".$row["userId"]." </td> 
+	 					 	<td class =\"uppercase bold-text\"> ".$newrow["userName"]." </td>  
+	 					 	<td>".$newrow["Skills"]."</td>  
+	 					 	<td>".$newrow["academic_year"]."</td> 
+	 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
+	 					 	<td><a href=$url target=\"_blank\">View</a></td>  
+
+	 				 	</tr>";   
+	 }
+	 echo "</table>";
+?>
 <div class="container">
 		<div class="row">
 			<div class="col s12">
@@ -1169,7 +1931,7 @@ if ($result->num_rows > 0) {
 		 	$result_user = $conn->query($checkboxes_user);
 		 	$newrow = $result_user->fetch_assoc();
 		 	$userId = $row['userId'];
-		 	$url = 'http://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
+		 	$url = 'https://www.scouncilgeca.com/Admin/dy.php?id='.$userId;
 
 		 	echo "
 		 				 	<tr> 
@@ -1179,7 +1941,7 @@ if ($result->num_rows > 0) {
 		 					 	<td>".$newrow["Skills"]."</td>  
 		 					 	<td>".$newrow["academic_year"]."</td> 
 		 					 	<td><span class =\"bold-text\"> <a href=\"tel:$newrow[mobile]\">".$newrow["mobile"]."</a></span> <br> ".$newrow["userEmail"]." </td>  <td>".$newrow["Gender"]."</td>   
-		 					 	<td><a href=$url>View</a></td>  
+		 					 	<td><a href=$url target=\"_blank\">View</a></td>  
 
 		 				 	</tr>";   
 		 }

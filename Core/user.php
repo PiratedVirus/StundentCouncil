@@ -50,11 +50,11 @@
 			    return( $qDecoded );
 			}
 
-			$encrypted = encryptIt( $pass );
+			$encrypted = encryptIt( $pass ); 
 			$decrypted = decryptIt( $encrypted );
 
 		
-			//passing array for retring whole info
+			//passing array for retrieving   whole info
 			$res=mysqli_query($conn,"SELECT userId, userName, userPass FROM users WHERE userId='$id'");
 			$row=mysqli_fetch_array($res);
 			$count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
@@ -62,10 +62,10 @@
 
 
 
-			//passing array for retring whole info
+			//passing array for retrieving whole info
 			$get = mysqli_query($conn,"SELECT * FROM users WHERE userId='$id'");
 			$arr = mysqli_fetch_array($get);
-			// Query to get everyting from skills table
+			// Query to get everything from skills table
 			$getskills = mysqli_query($conn,"SELECT * FROM skills WHERE userId='$id'");
 			$arrskills = mysqli_fetch_array($getskills);
 

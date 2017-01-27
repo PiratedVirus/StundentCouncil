@@ -49,7 +49,7 @@
 			$encrypted = encryptIt( $pass );
 
 			//passing array for retring whole info
-			$res=mysqli_query($conn,"SELECT userId, userName, userPass FROM users WHERE adminId='$id'");
+			$res=mysqli_query($conn,"SELECT userId, userName, userPass, classAdmin FROM users WHERE adminId='$id'");
 			$row=mysqli_fetch_array($res);
 			$count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
 
@@ -73,14 +73,21 @@
 			$_SESSION['stud_pass'] = $user_pass;
 			$_SESSION['stud_skills'] = $user_skills;
 			$_SESSION['sql_userid'] = $row['userId'];
+			$_SESSION['sql_adminclass'] = $row['classAdmin'];
 
-			if( $count == 1 && $row['userPass']==$encrypted ) {
+			if( $count == 1 && $row['userPass']==$encrypted && $row['classAdmin'] != '' ) {
+				$_SESSION['user'] = $row['userId'];
+				header("Location: admin/classAdmin");
+
+			} elseif ( $count == 1 && $row['userPass']==$encrypted) {
 				$_SESSION['user'] = $row['userId'];
 				header("Location: admin/home");
-
+				
 			} else {
 				$errMSG = "Incorrect Credentials, Try again...";
 			}
+
+			
 
 		}
 

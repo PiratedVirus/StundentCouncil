@@ -16,7 +16,8 @@
 
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
    <link rel="stylesheet" href="Assets/css/base.css">
-   
+   <link rel="manifest" href="Assets/js/manifest.json">
+
    <script src="Assets/js/jquery-1.11.3-jquery.min.js"></script>
    <script src="Assets/js/ajaxvailator.js"></script>
    <script src="Assets/js/analytics.js"></script>
@@ -156,6 +157,15 @@
             </div>
 
 
+
+           <div class="input-field">
+              <input  required="requried"  id="icon_telephone" maxlength="10" type="tel" name="mobile" value="<?php echo $_SESSION['stud_mobile'] ?>" class="validate">
+              <label for="icon_telephone">Mobile Number</label>
+              <div class="errorTxt12"></div>
+
+            </div> 
+
+
             <div class="input-field">
               <select required required="required" id="branch" name="branch" class="branch click"  data-error=".errorTxt5">
                 <option value="" disabled selected="selected" >Select Branch</option>
@@ -189,10 +199,7 @@
 
             </div>
             <div class="errorTxt6" style="color: #F44336;font-size: 15px;"></div>
-
-
-
-
+             <div class="col s12 center gray" style="padding: 10px 0px;">After successful sign up, you will be redirected  to login page. Please <b style="color: #039be5">LOGIN</b> to update your profile.</div>
              <button type="submit" disabled id="reg" class="btn waves-effect waves-light new-submit" name="btn-signup">Sign Up</button>
         </div>
     </form>
@@ -206,15 +213,12 @@
 
   <div class="footer-copyright">
     <div class="container">
-     <div class="left">
-      <p class="black-text center"><i class="material-icons">code</i>with<i class="material-icons" style="color: #f44336">favorite</i>by <span class="ftr"><a class="ftr" href="https://www.facebook.com/saurabhk20">Saurabh Kulkarni</a> </span>, SE CSE</p>
+     <div class="center">
+      <p class="black-text center"><i class="material-icons">code</i>with<i class="material-icons" style="color: #f44336">favorite</i>by <span class="ftr"><a class="ftr" href="https://www.facebook.com/saurabhk20"> Saurabh Kulkarni</a> </span>, SE CSE</p>
 
      </div>
 
-     <div class="right">
-      <p class="black-text center">Intiated by <span class="ftr"><a class="ftr" href="https://www.facebook.com/people/Nikhil-Badave/100004117724825">Nikhil Badave</a></span>, Cultural Secretary 2016-17 </p>
 
-     </div>
     </div>
   </div>
 </footer>

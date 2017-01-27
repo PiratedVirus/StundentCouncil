@@ -16,6 +16,7 @@
 		<META NAME="author" CONTENT="Saurabh Kulkarni">
 		<META NAME="revisit-after" CONTENT="2 days">
 
+		<link rel="manifest" href="Assets/js/manifest.json">
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 		<link rel="stylesheet" href="Assets/css/base.css">
@@ -39,17 +40,17 @@
 	<body>
 
 	<nav id="subpages">
-	  <div class="nav-wrapper"><a href="http://www.scouncilgeca.com" class="brand-logo">Student Council</a><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	  <div class="nav-wrapper"><a href="https://www.scouncilgeca.com" class="brand-logo">Student Council</a><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	    <ul class="right hide-on-med-and-down">
 	  	  <a href="http://geca.ac.in" target="_blank" class="brand-logo center"><img src="Assets/img/final_small.png"></a>
 	      <li><a href="register.php">Sign Up</a></li>
-	      <li><a href="http://www.scouncilgeca.com#team-link">Collaborators</a></li>
-	      <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	      <li><a href="https://www.scouncilgeca.com#team-link">Collaborators</a></li>
+	      <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 	    </ul>
 	    <ul id="mobile-demo" class="side-nav">
 	    <li><a href="register.php">Sign Up</a></li>
-	    <li><a href="http://www.scouncilgeca.com#team-link">Collaborators</a></li>
-	    <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	    <li><a href="https://www.scouncilgeca.com#team-link">Collaborators</a></li>
+	    <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 	    </ul>
 	  </div>
 	</nav>

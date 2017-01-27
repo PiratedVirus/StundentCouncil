@@ -76,17 +76,17 @@
 	<body>
 
 	<nav id="subpages">
-	  <div class="nav-wrapper"><a href="http://www.scouncilgeca.com" class="brand-logo">Student Council</a><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	  <div class="nav-wrapper"><a href="https://www.scouncilgeca.com" class="brand-logo">Student Council</a><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	    <ul class="right hide-on-med-and-down">
 	  	  <a href="http://geca.ac.in" target="_blank" class="brand-logo center"><img src="../Assets/img/final_small.png"></a>
 	      <li><a href="../register">Sign Up</a></li>
-	      <li><a href="http://www.scouncilgeca.com#team-link">Collaborators</a></li>
-	      <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	      <li><a href="https://www.scouncilgeca.com#team-link">Collaborators</a></li>
+	      <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 	    </ul>
 	    <ul id="mobile-demo" class="side-nav">
 	    <li><a href="register.php">Sign Up</a></li>
-	    <li><a href="http://www.scouncilgeca.com#team-link">Collaborators</a></li>
-	    <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+	    <li><a href="https://www.scouncilgeca.com#team-link">Collaborators</a></li>
+	    <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 	    </ul>
 	  </div>
 	</nav>
@@ -110,7 +110,7 @@
 				<div class="input-field col s12">
 					<label for="enrollment">Enrollment Number</label>
 					<input style="text-transform: uppercase;" type="text" name="enrollment" id="enrollment" class="validate" length="11" maxlength="11" />
-					<div style="color: #9e9e9e;" class="errorTxt20">As soon as you enterd 11<sup>th</sup> digit of Enrollment number, an email will be shooted to your email address. Be carefull that you don't shoot somebody else!</div>
+					<div style="color: #9e9e9e;" class="errorTxt20">As soon as you entered 11<sup>th</sup> digit of Enrollment number, an email will be shooted to your email address. Be careful that you don't shoot somebody else!</div>
 
 				</div>
 
@@ -138,7 +138,7 @@
 		     </div>
 
 		     <div class="right">
-		     	<p class="black-text center">Intiated by <span class="ftr"><a class="ftr" href="https://www.facebook.com/people/Nikhil-Badave/100004117724825">Nikhil Badave</a></span>, Cultural Secretary 2016-17 </p>
+		     	<p class="black-text center">Initiated by <span class="ftr"><a class="ftr" href="https://www.facebook.com/people/Nikhil-Badave/100004117724825">Nikhil Badave</a></span>, Cultural Secretary 2016-17 </p>
 
 		     </div>
 		    </div>

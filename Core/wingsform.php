@@ -48,9 +48,9 @@
            <li><a href="../logout.php?logout"><img class="slideicon" src="../Assets/img/logout.png"  alt="">Log Out</a></li>
            <li><div class="divider"></div></li>
 
-           <li><a href="http://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
-           <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-           <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+           <li><a href="https://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
+           <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+           <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
 
        </ul>
 
@@ -61,8 +61,8 @@
 
        <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li><a href="../logout.php?logout">Log out</a></li>
-         <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-         <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+         <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+         <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
        </ul>
 
 
@@ -132,20 +132,20 @@
             <div class="input-field col s12">
                   <select name="pref1" id="pref1" onchange="myFunction()" required>
                             <option value="" disabled selected>Choose your Preference</option>
-                            <option value="Sponsorship">Sponsorship</option>
-                            <option value="Publicity">Publicity</option>
-                            <option value="Design">Design</option>
-                            <option value="Decoration">Decoration</option>
-                            <option value="Infrastructure">Infrastructure</option>
-                            <option value="Documentation">Documentation</option>
-                            <option value="FacilityProvider">Facility Provider</option>
-                            <option value="CulturalEvent">Cultural Event</option>  
+                            <option value="Sponsorship" <?=$arr['pref1'] == 'Sponsorship' ? ' selected="selected"' : '';?> >Sponsorship</option>
+                            <option value="Publicity" <?=$arr['pref1'] == 'Publicity' ? ' selected="selected"' : '';?> >Publicity</option>
+                            <option value="Design" <?=$arr['pref1'] == 'Design' ? ' selected="selected"' : '';?> >Design</option>
+                            <option value="Decoration" <?=$arr['pref1'] == 'Decoration' ? ' selected="selected"' : '';?> >Decoration</option>
+                            <option value="Infrastructure" <?=$arr['pref1'] == 'Infrastructure' ? ' selected="selected"' : '';?> >Infrastructure</option>
+                            <option value="Documentation" <?=$arr['pref1'] == 'Documentation' ? ' selected="selected"' : '';?> >Documentation</option>
+                            <option value="FacilityProvider" <?=$arr['pref1'] == 'FacilityProvider' ? ' selected="selected"' : '';?> >Facility Provider</option>
+                            <option value="CulturalEvent" <?=$arr['pref1'] == 'CulturalEvent' ? ' selected="selected"' : '';?> >Cultural Event</option>  
                        </select>
                   <label for="pref1">Preference 1</label>
             </div>
             <div class="input-field col s12">
                     <!-- <label id="lbl6" hidden="">How will you contribute to this team?</label> -->
-                    <textarea id="pref1ans" placeholder="How will you contribute to this team?" name="pref1ans" hidden=""></textarea>
+                    <textarea id="pref1ans" placeholder="How will you contribute to this team?" name="pref1ans" hidden=""><?php echo $arr['pref1ans']?></textarea>
             </div>
 
 
@@ -153,42 +153,42 @@
             <div class="input-field col s12">
                       <select name="pref2" id="pref2" onchange="myFunction1()" required>
                             <option value="" disabled selected>Choose your Preference</option>
-                            <option value="Sponsorship">Sponsorship</option>
-                            <option value="Publicity">Publicity</option>
-                            <option value="Design">Design</option>
-                            <option value="Decoration">Decoration</option>
-                            <option value="Infrastructure">Infrastructure</option>
-                            <option value="Documentation">Documentation</option>
-                            <option value="Facility Provider">Facility Provider</option>
-                            <option value="Cultural Event">Cultural Event</option>  
+                            <option value="Sponsorship" <?=$arr['pref2'] == 'Sponsorship' ? ' selected="selected"' : '';?> >Sponsorship</option>
+                            <option value="Publicity" <?=$arr['pref2'] == 'Publicity' ? ' selected="selected"' : '';?> >Publicity</option>
+                            <option value="Design" <?=$arr['pref2'] == 'Design' ? ' selected="selected"' : '';?> >Design</option>
+                            <option value="Decoration" <?=$arr['pref2'] == 'Decoration' ? ' selected="selected"' : '';?> >Decoration</option>
+                            <option value="Infrastructure" <?=$arr['pref2'] == 'Infrastructure' ? ' selected="selected"' : '';?> >Infrastructure</option>
+                            <option value="Documentation" <?=$arr['pref2'] == 'Documentation' ? ' selected="selected"' : '';?> >Documentation</option>
+                            <option value="FacilityProvider" <?=$arr['pref2'] == 'FacilityProvider' ? ' selected="selected"' : '';?> >Facility Provider</option>
+                            <option value="CulturalEvent" <?=$arr['pref2'] == 'CulturalEvent' ? ' selected="selected"' : '';?> >Cultural Event</option>  
                        </select>
                   <label for="pref2">Preference 2</label>
             </div>
             <div class="input-field col s12">
-                    <textarea required id="pref2ans" placeholder="How will you contribute to this team?" name="pref2ans" hidden=""></textarea>
+                    <textarea  id="pref2ans" placeholder="How will you contribute to this team?" name="pref2ans" hidden=""><?php echo $arr['pref2ans']?></textarea>
             </div>
 
             <div class="input-field col s12">
                       <select name="pref3" id="pref3" onchange="myFunction2()" required>
                             <option value="" disabled selected>Choose your Preference</option>
-                            <option value="Sponsorship">Sponsorship</option>
-                            <option value="Publicity">Publicity</option>
-                            <option value="Design">Design</option>
-                            <option value="Decoration">Decoration</option>
-                            <option value="Infrastructure">Infrastructure</option>
-                            <option value="Documentation">Documentation</option>
-                            <option value="Facility Provider">Facility Provider</option>
-                            <option value="Cultural Event">Cultural Event</option>  
+                            <option value="Sponsorship" <?=$arr['pref3'] == 'Sponsorship' ? ' selected="selected"' : '';?> >Sponsorship</option>
+                            <option value="Publicity" <?=$arr['pref3'] == 'Publicity' ? ' selected="selected"' : '';?> >Publicity</option>
+                            <option value="Design" <?=$arr['pref3'] == 'Design' ? ' selected="selected"' : '';?> >Design</option>
+                            <option value="Decoration" <?=$arr['pref3'] == 'Decoration' ? ' selected="selected"' : '';?> >Decoration</option>
+                            <option value="Infrastructure" <?=$arr['pref3'] == 'Infrastructure' ? ' selected="selected"' : '';?> >Infrastructure</option>
+                            <option value="Documentation" <?=$arr['pref3'] == 'Documentation' ? ' selected="selected"' : '';?> >Documentation</option>
+                            <option value="FacilityProvider" <?=$arr['pref3'] == 'FacilityProvider' ? ' selected="selected"' : '';?> >Facility Provider</option>
+                            <option value="CulturalEvent" <?=$arr['pref3'] == 'CulturalEvent' ? ' selected="selected"' : '';?> >Cultural Event</option>  
                        </select>
                   <label for="pref3">Preference 3</label>
             </div>
             <div class="input-field col s12">
-                    <textarea required id="pref3ans" placeholder="How will you contribute to this team?" name="pref3ans" hidden=""></textarea>
+                    <textarea  id="pref3ans" placeholder="How will you contribute to this team?" name="pref3ans" hidden=""><?php echo $arr['pref3ans']?></textarea>
             </div>
 
             <div class="input-field col s12">
             
-                <textarea required name="ques1" id="ques1" placeholder="Do you have any work experience in WINGS or any other event?"></textarea>
+                <textarea  name="ques1" id="ques1" placeholder="Do you have any work experience in WINGS or any other event?"><?php echo $arr['ques1']?></textarea>
 
             </div>
 
@@ -196,13 +196,13 @@
               
                <select id="question" onchange="myFunction3()">
                     <option value="" disabled selected>Yes / No</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="Yes"  <?=$arr['ques2txt'] != '' ? ' selected="selected"' : '';?>  >Yes</option>
+                    <option value="No"  <?=$arr['ques2txt'] == '' ? ' selected="selected"' : '';?>  >No</option>
                </select>
                <label for="question">Are you busy in any other event other than WINGS?</label>
             </div>
             <div class="input-field col s12">
-                    <textarea  id="ques2txt" name="ques2txt" placeholder="Please mention the event name" hidden></textarea>
+                    <textarea  id="ques2txt" name="ques2txt" placeholder="Please mention the event name" hidden><?php echo $arr['ques2txt']?></textarea>
 
             </div>
 

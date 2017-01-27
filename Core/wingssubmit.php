@@ -26,7 +26,7 @@
 			// echo $usermail;
 
 
-		    $sql_skillstable = mysqli_query($conn,"UPDATE skills SET pref1 = '$pref1', pref2 = '$pref2', pref3 = '$pref3', pref1ans = '$pref1ans', pref2ans = '$pref2ans', pref3ans = '$pref3ans', ques1 = '$ques1', ques2txt = '$ques2' WHERE userId = 'be15f05f001'");
+		    $sql_skillstable = mysqli_query($conn,"UPDATE skills SET pref1 = '$pref1', pref2 = '$pref2', pref3 = '$pref3', pref1ans = '$pref1ans', pref2ans = '$pref2ans', pref3ans = '$pref3ans', ques1 = '$ques1', ques2txt = '$ques2' WHERE userId = '$userid'");
 
 		    $sql_userstable = mysqli_query($conn,"UPDATE users SET wings = '1' WHERE userId = '$userid'");
 

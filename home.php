@@ -20,6 +20,8 @@
   <meta name="msapplication-navbutton-color" content="#009688 ">
   <meta name="apple-mobile-web-app-status-bar-style" content="#009688 ">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+
   <style>
     body {
       display: flex;
@@ -46,10 +48,10 @@
     <li><a href="user/password">Change Password</a></li>
     <li><a href="logout.php?logout">Log Out</a></li>
     <li class="divider"></li>
-    <li><a href="http://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
+    <li><a href="https://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
   </ul>
 
-	<nav id="home-menu">
+  <nav id="home-menu">
     <div class="nav-wrapper">
 
       <ul id="slide-out" class="side-nav">
@@ -67,22 +69,30 @@
           <li><a href="user/wings"><img class="slideicon" src="Assets/img/forms.png" alt="">Wings Form</a></li>
 
           <li><div class="divider"></div></li>
-          <li><a href="http://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
-          <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-          <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="settings">Settings<i class="material-icons right">settings</i></a></li>
+          <li><a href="https://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
+          <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+          <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+          
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Settings<i class="material-icons right">settings</i></a></li>
+          <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="user/update">Edit Profile</a></li>
+          <li><a href="user/password">Change Password</a></li>
+          <li><a href="logout.php?logout">Log Out</a></li>
+          <li class="divider"></li>
+          <li><a href="https://www.scouncilgeca.com"><b> STUDENT COUNCIL</b></a></li>
+          </ul>
 
       </ul>
 
       <a href="#" id="user-menu" data-activates="slide-out" class="button-collapse">
       <i class="material-icons">menu</i></a>
 
-      <!-- <a href="http://www.scouncilgeca.com" class="brand-logo center">Student Council</a> -->
+      <!-- <a href="https://www.scouncilgeca.com" class="brand-logo center">Student Council</a> -->
       <a href="http://geca.ac.in" target="_blank" class="brand-logo center downlift"><img src="Assets/img/final_small.png"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="logout.php?logout">Log out</a></li>
-      <li><a href="http://www.scouncilgeca.com#team-link">Team</a></li>
-      <li><a href="http://www.scouncilgeca.com#contact-link">Contact Us</a></li>
+      <li><a href="https://www.scouncilgeca.com#team-link">Team</a></li>
+      <li><a href="https://www.scouncilgeca.com#contact-link">Contact Us</a></li>
       <li><a class="dropdown-button white-text" href="#!" data-activates="settings"><img class="slideicon" style="bottom: -7px;" src="Assets/img/userios.png"><b><?php echo $fname ?></b><i style="color: #fff; " class="material-icons right spin">settings</i></a></li>
 
       </ul>
@@ -192,7 +202,14 @@
 
 
              } else{
-               include 'Core/msg.php';
+               
+                     if ($row['dob'] == '') {
+                        include 'Core/msg.php';
+                     } else {
+                        include 'Core/welcome.php';
+                     }
+
+
              }
 
              $conn->close();
@@ -225,7 +242,7 @@ if( $wings != '1'){
   <div class="footer-copyright">
     <div class="container">
      <div class="center">
-      <p class="black-text center"><i class="material-icons">code</i>with<i class="material-icons" style="color: #f44336">favorite</i>by <span class="ftr"><a class="ftr" href="https://www.facebook.com/saurabhk20">Saurabh Kulkarni</a> </span>, SE CSE</p>
+      <p class="black-text center"><span class="ftr"><a class="ftr" href="https://www.scouncilgeca.com">Student Council, GECA</a> </span></p>
 
      </div>
 
